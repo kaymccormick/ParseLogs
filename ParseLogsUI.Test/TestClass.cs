@@ -15,9 +15,11 @@ using ParseLogs;
 
 namespace ParseLogsUI.Test
 {
+
     [TestFixture]
     public class TestClass
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         enum TestResult
         {
             None = 0,
@@ -47,14 +49,14 @@ namespace ParseLogsUI.Test
                         string message;
                         if(messages.TryDequeue(out message))
                         {
-                            Console.WriteLine(message);
+                            Logger.Trace(message);
                         }
                     }*/
                     sw.SpinOnce();
                 }
 
                 // As of .NET Framework 4: After some initial spinning, SpinWait.SpinOnce() will yield every time.
-                Console.WriteLine("SpinWait called {0} times, yielded {1} times", sw.Count, numYields);
+                Logger.Trace("SpinWait called {0} times, yielded {1} times", sw.Count, numYields);
             });
 
             Action<object> mainAction = w =>
@@ -67,7 +69,7 @@ namespace ParseLogsUI.Test
                 button.GetClickablePoint();
                 foreach (var pattern in button.GetSupportedPatterns())
                 {
-                    Console.WriteLine(pattern.ProgrammaticName);
+                    Logger.Trace(pattern.ProgrammaticName);
                 }
                 window.Close();
             };
@@ -83,11 +85,11 @@ namespace ParseLogsUI.Test
 
             Task.Factory.StartNew(() =>
             {
-                Console.WriteLine("constructing app");
+                Logger.Trace("constructing app");
                 App app = new App();
                 app.Exit += new ExitEventHandler((object sender, ExitEventArgs e) =>
                 {
-                    Console.WriteLine("Exiting");
+                    Logger.Trace("Exiting");
                     lock (resultLock)
                     {
                         result = TestResult.Success;
@@ -97,14 +99,14 @@ namespace ParseLogsUI.Test
                 });
 
 
-                Console.WriteLine("initializing application");
+                Logger.Trace("initializing application");
                 app.InitializeComponent();
-                Console.WriteLine("running application");
+                Logger.Trace("running application");
                 app.Run();
             });
 
             var condition = t1.Wait(10000);
-            Console.WriteLine($"{condition}");
+            Logger.Trace($"{condition}");
             Assert.True(
                 condition);
             Assert.Fail();

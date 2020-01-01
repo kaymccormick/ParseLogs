@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
@@ -14,7 +14,7 @@ using System.Windows.Threading;
 
 namespace ParseLogsLib
 {
-    public interface ILogFinder
+    public interface ILogFinder2
     {
         CommandBinding FindLogsCommandBinding { get; }
         ObservableCollection<LogItem> Files { get; }
@@ -22,22 +22,19 @@ namespace ParseLogsLib
         void ProcessFile(FileInfo fsi);
     }
 
-    [Export(typeof(ILogFinder))]
-    public class LogFinder : DependencyObject, ILogFinder
+    [Export(typeof(ILogFinder2))]
+    public class LogFinder2 : DependencyObject, ILogFinder2
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-
         public Dispatcher Dispatcher { get; }
         public object FilesLock { get; } = new object();
 
         public static readonly DependencyPropertyKey FilesPropertyKey = DependencyProperty.RegisterReadOnly("Files",
             typeof(ICollection<LogItem>), typeof(LogFinder),
-            new FrameworkPropertyMetadata(new ObservableCollection<LogItem>(),
-                FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnFilesChanged,
+            new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnFilesChanged,
                 CoerceValueCallback));
 
         public static readonly DependencyProperty FilesProperty = FilesPropertyKey.DependencyProperty;
-
         private static object CoerceValueCallback(DependencyObject d, object basevalue)
         {
             return basevalue;
@@ -53,18 +50,23 @@ namespace ParseLogsLib
             get { return (ObservableCollection<LogItem>) GetValue(FilesProperty); }
             set { SetValue(FilesProperty, value); }
         }
-
+        
         public CommandBinding FindLogsCommandBinding { get; set; }
 
-        public LogFinder() : base()
+        public LogFinder2() : base()
         {
-            Logger.Info("LogFinder constructor.");
-            SetValue(FilesPropertyKey, new ObservableCollection<LogItem>());
-
+            try
+            {
+                SetValue(FilesPropertyKey, new ObservableCollection<LogItem>());
+            }
+            catch (Exception e)
+            {
+                Logger.Trace(e);
+                throw;
+            }
             BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
             FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
         }
-
         private void Executed(object sender, ExecutedRoutedEventArgs e)
         {
             lock (FilesLock)
@@ -77,12 +79,11 @@ namespace ParseLogsLib
             var token = s.Token;
             Task.Run(() =>
             {
-                DirectoryInfo
-                    dir = new DirectoryInfo(@"c:\temp"); ///@"H:\Users\root\AppData\Roaming\Trillian\users\paigeat");
+                DirectoryInfo dir = new DirectoryInfo(@"c:\temp");///@"H:\Users\root\AppData\Roaming\Trillian\users\paigeat");
                 Recurse(dir);
                 lock (FilesLock)
                 {
-                    Logger.Trace("Files: " + String.Join(";", from file in Files select file.FullName));
+                    Logger.Trace("xx" + String.Join(";", from file in Files select file.FullName));
                 }
             }, token);
         }
@@ -90,7 +91,7 @@ namespace ParseLogsLib
         public void Recurse(DirectoryInfo dir)
         {
             IEnumerable<DirectoryInfo> dirs;
-            //Console.WriteLine(dir.FullName);
+            //Logger.Trace(dir.FullName);
             try
             {
                 dirs = dir.GetDirectories();
@@ -98,7 +99,7 @@ namespace ParseLogsLib
             catch (IOException e)
             {
                 LogItem item = new LogItem(dir.FullName, e);
-                Logger.Trace(e, "Unabble to get directory info");
+                Logger.Trace(e);
                 throw;
             }
 
@@ -109,22 +110,14 @@ namespace ParseLogsLib
 
             IList<FileInfo> files = dir.GetFiles();
             Logger.Trace($"{files.Count}");
-            try
+            foreach (var file in files)
             {
-                foreach (var file in files)
+                var isXml = file.Extension.ToLower().StartsWith(".xml");
+                Logger.Trace($"{file.Extension} {isXml}");
+                if (isXml)
                 {
-                    var isXml = file.Extension.ToLower().StartsWith(".xml");
-                    Logger.Trace($"{file.Extension} {isXml}");
-                    if (isXml)
-                    {
-                        ProcessFile(file);
-                    }
+                    ProcessFile(file);
                 }
-            }
-            catch (Exception e)
-            {
-                Logger.Trace(e, $"Unable to completely process files in {dir.FullName}");
-                throw;
             }
         }
 
@@ -134,22 +127,13 @@ namespace ParseLogsLib
         {
             lock (FilesLock)
             {
-                Logger.Trace($"adding {fsi.Name}");
-                // Console.WriteLine();
-                // Console.WriteLine($"count is {app.Files.Count}");
+                // Logger.Trace($"adding {fsi.Name}");
+                // Logger.Trace($"count is {app.Files.Count}");
 
-
-                try
-                {
-                    Files.Add(new LogItem(fsi));
-                }
-                catch (Exception e)
-                {
-                    Logger.Trace(e, $"unable to add {fsi.Name}");
-                    throw;
-                }
-                // Console.WriteLine($"count is {app.Files.Count}");
+                Files.Add(new LogItem(fsi));
+                // Logger.Trace($"count is {app.Files.Count}");
             }
         }
     }
+
 }

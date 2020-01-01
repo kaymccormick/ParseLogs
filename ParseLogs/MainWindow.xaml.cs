@@ -32,8 +32,11 @@ namespace ParseLogs
 
     {
         private App app;
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         public MainWindow()
         {
+            
             CollectionViewSource s = new CollectionViewSource();
 
             app = Application.Current as App;
@@ -41,11 +44,23 @@ namespace ParseLogs
             // var d = CollectionViewSource.GetDefaultView(app.Files);
             // int c = (from x in d.SortDescriptions select x).Count();
             // app.Files.Add(new Item(null));
-            // Console.WriteLine($"{c}");
+            // Logger.Trace($"{c}");
             InitializeComponent();
 
             CommandBindings.Add(
                 app.LogFinder.FindLogsCommandBinding);
+
+            
+            CommandManager.AddPreviewCanExecuteHandler(this, (sender, args) =>
+            {
+                CommandConverter con = new CommandConverter();
+                var convertFrom = con.ConvertToString(args.Command);
+                Logger.Info($"{convertFrom} {convertFrom.GetType().FullName}");
+                Logger.Info(
+                    $"Can execute {args.Command} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
+
+            });
+            
 
 
 //            FilesListView.ItemsSource = app.Files;
@@ -68,5 +83,17 @@ namespace ParseLogs
         }
 
         public Button SearchButton { get; set; }
+        private static void ErrorExit()
+        {
+            System.Windows.Application.Current.Shutdown(1);
+        }
+
+        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            Logger.Info("mainWindow " +
+                "loaded");
+            //_searchButton.Command.Execute(null);
+            //ErrorExit();
+        }
     }
 }
