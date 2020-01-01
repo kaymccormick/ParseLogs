@@ -24,7 +24,6 @@ namespace ParseLogs
         protected override void OnStartup(StartupEventArgs e)
         {
             InitCatalog();
-            //BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
         }
 
         public void InitCatalog()
@@ -42,6 +41,7 @@ namespace ParseLogs
                 Console.WriteLine(exception);
                 throw;
             }
+            
         }
     }
 }

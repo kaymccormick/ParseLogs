@@ -44,19 +44,29 @@ namespace ParseLogs
             // Console.WriteLine($"{c}");
             InitializeComponent();
 
+            CommandBindings.Add(
+                app.LogFinder.FindLogsCommandBinding);
+
+
 //            FilesListView.ItemsSource = app.Files;
 //            FilesListView.
-/*            Binding binding = new Binding("FullName")
-            {
-                Source = this.Files
-                
-            };
+            /*            Binding binding = new Binding("FullName")
+                        {
+                            Source = this.Files
 
-            var itemsSourceProperty = ItemsControl.ItemsSourceProperty;
+                        };
 
-            BindingOperations.SetBinding(FilesListView, itemsSourceProperty, binding);
-            */
+                        var itemsSourceProperty = ItemsControl.ItemsSourceProperty;
+
+                        BindingOperations.SetBinding(FilesListView, itemsSourceProperty, binding);
+                        */
         }
 
+        private void MainWindow_OnInitialized(object sender, EventArgs e)
+        {
+            SearchButton = _searchButton;
+        }
+
+        public Button SearchButton { get; set; }
     }
 }

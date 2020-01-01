@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace ParseLogsLib
 {
     public interface ILogFinder
     {
-        void Execute();
+        CommandBinding FindLogsCommandBinding { get; }
+        ObservableCollection<LogItem> Files { get; }
         void Recurse(DirectoryInfo dir);
         void ProcessFile(FileInfo fsi);
     }
@@ -20,10 +24,25 @@ namespace ParseLogsLib
     [Export(typeof(ILogFinder))]
     public class LogFinder : ILogFinder
     {
+        public Dispatcher Dispatcher { get; }
         public object FilesLock { get; } = new object();
         public ObservableCollection<LogItem> Files { get; } = new ObservableCollection<LogItem>();
+        public CommandBinding FindLogsCommandBinding { get; set; }
 
-        public void Execute()
+        public LogFinder()
+        {
+            BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
+            FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
+        }
+
+        public LogFinder(Dispatcher dispatcher)
+        {
+            BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
+            Dispatcher = dispatcher;
+            FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
+        }
+
+        private void Executed(object sender, ExecutedRoutedEventArgs e)
         {
             lock (FilesLock)
             {
@@ -35,7 +54,7 @@ namespace ParseLogsLib
             var token = s.Token;
             Task.Run(() =>
             {
-                DirectoryInfo dir = new DirectoryInfo(@"H:\Users\root\AppData\Roaming\Trillian\users\paigeat");
+                DirectoryInfo dir = new DirectoryInfo(@"c:\temp");///@"H:\Users\root\AppData\Roaming\Trillian\users\paigeat");
                 Recurse(dir);
                 lock (FilesLock)
                 {
