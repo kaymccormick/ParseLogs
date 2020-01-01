@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseLogs", "ParseLogs\ParseLogs.csproj", "{724936CA-6227-4AD9-A454-4C9436536097}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseLogs.Test", "ParseLogs.Test\ParseLogs.Test.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseLogsLib", "ParseLogsLib\ParseLogsLib.csproj", "{97603CED-2640-42A8-9BF1-1ED45614EFDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{724936CA-6227-4AD9-A454-4C9436536097}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{724936CA-6227-4AD9-A454-4C9436536097}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{724936CA-6227-4AD9-A454-4C9436536097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EDF4429-251A-416D-BB68-93F227191BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97603CED-2640-42A8-9BF1-1ED45614EFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97603CED-2640-42A8-9BF1-1ED45614EFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97603CED-2640-42A8-9BF1-1ED45614EFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97603CED-2640-42A8-9BF1-1ED45614EFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
