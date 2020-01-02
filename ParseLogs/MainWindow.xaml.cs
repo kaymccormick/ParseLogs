@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
@@ -20,6 +22,8 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Xml;
 using ParseLogs.Annotations;
+using ParseLogsLib;
+using Shell32;
 using ItemsControl = System.Windows.Controls.ItemsControl;
 using Path = System.IO.Path;
 
@@ -33,6 +37,7 @@ namespace ParseLogs
     {
         private App app;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+        private LogWindow _logWindow;
 
         public MainWindow()
         {
@@ -41,7 +46,7 @@ namespace ParseLogs
 
             app = Application.Current as App;
             // s.Source = app.Files;
-            // var d = CollectionViewSource.GetDefaultView(app.Files);
+            // var d = CollectionViewSource.GetDefaultView(app.     );
             // int c = (from x in d.SortDescriptions select x).Count();
             // app.Files.Add(new Item(null));
             // Logger.Trace($"{c}");
@@ -54,10 +59,11 @@ namespace ParseLogs
             CommandManager.AddPreviewCanExecuteHandler(this, (sender, args) =>
             {
                 CommandConverter con = new CommandConverter();
+                string cmd = WhatCommand(args.Command);
                 var convertFrom = con.ConvertToString(args.Command);
-                Logger.Info($"{convertFrom} {convertFrom.GetType().FullName}");
+                //Logger.Info($"{convertFrom} {convertFrom.GetType().FullName}");
                 Logger.Info(
-                    $"Can execute {args.Command} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
+                    $"Can execute {cmd} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
 
             });
             
@@ -75,13 +81,59 @@ namespace ParseLogs
 
                         BindingOperations.SetBinding(FilesListView, itemsSourceProperty, binding);
                         */
+            _logWindow = new LogWindow();
+            _logWindow.ShowActivated = true;
+            _logWindow.Loaded += (sender, args) =>
+            {
+                // var shell = new Shell32.Shell();
+                // shell.TileHorizontally();
+
+            };
+            _logWindow.Show();
+
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                var typeInfos = assembly.DefinedTypes.Where((info, i) => info.IsSubclassOf(typeof(TraceSource)));
+                if (typeInfos.Count()> 0)
+                {
+                    var s2 = String.Join(" ",
+                        typeInfos);
+                    var @join = s2;
+                    NLog.Logger l = NLog.LogManager.GetLogger(
+                        Path.GetFileName(assembly.Location));
+                    foreach (var t in typeInfos)
+                    {
+                        l.Info(t.Name);
+                    }
+                    //l.Info($"{assembly.Location} {@join}");
+                }
+            }
+
+
         }
+
+        private string WhatCommand(ICommand argsCommand)
+        {
+            if (argsCommand == Commands.FindLogsCommand)
+            {
+                return "FindLogsCommand";
+            }
+            
+
+            return "unknown";
+        }
+        
 
         private void MainWindow_OnInitialized(object sender, EventArgs e)
         {
             SearchButton = _searchButton;
+            Logger.Debug($"{Thread.CurrentThread.ManagedThreadId}");
+            LogFinder = new LogFinder();
+            app.LogFinder = LogFinder;
+
         }
 
+        public LogFinder LogFinder { get; set; }
         public Button SearchButton { get; set; }
         private static void ErrorExit()
         {
@@ -94,6 +146,11 @@ namespace ParseLogs
                 "loaded");
             //_searchButton.Command.Execute(null);
             //ErrorExit();
+        }
+
+        private void MainWindow_OnClosed(object sender, EventArgs e)
+        {
+            _logWindow.Close();
         }
     }
 }

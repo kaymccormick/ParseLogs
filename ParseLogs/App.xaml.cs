@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using ParseLogsLib;
+using Pose;
 
 namespace ParseLogs
 {
@@ -22,7 +23,9 @@ namespace ParseLogs
     {
         public App()
         {
-            foreach(var thread in Process.GetCurrentProcess().Threads)
+            PresentationTraceSources.Refresh();
+
+            foreach (var thread in Process.GetCurrentProcess().Threads)
             {
                 
                 ProcessThread t = thread as ProcessThread;
@@ -39,7 +42,9 @@ namespace ParseLogs
         {
             Logger.Info("On startup");
             //Assert.True(Logger.IsDebugEnabled);
-            InitCatalog();
+         //   InitCatalog();
+
+
         }
 
         public void InitCatalog()

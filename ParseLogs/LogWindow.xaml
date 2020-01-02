@@ -4,9 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParseLogs"
+        xmlns:dj="clr-namespace:DJ;assembly=NLogViewer"
         mc:Ignorable="d"
         Title="LogWindow" Height="450" Width="800">
     <Grid>
-        
+        <dj:NLogViewer></dj:NLogViewer>
     </Grid>
 </Window>
