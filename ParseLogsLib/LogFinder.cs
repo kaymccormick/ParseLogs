@@ -27,16 +27,17 @@ namespace ParseLogsLib
 
     [Export(typeof(ILogFinder))]
     public class LogFinder : FrameworkElement, ILogFinder
-    { 
+    {
         public static readonly RoutedEvent CommandFailedEvent = EventManager.RegisterRoutedEvent("CommandFailed",
-        RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(LogFinder));
+            RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(LogFinder));
 
-    private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
-        public event  RoutedEventHandler CommandFailed
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
+        public event RoutedEventHandler CommandFailed
         {
             add { AddHandler(CommandFailedEvent, value); }
-            remove {  RemoveHandler(CommandFailedEvent, value);}
+            remove { RemoveHandler(CommandFailedEvent, value); }
         }
 
 
@@ -62,7 +63,7 @@ namespace ParseLogsLib
         }
 
         //public ObservableCollection<LogItem> Files { get; } = new ObservableCollection<LogItem>();
-        public LogItemObservableList Files 
+        public LogItemObservableList Files
         {
             get
             {
@@ -75,6 +76,7 @@ namespace ParseLogsLib
         public CommandBinding FindLogsCommandBinding { get; set; }
 
         public delegate void DispatcherDelegate();
+
         public LogFinder() : base()
         {
             Logger.Info("LogFinder constructor.");
@@ -87,6 +89,7 @@ namespace ParseLogsLib
         }
 
         private delegate void RaiseDelegate();
+
         private void Executed(object sender, ExecutedRoutedEventArgs e)
         {
             lock (FilesLock)
@@ -109,8 +112,8 @@ namespace ParseLogsLib
 
                     lock (FilesLock)
                     {
-                       // if (isTraceLogging)
-                         //   Logger.Trace("Files: " + String.Join(";", from file in Files select file.FullName));
+                        // if (isTraceLogging)
+                        //   Logger.Trace("Files: " + String.Join(";", from file in Files select file.FullName));
                     }
                 }
                 catch (Exception ex)
@@ -125,8 +128,9 @@ namespace ParseLogsLib
                     {
                         //Logger.Info(f.ToString);
                     }
+
                     Dispatcher.BeginInvoke(DispatcherPriority.Normal,
-                        
+
                         new RaiseDelegate(() => { RaiseEvent(new RoutedEventArgs(CommandFailedEvent, this)); }));
                     return new TaskResult<int?>(null);
                 }
@@ -159,14 +163,14 @@ namespace ParseLogsLib
             }
 
             IList<FileInfo> files = dir.GetFiles();
-            if(isTraceLogging)
+            if (isTraceLogging)
                 Logger.Trace($"{files.Count}");
             try
             {
                 foreach (var file in files)
                 {
                     var isXml = file.Extension.ToLower().StartsWith(".xml");
-                    if(isTraceLogging)
+                    if (isTraceLogging)
                         Logger.Trace($"{file.Extension} {isXml}");
                     if (isXml)
                     {
@@ -187,7 +191,7 @@ namespace ParseLogsLib
         {
             lock (FilesLock)
             {
-                if(isTraceLogging)
+                if (isTraceLogging)
                     Logger.Trace($"adding {fsi.Name}");
                 // Console.WriteLine();
                 // Console.WriteLine($"count is {app.Files.Count}");
@@ -207,23 +211,6 @@ namespace ParseLogsLib
                 }));
                 // Console.WriteLine($"count is {app.Files.Count}");
             }
-        }
-    }
-
-    internal class TaskResult<T>
-    {
-        public Exception Ex { get; }
-        public T Result { get; }
-
-        public TaskResult(T result, Exception ex)
-        {
-            this.Result = result;
-            this.Ex = ex;
-        }
-
-        public TaskResult(T result)
-        {
-            this.Result = result;
         }
     }
 }

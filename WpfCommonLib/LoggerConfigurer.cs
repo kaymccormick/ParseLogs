@@ -18,7 +18,7 @@ namespace WpfCommonLib
             cacheTarget.Name = "WpfCommonLib.Cache1";
             ConsoleTarget console = new ConsoleTarget("ConsoleTarget1");
             CommonLayout layout = new CommonLayout();
-
+            NLog.LogManager.Configuration = config;
         }
 
     }

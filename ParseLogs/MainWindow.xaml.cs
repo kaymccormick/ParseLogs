@@ -21,6 +21,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Xml.Linq;
+using FolderBrowser;
+using FolderBrowser.Views;
 using ParseLogs.Annotations;
 using ParseLogsLib;
 using ItemsControl = System.Windows.Controls.ItemsControl;
@@ -41,7 +43,7 @@ namespace ParseLogs
 
         public XDocument Document
         {
-            get { return (FilesListView.SelectedItems[0] as LogItem).Document; }
+            get { return (FilesListView.SelectedItem != null ? (FilesListView.SelectedItem as LogItem).Document : null); }
             set { (FilesListView.SelectedItems[0] as LogItem).Document = value as XDocument; }
         }
 
@@ -54,6 +56,7 @@ namespace ParseLogs
         }
         public MainWindow() : base()
         {
+            FolderBrowserTreeView view = new FolderBrowserTreeView();
             LogFinder = new LogFinder();
             app.LogFinder = LogFinder;
 
@@ -177,6 +180,12 @@ namespace ParseLogs
         private void MainWindow_OnClosed(object sender, EventArgs e)
         {
             _logWindow.Close();
+        }
+
+        private void DriveListBox_Initialized(object sender, EventArgs e)
+        {
+            DriveInfo[] drives = DriveInfo.GetDrives();
+            DriveListBox.ItemsSource = drives;
         }
     }
 }

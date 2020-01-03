@@ -9,12 +9,15 @@
         xmlns:xlinq="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq"
         xmlns:data="clr-namespace:System.Windows.Data;assembly=WindowsBase"
         xmlns:wpfCommonLib="clr-namespace:WpfCommonLib;assembly=WpfCommonLib"
+        xmlns:views="clr-namespace:FolderBrowser.Views;assembly=FolderBrowser"
+        xmlns:io="clr-namespace:System.IO;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
         <!-- <CommandBinding Command="{x:Static parseLogsLib:Commands.FindLogsCommand}" /> -->
     </Window.CommandBindings>
     <Window.Resources>
+        <ObjectDataProvider x:Key="DrivesProvider" ObjectType="io:DriveInfo" MethodName="GetDrives"></ObjectDataProvider>
         <DataTemplate x:Key="message" DataType="{x:Type xlinq:XElement}">
             <WrapPanel Margin="10">
                 <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=FromTextBlock}" VerticalAlignment="Stretch" Content="From"/>
@@ -46,6 +49,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Menu>
             <MenuItem />
@@ -57,7 +61,9 @@
         <!--         < -->
         <!--     </EventTrigger.Actions></EventTrigger> -->
         <!-- </Button.Triggers> -->
-        <ListBox Name="FilesListView" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
+
+        <ListBox  Name="DriveListBox" Grid.Row="1" Grid.Column="0" Initialized="DriveListBox_Initialized"/>
+        <ListBox Name="FilesListView" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
             <ListBox.Triggers>
             </ListBox.Triggers>
             <ListBox.ItemTemplate>

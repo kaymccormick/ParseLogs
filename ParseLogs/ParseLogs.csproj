@@ -282,6 +282,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IMetadataItem.cs" />
     <Compile Include="LogWindow.xaml.cs">
       <DependentUpon>LogWindow.xaml</DependentUpon>
     </Compile>
@@ -347,11 +348,17 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Autofac.Extras.IocManager">
+      <Version>3.2.2</Version>
+    </PackageReference>
     <PackageReference Include="Dirkster.FolderBrowser">
       <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="EO.Pdf">
       <Version>19.2.91</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical">
+      <Version>3.1.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.WindowsAPICodePack-Shell">
       <Version>1.1.0</Version>
@@ -371,8 +378,8 @@
     <PackageReference Include="Sentinel.NLogViewer">
       <Version>1.0.1</Version>
     </PackageReference>
-    <PackageReference Include="TabbedFileBrowser">
-      <Version>0.0.0.10</Version>
+    <PackageReference Include="winapicp">
+      <Version>1.1.0</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

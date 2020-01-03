@@ -1,0 +1,10 @@
+namespace ParseLogsLib
+{
+    interface IFoundObject
+    {
+	FileInfo fileInfo;
+	IEnumerable<IFileSystemInfo> fileInfos;
+
+
+    }
+}
