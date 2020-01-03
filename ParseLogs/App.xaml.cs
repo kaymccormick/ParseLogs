@@ -6,11 +6,13 @@ using System.ComponentModel.Composition.Hosting;
 using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.RightsManagement;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using ParseLogsLib;
+using WpfCommonLib;
 
 namespace ParseLogs
 {
@@ -19,9 +21,13 @@ namespace ParseLogs
     /// </summary>
     public partial class App : Application
     {
+        public CommonManager CommonManager { get; }
+
         public App()
         {
             PresentationTraceSources.Refresh();
+
+            CommonManager = CommonManager.Instance;
 
             foreach (var thread in Process.GetCurrentProcess().Threads)
             {

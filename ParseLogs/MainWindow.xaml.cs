@@ -25,6 +25,7 @@ using ParseLogs.Annotations;
 using ParseLogsLib;
 using ItemsControl = System.Windows.Controls.ItemsControl;
 using Path = System.IO.Path;
+using WpfCommonLib;
 
 namespace ParseLogs
 {
@@ -34,7 +35,7 @@ namespace ParseLogs
     public partial class MainWindow : Window
 
     {
-            private App app = Application.Current as App;
+        private App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private LogWindow _logWindow ;
 
@@ -51,7 +52,7 @@ namespace ParseLogs
             {
             }
         }
-        public MainWindow()
+        public MainWindow() : base()
         {
             LogFinder = new LogFinder();
             app.LogFinder = LogFinder;

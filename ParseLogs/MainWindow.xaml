@@ -8,6 +8,7 @@
         xmlns:parseLogsLib="clr-namespace:ParseLogsLib;assembly=ParseLogsLib"
         xmlns:xlinq="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq"
         xmlns:data="clr-namespace:System.Windows.Data;assembly=WindowsBase"
+        xmlns:wpfCommonLib="clr-namespace:WpfCommonLib;assembly=WpfCommonLib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
@@ -24,10 +25,10 @@
 
                 <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=TextTextBlock}" VerticalAlignment="Stretch" Content="To"/>
                 <TextBlock Name="TextTextBlock" Margin="10" VerticalAlignment="Center" Text="{Binding Path=Attribute[text].Value}"/>
-                </WrapPanel>
+            </WrapPanel>
         </DataTemplate>
-        
 
+        
         <!--        <XmlDataProvider x:Key="MyList" Source="Data\Leagues.xml"
                          XPath="Leagues/League"/>
 -->

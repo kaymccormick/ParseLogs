@@ -260,6 +260,9 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\WindowsBase.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -327,6 +330,10 @@
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WpfCommonLib\WpfCommonLib.csproj">
+      <Project>{52cde0c8-07b1-4351-804d-764dc2d70f4e}</Project>
+      <Name>WpfCommonLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
@@ -340,14 +347,32 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Dirkster.FolderBrowser">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="EO.Pdf">
+      <Version>19.2.91</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.WindowsAPICodePack-Shell">
+      <Version>1.1.0</Version>
+    </PackageReference>
     <PackageReference Include="NLog.MSFTTeams">
       <Version>0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="NuGet.Packaging">
+      <Version>5.5.0-preview.1.6319</Version>
+    </PackageReference>
+    <PackageReference Include="OpenDialog">
+      <Version>1.1.1</Version>
     </PackageReference>
     <PackageReference Include="pose">
       <Version>1.2.1</Version>
     </PackageReference>
     <PackageReference Include="Sentinel.NLogViewer">
       <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="TabbedFileBrowser">
+      <Version>0.0.0.10</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
