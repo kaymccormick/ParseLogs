@@ -9,16 +9,21 @@ using NLog.Targets;
 
 namespace WpfCommonLib
 {
-    class LoggerConfigurer
+
+    public class LoggerConfigurer
     {
+        public static bool PerformConfiguration = true;
         public LoggerConfigurer()
         {
-            var config = new LoggingConfiguration();
-            CacheTarget cacheTarget = new CacheTarget();
-            cacheTarget.Name = "WpfCommonLib.Cache1";
-            ConsoleTarget console = new ConsoleTarget("ConsoleTarget1");
-            CommonLayout layout = new CommonLayout();
-            NLog.LogManager.Configuration = config;
+            if (PerformConfiguration)
+            {
+                var config = new LoggingConfiguration();
+                CacheTarget cacheTarget = new CacheTarget();
+                cacheTarget.Name = "WpfCommonLib.Cache1";
+                ConsoleTarget console = new ConsoleTarget("ConsoleTarget1");
+                CommonLayout layout = new CommonLayout();
+                NLog.LogManager.Configuration = config;
+            }
         }
 
     }

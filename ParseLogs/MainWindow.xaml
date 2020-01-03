@@ -11,13 +11,20 @@
         xmlns:wpfCommonLib="clr-namespace:WpfCommonLib;assembly=WpfCommonLib"
         xmlns:views="clr-namespace:FolderBrowser.Views;assembly=FolderBrowser"
         xmlns:io="clr-namespace:System.IO;assembly=mscorlib"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.CommandBindings>
         <!-- <CommandBinding Command="{x:Static parseLogsLib:Commands.FindLogsCommand}" /> -->
     </Window.CommandBindings>
     <Window.Resources>
-        <ObjectDataProvider x:Key="DrivesProvider" ObjectType="io:DriveInfo" MethodName="GetDrives"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="Methods" ObjectInstance="{x:Type io:DriveInfo}" MethodName="GetMethods"></ObjectDataProvider>
+        <ObjectDataProvider x:Key="Methods2" ObjectInstance="{StaticResource Methods}" ></ObjectDataProvider>
+        <ObjectDataProvider x:Key="DrivesProvider" ObjectType="{x:Type io:DriveInfo}" MethodName="GetDrives">
+            <ObjectDataProvider.ConstructorParameters>c:</ObjectDataProvider.ConstructorParameters>
+        </ObjectDataProvider>
+        <CollectionViewSource x:Key="MethodsView" Source="{StaticResource Methods}"></CollectionViewSource>
+        <ObjectDataProvider x:Key="xxx" ObjectInstance="{StaticResource MethodsView}"></ObjectDataProvider>
         <DataTemplate x:Key="message" DataType="{x:Type xlinq:XElement}">
             <WrapPanel Margin="10">
                 <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=FromTextBlock}" VerticalAlignment="Stretch" Content="From"/>
@@ -31,7 +38,7 @@
             </WrapPanel>
         </DataTemplate>
 
-        
+
         <!--        <XmlDataProvider x:Key="MyList" Source="Data\Leagues.xml"
                          XPath="Leagues/League"/>
 -->
@@ -41,7 +48,7 @@
     <!--        <Window.DataContext ></Window.DataContext>-->
     <!-- </Window.Resources> -->
     <!--    <Window.DataContext><Binding Source="{DynamicResource}"></Binding></Window.DataContext>-->
-    <Grid>
+    <Grid DataContext="{Binding Source={StaticResource DrivesProvider}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -62,7 +69,7 @@
         <!--     </EventTrigger.Actions></EventTrigger> -->
         <!-- </Button.Triggers> -->
 
-        <ListBox  Name="DriveListBox" Grid.Row="1" Grid.Column="0" Initialized="DriveListBox_Initialized"/>
+        <ListBox  Name="DriveListBox" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Mode=OneWay}"/>
         <ListBox Name="FilesListView" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
             <ListBox.Triggers>
             </ListBox.Triggers>
@@ -102,10 +109,10 @@
                     <TextBlock Text="{Binding Attribute[text]}"></TextBlock>
                 </StackPanel>
             </GroupBox>
-            
+
 
         </Grid>
-        
+
 
 
     </Grid>

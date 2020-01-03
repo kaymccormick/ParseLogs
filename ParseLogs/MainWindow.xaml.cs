@@ -1,33 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 using System.Xml.Linq;
-using FolderBrowser;
 using FolderBrowser.Views;
-using ParseLogs.Annotations;
 using ParseLogsLib;
-using ItemsControl = System.Windows.Controls.ItemsControl;
 using Path = System.IO.Path;
-using WpfCommonLib;
 
 namespace ParseLogs
 {
@@ -39,27 +23,30 @@ namespace ParseLogs
     {
         private App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        private LogWindow _logWindow ;
+        private LogWindow _logWindow;
 
         public XDocument Document
         {
-            get { return (FilesListView.SelectedItem != null ? (FilesListView.SelectedItem as LogItem).Document : null); }
+            get
+            {
+                return (FilesListView.SelectedItem != null ? (FilesListView.SelectedItem as LogItem).Document : null);
+            }
             set { (FilesListView.SelectedItems[0] as LogItem).Document = value as XDocument; }
         }
 
         class XCol : CollectionViewSource
         {
             public Type CollectionViewType { get; set; } = typeof(ListCollectionView);
+
             public XCol() : base()
             {
             }
         }
+
         public MainWindow() : base()
         {
-            FolderBrowserTreeView view = new FolderBrowserTreeView();
             LogFinder = new LogFinder();
             app.LogFinder = LogFinder;
-
 
 
             app = Application.Current as App;
@@ -70,10 +57,54 @@ namespace ParseLogs
             // Logger.Trace($"{c}");
             InitializeComponent();
 
+            Logger.Debug($"Checkign resources");
+            if (Resources.Count == 0)
+            {
+                Logger.Warn($"No resources in MainWindow");
+            }
+            else
+            {
+                foreach (var r in Resources.Keys)
+                {
+                    var v = TryFindResource(r);
+                    Logger.Debug($"resource {r} = {v}");
+                    if (!(v is string))
+                    {
+                        Logger.Debug($"Type is {v.GetType().Name});");
+                        var typeConverter = TypeDescriptor.GetConverter(v.GetType(), true);
+                        string vs;
+                        if (typeConverter.CanConvertTo(typeof(string)))
+                        {
+                            vs = typeConverter.ConvertTo(v, typeof(string)) as string;
+                        }
+                        else
+                        {
+                            vs = "";
+                        }
+
+                        Logger.Debug($"value: {vs}");
+                        if (v is ObjectDataProvider)
+                        {
+                            var od = v as ObjectDataProvider;
+                            var d = od.Data;
+                            Logger.Debug($"ObjectInstance is {od.ObjectInstance}, data is {d}");
+                        } else if (v is CollectionViewSource)
+                        {
+                            var cvs = v as CollectionViewSource;
+                            Logger.Debug($"View is {cvs.View}");
+                        }
+                    }
+                }
+            }
+
+            ObjectDataProvider o = TryFindResource("DrivesProvider") as ObjectDataProvider;
+            var typ = o.ObjectInstance.GetType().ToString();
+            Logger.Info($"{o.ObjectInstance}");
+
             CommandBindings.Add(
                 app.LogFinder.FindLogsCommandBinding);
 
-            
+
             CommandManager.AddPreviewCanExecuteHandler(this, (sender, args) =>
             {
                 CommandConverter con = new CommandConverter();
@@ -82,7 +113,6 @@ namespace ParseLogs
                 //Logger.Info($"{convertFrom} {convertFrom.GetType().FullName}");
                 Logger.Info(
                     $"Can execute {cmd} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
-
             });
 
             // CollectionViewSource s = new CollectionViewSource();
@@ -118,14 +148,13 @@ namespace ParseLogs
             {
                 // var shell = new Shell32.Shell();
                 // shell.TileHorizontally();
-
             };
             _logWindow.Show();
 
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
                 var typeInfos = assembly.DefinedTypes.Where((info, i) => info.IsSubclassOf(typeof(TraceSource)));
-                if (typeInfos.Count()> 0)
+                if (typeInfos.Count() > 0)
                 {
                     var s2 = String.Join(" ",
                         typeInfos);
@@ -136,11 +165,10 @@ namespace ParseLogs
                     {
                         l.Info(t.Name);
                     }
+
                     //l.Info($"{assembly.Location} {@join}");
                 }
             }
-
-
         }
 
         private string WhatCommand(ICommand argsCommand)
@@ -149,21 +177,21 @@ namespace ParseLogs
             {
                 return "FindLogsCommand";
             }
-            
+
 
             return "unknown";
         }
-        
+
 
         private void MainWindow_OnInitialized(object sender, EventArgs e)
         {
             SearchButton = _searchButton;
             Logger.Debug($"{Thread.CurrentThread.ManagedThreadId}");
-
         }
 
         public LogFinder LogFinder { get; set; }
         public Button SearchButton { get; set; }
+
         private static void ErrorExit()
         {
             System.Windows.Application.Current.Shutdown(1);
@@ -172,7 +200,7 @@ namespace ParseLogs
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
             Logger.Info("mainWindow " +
-                "loaded");
+                        "loaded");
             //_searchButton.Command.Execute(null);
             //ErrorExit();
         }

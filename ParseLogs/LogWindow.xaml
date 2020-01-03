@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ParseLogs"
         xmlns:dj="clr-namespace:DJ;assembly=NLogViewer"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
+        FontSize="18"
         Title="LogWindow" Height="450" Width="800">
     <Grid>
         <dj:NLogViewer></dj:NLogViewer>

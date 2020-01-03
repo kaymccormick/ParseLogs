@@ -30,7 +30,7 @@ namespace ParseLogs
         {
             NativeMethods.CBTProc x;
             PresentationTraceSources.Refresh();
-
+            LoggerConfigurer.PerformConfiguration = false;
             //NativeMethods.SetWindowsHookEx();
 
             CommonManager = CommonManager.Instance;
@@ -40,7 +40,7 @@ namespace ParseLogs
             {
                 
                 ProcessThread t = thread as ProcessThread;
-                Logger.Info($"Thread {t.Id} is \"\"");
+                Logger.Trace($"Thread {t.Id} is \"\"");
             }
         }
 
@@ -59,6 +59,11 @@ namespace ParseLogs
             }
 
             builder.RegisterAssemblyTypes();
+            foreach (var r in Resources.Keys)
+            {
+                Logger.Debug($"resource {r}");
+            }
+
         }
 
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
