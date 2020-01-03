@@ -20,10 +20,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using System.Xml;
+using System.Xml.Linq;
 using ParseLogs.Annotations;
 using ParseLogsLib;
-using Shell32;
 using ItemsControl = System.Windows.Controls.ItemsControl;
 using Path = System.IO.Path;
 
@@ -35,14 +34,29 @@ namespace ParseLogs
     public partial class MainWindow : Window
 
     {
-        private App app;
+            private App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        private LogWindow _logWindow;
+        private LogWindow _logWindow ;
 
+        public XDocument Document
+        {
+            get { return (FilesListView.SelectedItems[0] as LogItem).Document; }
+            set { (FilesListView.SelectedItems[0] as LogItem).Document = value as XDocument; }
+        }
+
+        class XCol : CollectionViewSource
+        {
+            public Type CollectionViewType { get; set; } = typeof(ListCollectionView);
+            public XCol() : base()
+            {
+            }
+        }
         public MainWindow()
         {
-            
-            CollectionViewSource s = new CollectionViewSource();
+            LogFinder = new LogFinder();
+            app.LogFinder = LogFinder;
+
+
 
             app = Application.Current as App;
             // s.Source = app.Files;
@@ -66,11 +80,24 @@ namespace ParseLogs
                     $"Can execute {cmd} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
 
             });
-            
 
-
-//            FilesListView.ItemsSource = app.Files;
-//            FilesListView.
+            // CollectionViewSource s = new CollectionViewSource();
+            // var def = CollectionViewSource.GetDefaultView(LogFinder.Files);
+            // Logger.Debug($"{def}");
+            // Logger.Debug($"{def}");
+            //
+            //
+            // CollectionViewSource src = new XCol();
+            //
+            // Binding binding = new Binding
+            // {
+            //     Source = def
+            // };
+            //
+            // FilesListView.SetBinding(ItemsControl.ItemsSourceProperty,binding);
+            //
+            // //            FilesListView.ItemsSource = app.Files;
+            //            FilesListView.
             /*            Binding binding = new Binding("FullName")
                         {
                             Source = this.Files
@@ -128,8 +155,6 @@ namespace ParseLogs
         {
             SearchButton = _searchButton;
             Logger.Debug($"{Thread.CurrentThread.ManagedThreadId}");
-            LogFinder = new LogFinder();
-            app.LogFinder = LogFinder;
 
         }
 

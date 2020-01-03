@@ -103,9 +103,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LogFinder.cs" />
     <Compile Include="LogFinder2.cs" />
     <Compile Include="LogItem.cs" />
+    <Compile Include="LogItemCollectionViewSource.cs" />
+    <Compile Include="LogItemConverter.cs" />
+    <Compile Include="LogItemListCollectionView.cs" />
+    <Compile Include="LogItemObservableList.cs" />
+    <Compile Include="LogItemTypeConverter.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

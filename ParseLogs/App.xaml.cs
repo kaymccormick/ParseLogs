@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Configuration;
-using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
@@ -12,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using ParseLogsLib;
-using Pose;
 
 namespace ParseLogs
 {

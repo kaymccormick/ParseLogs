@@ -19,7 +19,7 @@ namespace ParseLogsLib
     public interface ILogFinder
     {
         CommandBinding FindLogsCommandBinding { get; }
-        ObservableCollection<LogItem> Files { get; }
+        LogItemObservableList Files { get; }
         void Recurse(DirectoryInfo dir);
         void ProcessFile(FileInfo fsi);
         event RoutedEventHandler CommandFailed;
@@ -45,8 +45,8 @@ namespace ParseLogsLib
         public Boolean isTraceLogging { get; set; } = true;
 
         public static readonly DependencyPropertyKey FilesPropertyKey = DependencyProperty.RegisterReadOnly("Files",
-            typeof(ICollection<LogItem>), typeof(LogFinder),
-            new FrameworkPropertyMetadata(new ObservableCollection<LogItem>(),
+            typeof(LogItemObservableList), typeof(LogFinder),
+            new FrameworkPropertyMetadata(new LogItemObservableList(),
                 FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnFilesChanged,
                 CoerceValueCallback));
 
@@ -62,12 +62,12 @@ namespace ParseLogsLib
         }
 
         //public ObservableCollection<LogItem> Files { get; } = new ObservableCollection<LogItem>();
-        public ObservableCollection<LogItem> Files
+        public LogItemObservableList Files 
         {
             get
             {
                 Logger.Info($"trying to access collection {System.Threading.Thread.CurrentThread.ManagedThreadId}");
-                return (ObservableCollection<LogItem>) GetValue(FilesProperty);
+                return (LogItemObservableList) GetValue(FilesProperty);
             }
             set { SetValue(FilesProperty, value); }
         }
@@ -80,7 +80,7 @@ namespace ParseLogsLib
             Logger.Info("LogFinder constructor.");
             Dispatcher.BeginInvoke(DispatcherPriority.Normal, new DispatcherDelegate(() =>
             {
-                SetValue(FilesPropertyKey, new ObservableCollection<LogItem>());
+                SetValue(FilesPropertyKey, new LogItemObservableList());
                 BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
             }));
             FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
