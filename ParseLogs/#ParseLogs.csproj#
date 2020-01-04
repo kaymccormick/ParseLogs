@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Toolkit.UI.XamlHost.6.0.0\build\Microsoft.Toolkit.UI.XamlHost.props" Condition="Exists('..\packages\Microsoft.Toolkit.UI.XamlHost.6.0.0\build\Microsoft.Toolkit.UI.XamlHost.props')" />
   <Import Project="..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props" Condition="Exists('..\packages\Microsoft.Windows.SDK.Contracts.10.0.18362.2005\build\Microsoft.Windows.SDK.Contracts.props')" />
   <Import Project="..\packages\Microsoft.Toolkit.Win32.UI.XamlApplication.6.0.0\build\Microsoft.Toolkit.Win32.UI.XamlApplication.props" Condition="Exists('..\packages\Microsoft.Toolkit.Win32.UI.XamlApplication.6.0.0\build\Microsoft.Toolkit.Win32.UI.XamlApplication.props')" />
-  <Import Project="..\packages\Microsoft.Toolkit.Win32.UI.SDK.6.0.0\build\Microsoft.Toolkit.Win32.UI.SDK.props" Condition="Exists('..\packages\Microsoft.Toolkit.Win32.UI.SDK.6.0.0\build\Microsoft.Toolkit.Win32.UI.SDK.props')" />
+n  <Import Project="..\packages\Microsoft.Toolkit.Win32.UI.SDK.6.0.0\build\Microsoft.Toolkit.Win32.UI.SDK.props" Condition="Exists('..\packages\Microsoft.Toolkit.Win32.UI.SDK.6.0.0\build\Microsoft.Toolkit.Win32.UI.SDK.props')" />
   <Import Project="..\packages\CefSharp.Wpf.75.1.143\build\CefSharp.Wpf.props" Condition="Exists('..\packages\CefSharp.Wpf.75.1.143\build\CefSharp.Wpf.props')" />
   <Import Project="..\packages\CefSharp.Common.75.1.143\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.75.1.143\build\CefSharp.Common.props')" />
   <Import Project="..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props" Condition="Exists('..\packages\cef.redist.x86.75.1.14\build\cef.redist.x86.props')" />
@@ -167,6 +167,7 @@
     <Reference Include="Microsoft.MarkedNet, Version=1.0.13.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.MarkedNet.1.0.13\lib\net452\Microsoft.MarkedNet.dll</HintPath>
     </Reference>
+    <Reference Include="netstandard" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -383,9 +384,6 @@
     <PackageReference Include="EO.Pdf">
       <Version>19.2.91</Version>
     </PackageReference>
-    <PackageReference Include="Fluent.Ribbon">
-      <Version>7.0.1</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers">
       <Version>2.9.6</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -412,8 +410,8 @@
     <PackageReference Include="pose">
       <Version>1.2.1</Version>
     </PackageReference>
-    <PackageReference Include="Prism.RibbonRegionAdapter">
-      <Version>0.20.0.1</Version>
+    <PackageReference Include="PostSharp">
+      <Version>6.4.5</Version>
     </PackageReference>
     <PackageReference Include="winapicp">
       <Version>1.1.0</Version>

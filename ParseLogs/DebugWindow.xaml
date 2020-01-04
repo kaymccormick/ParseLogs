@@ -1,4 +1,4 @@
-﻿<Window x:Class="ParseLogs.DebugWindow"
+﻿<Window x:Name="window" x:Class="ParseLogs.DebugWindow"
         FontSize="18"
         Loaded="DebugWindow_OnLoaded"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -34,9 +34,7 @@
         </Grid.ColumnDefinitions>
         <Menu Style="{StaticResource MenuStyle}" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0">
             <MenuItem Style="{StaticResource MenuItemStyle}" Header="Debug">
-                <MenuItem Header="Log Viewer" Command="{x:Static parseLogsLib:ParseLogsCommands.ShowWindowCommand}">
-                    <MenuItem.CommandParameter><x:Type TypeName="local:LogWindow"></x:Type></MenuItem.CommandParameter>
-                   </MenuItem>
+                <MenuItem Header="Log Viewer" Command="{x:Static parseLogsLib:ParseLogsCommands.ShowWindowCommand}" CommandParameter="{Binding LogWindowType, ElementName=window}"/>
             </MenuItem>
         </Menu>
         <ListView Name="ThreadListView" 
@@ -45,12 +43,12 @@
                   Grid.Row="2"
                   Grid.Column="0"
                   >
-<ListView.View>
-    <GridView>
-        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
-        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
                 </GridView>
-</ListView.View>            
+            </ListView.View>
         </ListView>
     </Grid>
 </Window>

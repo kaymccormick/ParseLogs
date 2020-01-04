@@ -20,47 +20,62 @@ namespace ParseLogsLib
         {
             public bool CanExecute(object parameter)
             {
-                Window window;
-                Type t;
-                HandleParameter(parameter, out window, out t);
-                object[] attribs = t.Assembly.GetCustomAttributes(typeof(AssemblyCompanyAttribute), true);
-                string myCompany = "";
-                if (attribs.Length > 0)
+                try
                 {
-                    myCompany = ((AssemblyCompanyAttribute) attribs[0]).Company;
+                    Window window;
+                    Type t;
+                    HandleParameter(parameter, out window, out t);
+                    object[] attribs = t.Assembly.GetCustomAttributes(typeof(AssemblyCompanyAttribute), true);
+                    string myCompany = "";
+                    if (attribs.Length > 0)
+                    {
+                        myCompany = ((AssemblyCompanyAttribute) attribs[0]).Company;
+                    }
+
+                    foreach (var w in Application.Current.Windows)
+                    {
+                        var type = w.GetType();
+                        var ass = type.Assembly;
+
+                        object[] myAttribs = ass.GetCustomAttributes(typeof(AssemblyCompanyAttribute), true);
+                        string company = "";
+
+                        if (myAttribs.Length > 0)
+                        {
+                            var a = (AssemblyCompanyAttribute) myAttribs[0];
+                            company = a.Company;
+                        }
+
+                        if (company != myCompany)
+                        {
+                            Logger.Trace("Ignoring window {window} company is {company} not {myCompany}",
+                                w, company, myCompany);
+                            continue;
+                        }
+
+                        Logger.Debug("Checking {window} to see if it is a {type}", w, t);
+                        if (type.IsSubclassOf(t) || type == t)
+                        {
+                            Logger.Debug("returning false for {action}", this);
+                            return false;
+                        }
+                    }
+
+                    Logger.Debug("returning true for {action}", this);
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Logger.Error(e, "Failure in CanExec. {exception}.", e);
+                    if (e.InnerException != null)
+                    {
+                        Logger.Error(e.InnerException, "InnerException is {innerException}", e.InnerException);
+                    }
+
+                    return false;
                 }
 
-                foreach (var w in Application.Current.Windows)
-                {
-                    var type = w.GetType();
-                    var ass = type.Assembly;
-
-                    object[] myAttribs = ass.GetCustomAttributes(typeof(AssemblyCompanyAttribute), true);
-                    string company = "";
-
-                    if (myAttribs.Length > 0)
-                    {
-                        var a = (AssemblyCompanyAttribute) myAttribs[0];
-                        company = a.Company;
-                    }
-
-                    if (company != myCompany)
-                    {
-                        Logger.Trace("Ignoring window {window} company is {company} not {myCompany}",
-                            w, company, myCompany);
-                        continue;
-                    }
-
-                    Logger.Debug("Checking {window} to see if it is a {type}", w, t);
-                    if (type.IsSubclassOf(t) || type == t)
-                    {
-                        Logger.Debug("returning false for {action}", this);
-                        return false;
-                    }
-                }
-
-                Logger.Debug("returning true for {action}", this);
-                return true;
+                return false;
             }
 
             private void HandleParameter(object parameter, out Window window, out Type type)
@@ -76,7 +91,7 @@ namespace ParseLogsLib
                 if (type == null)
                 {
                     throw new ArgumentException(
-                        String.Format("Invalid parameter for command {command}, {parameter}", this, parameter),
+                        $"Invalid parameter for command {this}, parameter {parameter ?? "null"}",
                         "parameter");
                 }
 
@@ -85,43 +100,52 @@ namespace ParseLogsLib
 
             public void Execute(object parameter)
             {
-                Logger.Debug("Executing command {command}", this);
-                if (!CanExecute(parameter))
+                try
                 {
-                    throw new Exception();
-                }
-
-                Type type;
-                Window w;
-                HandleParameter(parameter, out w, out type);
-                if (type == null)
-                {
-                    throw new ArgumentException("Invalid argument", "parameter");
-                }
-
-                if (w != null)
-                {
-                    if (w.Visibility != Visibility.Visible)
+                    Logger.Debug("Executing command {command}", this);
+                    if (!CanExecute(parameter))
                     {
-                        w.Show();
+                        throw new Exception();
                     }
 
-                    return;
-                }
+                    Type type;
+                    Window w;
+                    HandleParameter(parameter, out w, out type);
+                    if (type == null)
+                    {
+                        throw new ArgumentException(
+                            $"Invalid parameter for command {this}, parameter {parameter}",
+                            "parameter");
+                    }
 
-                w = type.GetConstructor(Type.EmptyTypes).Invoke(null) as Window;
-                if (w == null)
-                {
-                    throw new ArgumentException();
-                }
+                    if (w != null)
+                    {
+                        if (w.Visibility != Visibility.Visible)
+                        {
+                            w.Show();
+                        }
 
-                w.Show();
-                w.Initialized += (sender, args) =>
+                        return;
+                    }
+
+                    w = type.GetConstructor(Type.EmptyTypes).Invoke(null) as Window;
+                    if (w == null)
+                    {
+                        throw new ArgumentException();
+                    }
+
+                    w.Show();
+                    w.Initialized += (sender, args) =>
+                    {
+                        Logger.Debug("In initialized, calling CanExecuteChanged handler.");
+                        var eventArgs = new EventArgs();
+                        CanExecuteChanged.Invoke(this, EventArgs.Empty);
+                    };
+                }
+                catch (Exception ex)
                 {
-                    Logger.Debug("In initialized, calling CanExecuteChanged handler.");
-                    var eventArgs = new EventArgs();
-                    CanExecuteChanged.Invoke(this, EventArgs.Empty);
-                };
+                    Logger.Error("Failure in command. {exception}.", ex);
+                }
             }
 
 

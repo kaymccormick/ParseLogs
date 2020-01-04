@@ -1,4 +1,6 @@
-﻿<Window x:Name="window" x:Class="ParseLogs.LogWindow"
+﻿<RibbonWindow 
+    x:Name="RibbonWindow"
+    x:Class="ParseLogs.LogRibbonWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,21 +12,28 @@
         FontSize="18"
         Title="LogWindow" Height="450" Width="800">
     <Window.Resources>
-        <ControlTemplate x:Key="LevelsControlTemplate"></ControlTemplate>
         <DataTemplate x:Key="levelButtonTemplate">
-            <Button Margin="10"  Content="{Binding Path=.}"></Button>
+            <Button Content="{Binding Path=.}"></Button>
         </DataTemplate>
         <ItemsPanelTemplate x:Key="LogItemsPanel" >
-            <StackPanel Orientation="Horizontal"></StackPanel>
-            </ItemsPanelTemplate>
+            
+        </ItemsPanelTemplate>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ItemsControl ItemsPanel="{StaticResource LogItemsPanel}" ItemTemplate="{StaticResource levelButtonTemplate}" ItemsSource="{Binding Source={x:Static local:LogWindow.LoggingLevels}}">
-        </ItemsControl>
+        <Ribbon Name="LayoutRoot">
+            <Ribbon.QuickAccessToolBar>
+                <RibbonButton SmallImageSource="Images/exit-to-app-button.svg"></RibbonButton>
+            </Ribbon.QuickAccessToolBar>
+        </Ribbon>
+        <StackPanel Orientation="Horizontal">
+            <ItemsControl ItemsPanel="{StaticResource LogItemsPanel}" ItemTemplate="{StaticResource levelButtonTemplate}" ItemsSource="{Binding Source={x:Static local:LogWindow.LoggingLevels}}">
+            </ItemsControl>
+
+        </StackPanel>
         <dj:NLogViewer Name="LogViewer" Grid.Row="1" Grid.Column="0"></dj:NLogViewer>
     </Grid>
-</Window>
+</RibbonWindow>

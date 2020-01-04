@@ -28,6 +28,12 @@ namespace ParseLogs
         private static App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private LogWindow _logWindow;
+        public static readonly DependencyProperty LogWindowTypeProperty = DependencyProperties.LogWindowTypeProperty;
+        public Type LogWindowType
+        {
+            get { return (Type)GetValue(DependencyProperties.LogWindowTypeProperty); }
+            set { SetValue(DependencyProperties.LogWindowTypeProperty, value); }
+        }
 
         public XDocument Document
         {

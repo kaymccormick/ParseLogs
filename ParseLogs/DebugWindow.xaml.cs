@@ -24,6 +24,13 @@ namespace ParseLogs
         public static IEnumerable<ProcessThread> Threads { get; } =
             Process.GetCurrentProcess().Threads.Cast<ProcessThread>() as IEnumerable<ProcessThread>;
 
+        public static readonly DependencyProperty LogWindowTypeProperty = DependencyProperties.LogWindowTypeProperty;
+        public Type LogWindowType
+        {
+            get { return (Type)GetValue(DependencyProperties.LogWindowTypeProperty); }
+            set { SetValue(DependencyProperties.LogWindowTypeProperty, value); }
+        }
+
         public DebugWindow()
         {
             InitializeComponent();

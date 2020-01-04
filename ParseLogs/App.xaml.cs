@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -31,12 +32,16 @@ namespace ParseLogs
     {
         [Option('D', "debugOnly", Default = false)]
         public Boolean DebugOnly { get; set; }
+        [Option(Default = true)]
+        public Boolean UseRibbon { get; set; }
     }
 
     public partial class App : Application
     {
         public CommonManager CommonManager { get; }
 
+        public Type LogWindowType { get; set; } = typeof(LogWindow);
+    
         public App()
         {
             NativeMethods.CBTProc x;
@@ -146,6 +151,11 @@ namespace ParseLogs
                     // Uri
                     //     startupUri= new Uri(debugwindowXaml);
                     // StartupUri = startupUri;
+                }
+
+                if (options.UseRibbon)
+                {
+                    LogWindowType = typeof(LogRibbonWindow);
                 }
             });
         }
