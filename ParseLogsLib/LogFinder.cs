@@ -85,7 +85,7 @@ namespace ParseLogsLib
                 SetValue(FilesPropertyKey, new LogItemObservableList());
                 BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
             }));
-            FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
+            FindLogsCommandBinding = new CommandBinding(ParseLogsCommands.FindLogsCommand, Executed);
         }
 
         private delegate void RaiseDelegate();

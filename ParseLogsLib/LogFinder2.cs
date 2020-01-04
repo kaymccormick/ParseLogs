@@ -26,10 +26,9 @@ namespace ParseLogsLib
     public class LogFinder2 : DependencyObject, ILogFinder2
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        public Dispatcher Dispatcher { get; }
         public object FilesLock { get; } = new object();
 
-        public static readonly DependencyPropertyKey FilesPropertyKey = DependencyProperty.RegisterReadOnly("Files",
+        public static readonly DependencyPropertyKey FilesPropertyKey = DependencyProperty.RegisterReadOnly("Files2",
             typeof(ICollection<LogItem>), typeof(LogFinder),
             new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnFilesChanged,
                 CoerceValueCallback));
@@ -65,7 +64,7 @@ namespace ParseLogsLib
                 throw;
             }
             BindingOperations.EnableCollectionSynchronization(Files, FilesLock);
-            FindLogsCommandBinding = new CommandBinding(Commands.FindLogsCommand, Executed);
+            FindLogsCommandBinding = new CommandBinding(ParseLogsCommands.FindLogsCommand, Executed);
         }
         private void Executed(object sender, ExecutedRoutedEventArgs e)
         {

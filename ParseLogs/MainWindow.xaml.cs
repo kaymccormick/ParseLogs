@@ -3,13 +3,17 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Xml.Linq;
+using EO.Internal;
 using FolderBrowser.Views;
+using NLog;
 using ParseLogsLib;
 using Path = System.IO.Path;
 
@@ -21,7 +25,7 @@ namespace ParseLogs
     public partial class MainWindow : Window
 
     {
-        private App app = Application.Current as App;
+        private static App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
         private LogWindow _logWindow;
 
@@ -48,8 +52,6 @@ namespace ParseLogs
             LogFinder = new LogFinder();
             app.LogFinder = LogFinder;
 
-
-            app = Application.Current as App;
             // s.Source = app.Files;
             // var d = CollectionViewSource.GetDefaultView(app.     );
             // int c = (from x in d.SortDescriptions select x).Count();
@@ -57,45 +59,33 @@ namespace ParseLogs
             // Logger.Trace($"{c}");
             InitializeComponent();
 
-            Logger.Debug($"Checkign resources");
-            if (Resources.Count == 0)
-            {
-                Logger.Warn($"No resources in MainWindow");
-            }
-            else
-            {
-                foreach (var r in Resources.Keys)
-                {
-                    var v = TryFindResource(r);
-                    Logger.Debug($"resource {r} = {v}");
-                    if (!(v is string))
-                    {
-                        Logger.Debug($"Type is {v.GetType().Name});");
-                        var typeConverter = TypeDescriptor.GetConverter(v.GetType(), true);
-                        string vs;
-                        if (typeConverter.CanConvertTo(typeof(string)))
-                        {
-                            vs = typeConverter.ConvertTo(v, typeof(string)) as string;
-                        }
-                        else
-                        {
-                            vs = "";
-                        }
+            DebugWindow debugWindow =  new DebugWindow();
+            debugWindow.Show();
 
-                        Logger.Debug($"value: {vs}");
-                        if (v is ObjectDataProvider)
-                        {
-                            var od = v as ObjectDataProvider;
-                            var d = od.Data;
-                            Logger.Debug($"ObjectInstance is {od.ObjectInstance}, data is {d}");
-                        } else if (v is CollectionViewSource)
-                        {
-                            var cvs = v as CollectionViewSource;
-                            Logger.Debug($"View is {cvs.View}");
-                        }
+            foreach (FieldInfo f in typeof(StartupActions).GetFields(
+                BindingFlags.Static | BindingFlags.Public | BindingFlags.ExactBinding))
+            {
+                var fieldValue = f.GetValue(null);
+                Delegate d = fieldValue as Delegate;
+                if (d != null)
+                {
+                    if (!d.GetMethodInfo().GetParameters().Any())
+                    {
+                        Action a = d as Action;
+                        Debug.Assert(a != null);
+                        Task.Run(a);
                     }
                 }
             }
+
+            _logWindow = new LogWindow();
+            //_logWindow.ShowActivated = true;
+            _logWindow.Show();
+
+            Task.Run(() =>
+            {
+            });
+
 
             ObjectDataProvider o = TryFindResource("DrivesProvider") as ObjectDataProvider;
             var typ = o.ObjectInstance.GetType().ToString();
@@ -104,15 +94,14 @@ namespace ParseLogs
             CommandBindings.Add(
                 app.LogFinder.FindLogsCommandBinding);
 
-
-            CommandManager.AddPreviewCanExecuteHandler(this, (sender, args) =>
+            CommandManager.AddPreviewExecutedHandler(this, (sender, args) =>
             {
                 CommandConverter con = new CommandConverter();
                 string cmd = WhatCommand(args.Command);
                 var convertFrom = con.ConvertToString(args.Command);
                 //Logger.Info($"{convertFrom} {convertFrom.GetType().FullName}");
                 Logger.Info(
-                    $"Can execute {cmd} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
+                    $" executed {cmd} {args.Parameter} {args.Source} {args.OriginalSource} {args.RoutedEvent}");
             });
 
             // CollectionViewSource s = new CollectionViewSource();
@@ -142,15 +131,6 @@ namespace ParseLogs
 
                         BindingOperations.SetBinding(FilesListView, itemsSourceProperty, binding);
                         */
-            _logWindow = new LogWindow();
-            _logWindow.ShowActivated = true;
-            _logWindow.Loaded += (sender, args) =>
-            {
-                // var shell = new Shell32.Shell();
-                // shell.TileHorizontally();
-            };
-            _logWindow.Show();
-
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
                 var typeInfos = assembly.DefinedTypes.Where((info, i) => info.IsSubclassOf(typeof(TraceSource)));
@@ -171,15 +151,32 @@ namespace ParseLogs
             }
         }
 
+        private void LogInstance(object instance, FieldInfo field, LogLevel loglevel)
+        {
+            //LogEventInfo event = new LogEventInfo(loglevel, null, )
+            throw new NotImplementedException();
+        }
+
         private string WhatCommand(ICommand argsCommand)
         {
-            if (argsCommand == Commands.FindLogsCommand)
+            if (argsCommand == ParseLogsCommands.FindLogsCommand)
             {
                 return "FindLogsCommand";
             }
+            else if (argsCommand == DebugCommands.DumpResources)
+            {
+                return "DebugCommands.DumpResources";
+            }
 
+            var nameProp = argsCommand.GetType().GetProperty("Name");
+            if (nameProp != null)
+            {
+                object o = nameProp.GetValue(argsCommand);
+                //Logger.Debug($"Command has name of {o}");
+                return o.ToString();
+            }   
 
-            return "unknown";
+            return $"{argsCommand}";
         }
 
 

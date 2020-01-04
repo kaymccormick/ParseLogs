@@ -1,4 +1,5 @@
-﻿<Window x:Name="window" Closed="MainWindow_OnClosed" Loaded="MainWindow_OnLoaded" Initialized="MainWindow_OnInitialized"
+﻿<Window x:Name="window" Closed="MainWindow_OnClosed" Loaded="MainWindow_OnLoaded"
+        Initialized="MainWindow_OnInitialized"
         x:Class="ParseLogs.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -14,27 +15,39 @@
         xmlns:system="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Window.CommandBindings>
         <!-- <CommandBinding Command="{x:Static parseLogsLib:Commands.FindLogsCommand}" /> -->
     </Window.CommandBindings>
     <Window.Resources>
-        <ObjectDataProvider x:Key="Methods" ObjectInstance="{x:Type io:DriveInfo}" MethodName="GetMethods"></ObjectDataProvider>
-        <ObjectDataProvider x:Key="Methods2" ObjectInstance="{StaticResource Methods}" ></ObjectDataProvider>
+        <x:Array x:Key="CoreAssemblies" Type="{x:Type system:String}">
+            <system:String>PresentationCore</system:String>
+            <system:String>PresentationFramework</system:String>
+            <system:String>WindowsBase</system:String>
+        </x:Array>
+        <ObjectDataProvider x:Key="Methods" ObjectInstance="{x:Type io:DriveInfo}" MethodName="GetMethods" />
+        <ObjectDataProvider x:Key="Methods2" ObjectInstance="{StaticResource Methods}" />
         <ObjectDataProvider x:Key="DrivesProvider" ObjectType="{x:Type io:DriveInfo}" MethodName="GetDrives">
             <ObjectDataProvider.ConstructorParameters>c:</ObjectDataProvider.ConstructorParameters>
         </ObjectDataProvider>
-        <CollectionViewSource x:Key="MethodsView" Source="{StaticResource Methods}"></CollectionViewSource>
-        <ObjectDataProvider x:Key="xxx" ObjectInstance="{StaticResource MethodsView}"></ObjectDataProvider>
+        <CollectionViewSource x:Key="MethodsView" Source="{StaticResource Methods}" />
+        <ObjectDataProvider x:Key="xxx" ObjectInstance="{StaticResource MethodsView}" />
         <DataTemplate x:Key="message" DataType="{x:Type xlinq:XElement}">
             <WrapPanel Margin="10">
-                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=FromTextBlock}" VerticalAlignment="Stretch" Content="From"/>
-                <TextBlock Margin="10" VerticalAlignment="Center" Name="FromTextBlock"  Text="{Binding Path=Attribute[from].Value}"/>
+                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=FromTextBlock}"
+                       VerticalAlignment="Stretch" Content="From" />
+                <TextBlock Margin="10" VerticalAlignment="Center" Name="FromTextBlock"
+                           Text="{Binding Path=Attribute[from].Value}" />
 
-                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=ToTextBlock}" VerticalAlignment="Stretch" Content="To"/>
-                <TextBlock Name="ToTextBlock" Margin="10" VerticalAlignment="Center" Text="{Binding Path=Attribute[to].Value}"/>
+                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=ToTextBlock}"
+                       VerticalAlignment="Stretch" Content="To" />
+                <TextBlock Name="ToTextBlock" Margin="10" VerticalAlignment="Center"
+                           Text="{Binding Path=Attribute[to].Value}" />
 
-                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=TextTextBlock}" VerticalAlignment="Stretch" Content="To"/>
-                <TextBlock Name="TextTextBlock" Margin="10" VerticalAlignment="Center" Text="{Binding Path=Attribute[text].Value}"/>
+                <Label Margin="10" VerticalContentAlignment="Center" Target="{Binding ElementName=TextTextBlock}"
+                       VerticalAlignment="Stretch" Content="To" />
+                <TextBlock Name="TextTextBlock" Margin="10" VerticalAlignment="Center"
+                           Text="{Binding Path=Attribute[text].Value}" />
             </WrapPanel>
         </DataTemplate>
 
@@ -43,77 +56,85 @@
                          XPath="Leagues/League"/>
 -->
         <!--Source={x:Static Application.Current}, -->
-        <CollectionViewSource  Source="{Binding LogFinder.Files, ElementName=window}" x:Key="FilesDataView"  />
+        <CollectionViewSource Source="{Binding LogFinder.Files, ElementName=window}" x:Key="FilesDataView" />
     </Window.Resources>
     <!--        <Window.DataContext ></Window.DataContext>-->
     <!-- </Window.Resources> -->
     <!--    <Window.DataContext><Binding Source="{DynamicResource}"></Binding></Window.DataContext>-->
-    <Grid DataContext="{Binding Source={StaticResource DrivesProvider}}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Menu>
-            <MenuItem />
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Dump Resources" Command="{x:Static local:DebugCommands.DumpResources}">Dump Resources</MenuItem>
         </Menu>
-        <Button Grid.Column="0" Command="{x:Static parseLogsLib:Commands.FindLogsCommand}" Name="_searchButton"
-                Grid.Row="0" Content="Search" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10,0,0,9.8" />
-        <!-- <Button.Triggers> -->
-        <!--     <EventTrigger RoutedEvent="Button.Click"><EventTrigger.Actions> -->
-        <!--         < -->
-        <!--     </EventTrigger.Actions></EventTrigger> -->
-        <!-- </Button.Triggers> -->
-
-        <ListBox  Name="DriveListBox" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Mode=OneWay}"/>
-        <ListBox Name="FilesListView" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
-            <ListBox.Triggers>
-            </ListBox.Triggers>
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Path=FullName}" />
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Grid.ColumnSpan="2"
-              VerticalAlignment="Stretch" DataContext="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}" >
-            <Grid.Resources>
-            </Grid.Resources>
+        <Grid Margin="25" DataContext="{Binding Source={StaticResource DrivesProvider}}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.ColumnSpan="2" Text="{Binding Path=FullName}" Width="auto"></TextBlock>
+            <Menu>
+                <MenuItem />
+            </Menu>
+            <Button Grid.Column="0" Command="{x:Static parseLogsLib:ParseLogsCommands.FindLogsCommand}" Name="_searchButton"
+                    Grid.Row="0" Content="Search" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                    Margin="10,0,0,9.8" />
+            <!-- <Button.Triggers> -->
+            <!--     <EventTrigger RoutedEvent="Button.Click"><EventTrigger.Actions> -->
+            <!--         < -->
+            <!--     </EventTrigger.Actions></EventTrigger> -->
+            <!-- </Button.Triggers> -->
 
-            <ListBox x:Name="listView" Grid.Row="2" 
-                     Grid.ColumnSpan="2" HorizontalAlignment="Stretch"
-                     Margin="0,0,0,-75.2"
-                     VerticalAlignment="Stretch" 
-                     DataContext="{DynamicResource ResourceKey=FilesDataView}"
-                     ItemsSource="{Binding Document.Root.Elements}" ItemTemplate="{Binding Mode=OneWay, Source={StaticResource message}}"/>
+            <ListBox Name="DriveListBox" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Mode=OneWay}" />
+            <ListBox Name="FilesListView" Grid.Row="1" Grid.Column="1"
+                     ItemsSource="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
+                <ListBox.Triggers>
+                </ListBox.Triggers>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path=FullName}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Grid.ColumnSpan="2"
+                  VerticalAlignment="Stretch"
+                  DataContext="{Binding Mode=OneWay, Source={StaticResource FilesDataView}}">
+                <Grid.Resources>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.ColumnSpan="2" Text="{Binding Path=FullName}" Width="auto" />
 
-            <GroupBox Grid.Row="3" Grid.ColumnSpan="2" DataContext="{Binding SelectedItem, ElementName=listView}" >
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Text="{Binding Attribute[to]}"></TextBlock>
-                    <TextBlock Text="{Binding Attribute[from]}"></TextBlock>
-                    <TextBlock Text="{Binding Attribute[text]}"></TextBlock>
-                </StackPanel>
-            </GroupBox>
+                <ListBox x:Name="listView" Grid.Row="2"
+                         Grid.ColumnSpan="2" HorizontalAlignment="Stretch"
+                         Margin="0,0,0,-75.2"
+                         VerticalAlignment="Stretch"
+                         DataContext="{DynamicResource ResourceKey=FilesDataView}"
+                         ItemsSource="{Binding Document.Root.Elements}"
+                         ItemTemplate="{Binding Mode=OneWay, Source={StaticResource message}}" />
+
+                <GroupBox Grid.Row="3" Grid.ColumnSpan="2" DataContext="{Binding SelectedItem, ElementName=listView}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Attribute[to]}" />
+                        <TextBlock Text="{Binding Attribute[from]}" />
+                        <TextBlock Text="{Binding Attribute[text]}" />
+                    </StackPanel>
+                </GroupBox>
+
+
+            </Grid>
 
 
         </Grid>
-
-
-
-    </Grid>
+    </DockPanel>
 </Window>

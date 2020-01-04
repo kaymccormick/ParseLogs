@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel.Composition;
-using System.ComponentModel.Composition.Hosting;
-using System.Configuration;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Security.RightsManagement;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Text;
 using System.Windows;
-using System.Windows.Data;
 using Autofac;
+using CommandLine;
 using ParseLogsLib;
 using WpfCommonLib;
 
@@ -22,6 +17,22 @@ namespace ParseLogs
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
+    ///
+    ///
+    public enum ExitCodes
+    {
+        Success = 0,
+        GeneralError = 1,
+        ArgumentsError = 2,
+
+        
+    }
+    class Options
+    {
+        [Option('D', "debugOnly", Default = false)]
+        public Boolean DebugOnly { get; set; }
+    }
+
     public partial class App : Application
     {
         public CommonManager CommonManager { get; }
@@ -36,16 +47,15 @@ namespace ParseLogs
             CommonManager = CommonManager.Instance;
             CommonManager.RegisterApplication(this);
 
-            foreach (var thread in Process.GetCurrentProcess().Threads)
-            {
-                
-                ProcessThread t = thread as ProcessThread;
-                Logger.Trace($"Thread {t.Id} is \"\"");
-            }
+            // foreach (var thread in Process.GetCurrentProcess().Threads)
+            // {
+            //     
+            //     ProcessThread t = thread as ProcessThread;
+            //     Logger.Trace($"Thread {t.Id} is \"\"");
+            // }
         }
 
 
-        private IContainer container;
         internal void InitContainer()
         {
             var builder = new ContainerBuilder();
@@ -63,23 +73,20 @@ namespace ParseLogs
             {
                 Logger.Debug($"resource {r}");
             }
-
         }
 
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         public ILogFinder LogFinder { get; set; }
-        protected override void OnStartup(StartupEventArgs e)
+
+        private static void ErrorExit(ExitCodes exitcode = ExitCodes.GeneralError)
         {
-            Logger.Info("On startup");
+            int code = (int) Convert.ChangeType(exitcode, exitcode.GetTypeCode());
+            Logger.Info("Exiting with code {exitcode}, {name}", code, exitcode);
+            System.Windows.Application.Current.Shutdown(code);
         }
 
-        private static void ErrorExit()
-        {
-            System.Windows.Application.Current.Shutdown(1);
-        }
-
-        private void Application_DispatcherUnhandledException(object sender,
+        private void Application_DispatcherUnhandledException1(object sender,
             System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
             Logger.Error(e.Exception, "Unhandled");
@@ -90,6 +97,62 @@ namespace ParseLogs
             // }
         }
 
+        private void Application_Startup1(object sender, StartupEventArgs e)
+        {
+            var newArgs = e.Args.ToList().Prepend(Assembly.GetEntryAssembly().Location);
+            Logger.Debug("Parsing command line arguments {arguments}", newArgs);
+            StringBuilder b = new StringBuilder(200);
+            TextWriter t = new StringWriter(b);
+            var parserSettings = new ParserSettings {HelpWriter = t};
+            Parser parser = new Parser(settings => { settings.HelpWriter = t; });
+
+            var parserResult = parser.ParseArguments<Options>(e.Args);
+            var r = new StringReader(b.ToString());
+            try
+            {
+                string s;
+                while ((s = r.ReadLine()) != null)
+                {
+                    Logger.Error(s);
+                }
+
+                MessageBox.Show(b.ToString(), "Help text");
+                ErrorExit(ExitCodes.ArgumentsError);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("Exception {exception}", ex);
+            }
+
+            parserResult.WithParsed<Options>(options =>
+            {
+                AppOptions = options;
+                if (AppOptions.DebugOnly)
+                {
+                    //Logger.Debug("{StartupUri}.AbsolutePath);
+                    var debugwindowXaml = "DebugWindow.xaml";
+                    // StartupUri = new Uri(debugwindowXaml);
+                    // Logger.Debug("Startup URI is {startupUri}", StartupUri);
+
+                    TypeConverter converter = TypeDescriptor.GetConverter(typeof(Uri));
+                    if (converter.CanConvertFrom(typeof(string)))
+                    {
+                        StartupUri = (Uri) converter.ConvertFrom(debugwindowXaml);
+                        Logger.Debug("Startup URI is {startupUri}", StartupUri);
+                    }
+
+                    // StartupUri.AbsolutePath  = debugwindowXaml;
+                    // StartupUri = new Uri();
+                    // Uri
+                    //     startupUri= new Uri(debugwindowXaml);
+                    // StartupUri = startupUri;
+                }
+            });
+        }
+
+        Options AppOptions { get; set; }
+
+
         private static class NativeMethods
         {
             [StructLayout(LayoutKind.Sequential)]
@@ -99,6 +162,7 @@ namespace ParseLogs
                 public IntPtr hwnd;
                 public uint wHitTestCode;
                 public IntPtr dwExtraInfo;
+
                 public override string ToString()
                 {
                     return $"({pt.X,4},{pt.Y,4})";
@@ -134,6 +198,7 @@ namespace ParseLogs
                 WH_KEYBOARD_LL = 13,
                 WH_MOUSE_LL = 14
             }
+
             public enum HookCodes
             {
                 HC_ACTION = 0,
@@ -144,6 +209,7 @@ namespace ParseLogs
                 HC_SYSMODALON = 4,
                 HC_SYSMODALOFF = 5
             }
+
             public enum CBTHookCodes
             {
                 HCBT_MOVESIZE = 0,
@@ -168,11 +234,11 @@ namespace ParseLogs
             public static extern IntPtr CallNextHookEx(IntPtr hookPtr, int nCode, IntPtr wordParam, IntPtr longParam);
 
             [DllImport("user32.dll")]
-            public static extern IntPtr SetWindowsHookEx(HookType hookType, CBTProc hookProc, IntPtr instancePtr, uint threadID);
+            public static extern IntPtr SetWindowsHookEx(HookType hookType, CBTProc hookProc, IntPtr instancePtr,
+                uint threadID);
 
             [DllImport("kernel32.dll")]
             public static extern uint GetCurrentThreadId();
         }
     }
-
 }

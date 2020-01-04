@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("ParseLogs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Kay McCormick")]
 [assembly: AssemblyProduct("ParseLogs")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

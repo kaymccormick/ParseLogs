@@ -269,6 +269,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="DebugWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -281,6 +285,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DebugCommands.cs" />
+    <Compile Include="DebugWindow.xaml.cs">
+      <DependentUpon>DebugWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartupActions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IMetadataItem.cs" />
     <Compile Include="LogWindow.xaml.cs">
@@ -327,6 +336,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\commandline\src\CommandLine\CommandLine.csproj">
+      <Project>{a22e3220-7241-419b-9c29-58d4102ece58}</Project>
+      <Name>CommandLine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NLogViewer\src\NLogViewer\NLogViewer.csproj">
+      <Project>{48a3c54f-fd9b-4c61-808f-212f9bb6f0d3}</Project>
+      <Name>NLogViewer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ParseLogsLib\ParseLogsLib.csproj">
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>
@@ -374,9 +391,6 @@
     </PackageReference>
     <PackageReference Include="pose">
       <Version>1.2.1</Version>
-    </PackageReference>
-    <PackageReference Include="Sentinel.NLogViewer">
-      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="winapicp">
       <Version>1.1.0</Version>

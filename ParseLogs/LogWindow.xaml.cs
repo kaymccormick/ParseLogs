@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using NLog;
 
 namespace ParseLogs
 {
@@ -19,9 +20,13 @@ namespace ParseLogs
     /// </summary>
     public partial class LogWindow : Window
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         public LogWindow()
         {
             InitializeComponent();
         }
+
+        public static IEnumerable<LogLevel> LoggingLevels { get; set; } = NLog.LogLevel.AllLoggingLevels;
     }
 }
