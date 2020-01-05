@@ -27,13 +27,19 @@ namespace ParseLogs
         public static readonly DependencyProperty LogWindowTypeProperty = DependencyProperties.LogWindowTypeProperty;
         public Type LogWindowType
         {
-            get { return (Type)GetValue(DependencyProperties.LogWindowTypeProperty); }
-            set { SetValue(DependencyProperties.LogWindowTypeProperty, value); }
+            get { return (Type)GetValue(LogWindowTypeProperty); }
+            set { SetValue(LogWindowTypeProperty, value); }
         }
 
         public DebugWindow()
         {
             InitializeComponent();
+            Binding binding = new   Binding
+            {
+                Source = Application.Current,
+                Path = new PropertyPath("LogWindowType")
+            };
+            SetBinding(LogWindowTypeProperty, binding);
         }
 
         private void DebugWindow_OnLoaded(object sender, RoutedEventArgs e)

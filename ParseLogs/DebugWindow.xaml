@@ -45,8 +45,8 @@
                   >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="Name"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=StartTime}" Header="Start Time"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ThreadState}" Header="State"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

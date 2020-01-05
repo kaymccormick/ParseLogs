@@ -18,7 +18,7 @@ namespace ParseLogsLib
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
-        public IEnumerable<Lazy<IFinderSubject>> subjects;
+        private IEnumerable<Lazy<IFinderSubject>> subjects;
 
         public class FoundItem
         {
@@ -41,7 +41,7 @@ namespace ParseLogsLib
             return true;
         }
 
-        private Dispatcher _dispatcher;
+        
         public object FilesLock { get; } = new object();
 
         public void Execute(object parameter)

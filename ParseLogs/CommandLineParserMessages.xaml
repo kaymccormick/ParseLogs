@@ -1,0 +1,62 @@
+﻿<UserControl x:Name="MessagesControl"  x:Class="ParseLogs.CommandLineParserMessages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ParseLogs"
+             xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+             xmlns:text="clr-namespace:CommandLine.Text;assembly=CommandLine"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <x:Array x:Key="Examples1" Type="{x:Type local:Example}">
+            <local:Example HelpText="This is help text"></local:Example>
+        </x:Array>
+        <x:Array x:Key="Usages" Type="{x:Type local:Usage}">
+            <local:Usage Examples="{Binding Source={StaticResource Examples1}}">
+            </local:Usage>
+        </x:Array>
+        <ObjectDataProvider x:Key="etest" ObjectInstance="{StaticResource Usages}" MethodName="get_Length"
+                            />
+        <DataTemplate DataType="{x:Type text:ExampleInfo}">
+            <TextBlock Text="{Binding Path=MapResult.HelpText}"></TextBlock>
+        </DataTemplate>
+        <ControlTemplate x:Key="listError" ><DockPanel><TextBlock Foreground="Red" FontSize="24">!</TextBlock>
+            <AdornedElementPlaceholder/>
+        </DockPanel></ControlTemplate>
+    </UserControl.Resources>
+    <UserControl.DataContext><Binding ElementName="MessagesControl" Path="Usages"/>
+        </UserControl.DataContext>
+    <Grid d:DataContext="{d:DesignInstance CreateList=True, Type=local:Usage}">
+        <Grid.RowDefinitions><RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"></RowDefinition></Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock FontSize="20" Foreground="Red"></TextBlock>
+
+        </WrapPanel>
+        <HeaderedItemsControl Validation.ErrorTemplate="{StaticResource listError}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <HeaderedItemsControl.ItemsSource>
+                <Binding Path="."
+                         UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                    <local:UsageValidationRule/>
+                </Binding.ValidationRules>
+            </Binding>
+                </HeaderedItemsControl.ItemsSource>
+            <HeaderedItemsControl.Header><TextBlock Text="Usages"/></HeaderedItemsControl.Header>
+            <HeaderedItemsControl.ItemTemplate>
+                             <DataTemplate>
+                                <ComboBox DataContext="{Binding Path=Examples}" ItemsSource="{Binding .}" Text="{Binding /HelpText}">
+                                </ComboBox></DataTemplate>
+            </HeaderedItemsControl.ItemTemplate>
+        </HeaderedItemsControl>
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock Text="{Binding ElementName=MessagesControl, Path=Usages/Examples}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

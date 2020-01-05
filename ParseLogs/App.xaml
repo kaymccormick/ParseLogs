@@ -4,11 +4,13 @@
     x:Class="ParseLogs.App"
     xmlns:local="clr-namespace:ParseLogs"
     StartupUri="MainWindow.xaml"
+    Startup="Application_Startup"
+    DispatcherUnhandledException="Application_DispatcherUnhandledException1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:System="clr-namespace:System;assembly=mscorlib"
     >
   <Application.Resources>
-        <x:Array x:Key="CommandTypes" Type="System:String">
+      <x:Array x:Key="CommandTypes" Type="System:String">
             <x:Array.Items>
                 <System:String>System.Windows.Input.NavigationCommands</System:String>
             </x:Array.Items>

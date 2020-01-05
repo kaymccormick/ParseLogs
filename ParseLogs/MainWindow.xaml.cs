@@ -27,7 +27,7 @@ namespace ParseLogs
     {
         private static App app = Application.Current as App;
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        private LogWindow _logWindow;
+        private Window _logWindow;
         public static readonly DependencyProperty LogWindowTypeProperty = DependencyProperties.LogWindowTypeProperty;
         public Type LogWindowType
         {
@@ -44,15 +44,6 @@ namespace ParseLogs
             set { (FilesListView.SelectedItems[0] as LogItem).Document = value as XDocument; }
         }
 
-        class XCol : CollectionViewSource
-        {
-            public Type CollectionViewType { get; set; } = typeof(ListCollectionView);
-
-            public XCol() : base()
-            {
-            }
-        }
-
         public MainWindow() : base()
         {
             LogFinder = new LogFinder();
@@ -65,7 +56,14 @@ namespace ParseLogs
             // Logger.Trace($"{c}");
             InitializeComponent();
 
-            DebugWindow debugWindow =  new DebugWindow();
+            Binding binding = new Binding
+            {
+                Source = Application.Current,
+                Path = new PropertyPath("LogWindowType")
+            };
+            SetBinding(LogWindowTypeProperty, binding);
+            
+            DebugWindow debugWindow = new DebugWindow();
             debugWindow.Show();
 
             foreach (FieldInfo f in typeof(StartupActions).GetFields(
@@ -84,7 +82,10 @@ namespace ParseLogs
                 }
             }
 
-            _logWindow = new LogWindow();
+            ConsoleWindow consoleWindow = new ConsoleWindow();
+            consoleWindow.Show();
+
+            _logWindow = LogWindowType.GetConstructor(Type.EmptyTypes).Invoke(null) as Window;
             //_logWindow.ShowActivated = true;
             _logWindow.Show();
 
