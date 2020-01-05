@@ -13,9 +13,12 @@ namespace WebApp
 {
     public class Global : HttpApplication
     {
+        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
+            Logger.Info("Web Application Starting up");
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -10,10 +10,7 @@
     xmlns:System="clr-namespace:System;assembly=mscorlib"
     >
   <Application.Resources>
-      <x:Array x:Key="CommandTypes" Type="System:String">
-            <x:Array.Items>
-                <System:String>System.Windows.Input.NavigationCommands</System:String>
-            </x:Array.Items>
-        </x:Array>
+      <ResourceDictionary Source="AppResoureDictionary.xaml"/>
+
     </Application.Resources>
 </Application>

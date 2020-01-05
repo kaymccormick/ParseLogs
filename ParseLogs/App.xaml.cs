@@ -22,25 +22,23 @@ using WpfCommonLib;
 
 namespace ParseLogs
 {
-    public enum ExitCodes
+    public enum ExitCode
     {
         Success = 0,
         GeneralError = 1,
         ArgumentsError = 2,
     }
 
-    class MySettings : ParserSettings
+    [Verb("ListResources", HelpText = "List resources available.")]
+
+    public class ListResourcesOptions : IVerbOptions
     {
-        public MySettings()
-        {
-        }
     }
 
-    [Verb("ListResources", HelpText = "List resources available.")]
-    public class ListResourcesOptions
+    public interface IVerbOptions
     {
     }
-    
+
     class Options
     {
         [Option('D', "debugOnly", Default = false)]
@@ -65,61 +63,19 @@ namespace ParseLogs
         {
             var parserResult = Parser.ParseArguments<ListResourcesOptions, Options>(Array.Empty<string>());
 
-            // builder.DataSource = "Log.sqlite";
-            // builder.Flags = SQLiteConnectionFlags.DefaultAndLogAll;
-            // Logger.Debug($"Connection string is {builder.ConnectionString}");
-            // SQLiteConnection conn = new SQLiteConnection(builder.ConnectionString);
-            // conn.Open();
-            // Logger.Debug($"conn is {conn}; {conn.State}");
             NativeMethods.CBTProc x;
             PresentationTraceSources.Refresh();
             LoggerConfigurer.PerformConfiguration = false;
-            //NativeMethods.SetWindowsHookEx();
-            /*
-            IEnumerable<UsageInfo> usages = CommandLine.Text.HelpText.UsageTextAs(parserResult, example => example);
-            Window w = new Window();
-            var ctrl = new CommandLineParserMessages();
-            ctrl.Usages = new UsagesFreezableCollection<Usage>(usages);
-            w.Content = ctrl;
-            ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            w.ShowDialog();
-            */
+
             CommonManager = CommonManager.Instance;
             CommonManager.RegisterApplication(this);
-
-            // foreach (var thread in Process.GetCurrentProcess().Threads)
-            // {
-            //     
-            //     ProcessThread t = thread as ProcessThread;
-            //     Logger.Trace($"Thread {t.Id} is \"\"");
-            // }
-        }
-
-
-        internal void InitContainer()
-        {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<ReflectionBackups>().As<IFinderSubject>();
-            //builder.RegisterType<FileFinder>().As<>()
-
-            Assembly me = Assembly.GetExecutingAssembly();
-            foreach (var a in me.GetReferencedAssemblies())
-            {
-                Logger.Debug(a.Name);
-            }
-
-            builder.RegisterAssemblyTypes();
-            foreach (var r in Resources.Keys)
-            {
-                Logger.Debug($"resource {r}");
-            }
         }
 
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
 
         public ILogFinder LogFinder { get; set; }
 
-        private static void ErrorExit(ExitCodes exitcode = ExitCodes.GeneralError)
+        private static void ErrorExit(ExitCode exitcode = ExitCode.GeneralError)
         {
             if (exitcode != null)
             {
@@ -152,7 +108,7 @@ namespace ParseLogs
             {
                 Logger.Debug(inner, inner.Message);
             }
-            ErrorExit(ExitCodes.GeneralError);
+            ErrorExit(ExitCode.GeneralError);
             // foreach (var window in Windows)
             // {
             //     ((Window) window).Close();
@@ -164,13 +120,17 @@ namespace ParseLogs
             var newArgs = new string[e.Args.Length + 1];
             newArgs[0] = Assembly.GetEntryAssembly().Location;
             e.Args.CopyTo(newArgs, 1);
-            Logger.Debug("Parsing command line arguments {arguments}", newArgs);
+            HandleArguments(args: newArgs);
+        }
+
+        private void HandleArguments(ICollection<string> args)
+        {
+            Logger.Debug("Parsing command line arguments {arguments}", args);
             StringBuilder b = new StringBuilder(200);
             TextWriter t = new StringWriter(b);
             Parser parser = new Parser(settings => { settings.HelpWriter = t; });
 
-
-            var parserResult = Parser.ParseArguments<ListResourcesOptions, Options>(newArgs);
+            var parserResult = Parser.ParseArguments<ListResourcesOptions, Options>(args);
             try
             {
                 parserResult.WithParsed<ListResourcesOptions>(
@@ -190,7 +150,7 @@ namespace ParseLogs
                             {Usages = new UsagesFreezableCollection<Usage>(usages)};
                         w.Content = ctrl;
                         w.ShowDialog();
-                        ErrorExit(ExitCodes.ArgumentsError);
+                        ErrorExit(ExitCode.ArgumentsError);
 
                         var r = new StringReader(b.ToString());
                         try
@@ -202,7 +162,7 @@ namespace ParseLogs
                             }
 
                             MessageBox.Show(b.ToString(), "Help text");
-                            ErrorExit(ExitCodes.ArgumentsError);
+                            ErrorExit(ExitCode.ArgumentsError);
                         }
                         catch (Exception ex)
                         {
@@ -242,7 +202,7 @@ namespace ParseLogs
             catch (Exception exception)
             {
                 Logger.Error(exception, "{exception}", exception);
-                ErrorExit(ExitCodes.GeneralError);
+                ErrorExit(ExitCode.GeneralError);
             }
             finally
             {
