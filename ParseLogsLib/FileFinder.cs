@@ -41,7 +41,7 @@ namespace ParseLogsLib
             return true;
         }
 
-        
+
         public object FilesLock { get; } = new object();
 
         public void Execute(object parameter)
@@ -101,6 +101,7 @@ namespace ParseLogsLib
             IEnumerable<DirectoryInfo> dirs;
             //Console.WriteLine(dir.FullName);
             try
+
             {
                 dirs = dir.GetDirectories();
             }
@@ -154,6 +155,7 @@ namespace ParseLogsLib
                 // Console.WriteLine();
                 // Console.WriteLine($"count is {app.Files.Count}")
                 foreach (var s in subjects)
+
                 {
                     if (s.Value.selectionDelegate.Invoke(item))
                     {

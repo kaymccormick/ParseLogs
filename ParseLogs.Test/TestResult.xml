@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="2" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-05 15:54:14Z" end-time="2020-01-05 15:54:21Z" duration="6.855402">
+  <command-line><![CDATA["E:\packages\nunit.consolerunner\3.10.0\tools\nunit3-console.exe" .\ParseLogs.Test.csproj]]></command-line>
+  <test-suite type="Assembly" id="1-1008" name="ParseLogs.Test.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\ParseLogs.Test.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:21Z" duration="5.208721" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="BasePath" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\" />
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="34808" />
+      <property name="_APPDOMAIN" value="domain-68e8e8b7-ParseLogs.Test.csproj" />
+    </properties>
+    <test-suite type="TestSuite" id="1-1009" name="ParseLogs" fullname="ParseLogs" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:21Z" duration="5.153460" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <test-suite type="TestSuite" id="1-1010" name="Test" fullname="ParseLogs.Test" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:21Z" duration="5.152667" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <test-suite type="TestFixture" id="1-1000" name="AppTests" fullname="ParseLogs.Test.AppTests" classname="ParseLogs.Test.AppTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:16Z" duration="0.035796" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1-1001" name="InitCatalogTest" fullname="ParseLogs.Test.AppTests.InitCatalogTest" methodname="InitCatalogTest" classname="ParseLogs.Test.AppTests" runstate="Runnable" seed="1424161779" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:16Z" duration="0.007720" asserts="0" />
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1002" name="ContainerHelperTests" fullname="ParseLogs.Test.ContainerHelperTests" classname="ParseLogs.Test.ContainerHelperTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 15:54:16Z" end-time="2020-01-05 15:54:21Z" duration="5.079972" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-case id="1-1003" name="InitializeContainerTest" fullname="ParseLogs.Test.ContainerHelperTests.InitializeContainerTest" methodname="InitializeContainerTest" classname="ParseLogs.Test.ContainerHelperTests" runstate="Runnable" seed="678662300" result="Passed" start-time="2020-01-05 15:54:20Z" end-time="2020-01-05 15:54:21Z" duration="0.681511" asserts="1" />
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1004" name="LogFinderTests" fullname="ParseLogs.Test.LogFinderTests" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 15:54:21Z" end-time="2020-01-05 15:54:21Z" duration="0.000386" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1-1005" name="ExecuteTest" fullname="ParseLogs.Test.LogFinderTests.ExecuteTest" methodname="ExecuteTest" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" seed="1923984855" result="Passed" start-time="2020-01-05 15:54:21Z" end-time="2020-01-05 15:54:21Z" duration="0.000192" asserts="0">
+            <properties>
+              <property name="ApartmentState" value="MTA" />
+            </properties>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1006" name="TestClass" fullname="ParseLogs.Test.TestClass" classname="ParseLogs.Test.TestClass" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 15:54:21Z" end-time="2020-01-05 15:54:21Z" duration="0.025401" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-case id="1-1007" name="TestMethod" fullname="ParseLogs.Test.TestClass.TestMethod" methodname="TestMethod" classname="ParseLogs.Test.TestClass" runstate="Runnable" seed="1275801635" result="Passed" start-time="2020-01-05 15:54:21Z" end-time="2020-01-05 15:54:21Z" duration="0.025255" asserts="1" />
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

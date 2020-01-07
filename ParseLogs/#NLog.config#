@@ -70,7 +70,7 @@
                 writeTo="msftTeams" />
         <logger name="*"
                 minlevel="TRACE"
-                writeTo="teastLogFile" />
+                writeTo="testLogFile" />
     <logger name="*" writeTo="cache" minlevel="Debug"/> 
     </rules>
 </nlog>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -13,7 +13,7 @@ namespace ParseLogs
     public class ContainerHelper
     {
         public IContainer Container { get; private set; }
-        private LogEntryFactory.Factory logFactory;
+p        private LogEntryFactory.Factory logFactory;
 
         public ContainerHelper()
         {

@@ -1,134 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-02 08:02:30Z" end-time="2020-01-02 08:02:34Z" duration="4.218495">
+<test-run id="2" testcasecount="4" result="Failed" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="2" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-05 13:54:20Z" end-time="2020-01-05 13:54:25Z" duration="4.597070">
   <command-line><![CDATA["C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe" .\ParseLogs.Test\ParseLogs.Test.csproj]]></command-line>
-  <test-suite type="Assembly" id="1-1006" name="ParseLogs.Test.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\ParseLogs.Test.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2020-01-02 08:02:31Z" end-time="2020-01-02 08:02:34Z" duration="3.189936" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+  <test-suite type="Assembly" id="1-1008" name="ParseLogs.Test.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\ParseLogs.Test.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:24Z" duration="3.212070" total="4" passed="3" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
     <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="BasePath" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\" />
       <setting name="DisposeRunners" value="True" />
       <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs" />
       <setting name="ImageRuntimeVersion" value="4.0.30319" />
-      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.8" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
       <setting name="ImageRequiresX86" value="False" />
       <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
       <setting name="NumberOfTestWorkers" value="8" />
     </settings>
     <properties>
-      <property name="_PID" value="30796" />
+      <property name="_PID" value="36744" />
       <property name="_APPDOMAIN" value="domain-68e8e8b7-ParseLogs.Test.csproj" />
     </properties>
-    <test-suite type="TestSuite" id="1-1007" name="ParseLogs" fullname="ParseLogs" runstate="Runnable" testcasecount="3" result="Passed" start-time="2020-01-02 08:02:31Z" end-time="2020-01-02 08:02:34Z" duration="3.163872" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-      <test-suite type="TestSuite" id="1-1008" name="Test" fullname="ParseLogs.Test" runstate="Runnable" testcasecount="3" result="Passed" start-time="2020-01-02 08:02:31Z" end-time="2020-01-02 08:02:34Z" duration="3.163359" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-        <test-suite type="TestFixture" id="1-1000" name="AppTests" fullname="ParseLogs.Test.AppTests" classname="ParseLogs.Test.AppTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-02 08:02:31Z" end-time="2020-01-02 08:02:34Z" duration="3.126510" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
-          <test-case id="1-1001" name="InitCatalogTest" fullname="ParseLogs.Test.AppTests.InitCatalogTest" methodname="InitCatalogTest" classname="ParseLogs.Test.AppTests" runstate="Runnable" seed="221371756" result="Passed" start-time="2020-01-02 08:02:31Z" end-time="2020-01-02 08:02:34Z" duration="3.113738" asserts="0">
-            <output><![CDATA[2020-01-02 00:02:31.6304 Debug Skipping unknown 'NLog' property throwException=true
-2020-01-02 00:02:31.6633 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
-2020-01-02 00:02:31.7910 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
-2020-01-02 00:02:31.7990 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug
-2020-01-02 00:02:31.8299 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug
-2020-01-02 00:02:31.8299 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug
-2020-01-02 00:02:31.8488 Debug Auto loading done
-2020-01-02 00:02:31.8568 Info Message Template Auto Format enabled
-2020-01-02 00:02:31.8918 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:31.9296 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
-2020-01-02 00:02:31.9376 Debug Setting 'ChainsawTarget.newLine' to 'false'
-2020-01-02 00:02:31.9376 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
-2020-01-02 00:02:31.9506 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:31.9506 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
-2020-01-02 00:02:31.9645 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
-2020-01-02 00:02:31.9645 Info Adding target ChainsawTarget(Name=chainsaw)
-2020-01-02 00:02:31.9795 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
-2020-01-02 00:02:31.9795 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:31.9975 Debug Setting 'FileTarget.name' to 'logfile'
-2020-01-02 00:02:31.9975 Debug Setting 'FileTarget.fileName' to 'file.txt'
-2020-01-02 00:02:32.0154 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
-2020-01-02 00:02:32.0154 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:32.0284 Info Adding target FileTarget(Name=logfile)
-2020-01-02 00:02:32.0284 Debug Registered target logfile: NLog.Targets.FileTarget
-2020-01-02 00:02:32.0423 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:32.0423 Debug Setting 'ConsoleTarget.name' to 'logconsole'
-2020-01-02 00:02:32.0423 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
-2020-01-02 00:02:32.0613 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:32.0613 Info Adding target ConsoleTarget(Name=logconsole)
-2020-01-02 00:02:32.0743 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
-2020-01-02 00:02:32.0743 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:32.0743 Debug Setting 'NLogViewerTarget.name' to 'viewer'
-2020-01-02 00:02:32.0952 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
-2020-01-02 00:02:32.0952 Info Adding target NLogViewerTarget(Name=viewer)
-2020-01-02 00:02:32.1081 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
-2020-01-02 00:02:32.1081 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
-2020-01-02 00:02:32.1211 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
-2020-01-02 00:02:32.1211 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
-2020-01-02 00:02:32.1211 Info Adding target NLogViewerTarget(Name=viewer2)
-2020-01-02 00:02:32.1411 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
-2020-01-02 00:02:32.1989 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RichTextBox ---> System.ArgumentException: Target cannot be found: 'RichTextBox'
-   at NLog.Config.Factory`2.CreateInstance(String itemName)
-   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
-   --- End of inner exception stack trace ---
-2020-01-02 00:02:32.2159 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'rtb' not found for logging rule: *.
-2020-01-02 00:02:32.2159 Debug Unused target checking is started... Rule Count: 6, Target Count: 5
-2020-01-02 00:02:32.2478 Debug Unused target checking is completed. Total Rule Count: 6, Total Target Count: 5, Unused Target Count: 0
-2020-01-02 00:02:32.2617 Debug --- NLog configuration dump ---
-2020-01-02 00:02:32.2617 Debug Targets:
-2020-01-02 00:02:32.2617 Debug Chainsaw Target[chainsaw]
-2020-01-02 00:02:32.2817 Debug File Target[logfile]
-2020-01-02 00:02:32.2817 Debug Console Target[logconsole]
-2020-01-02 00:02:32.2936 Debug NLogViewer Target[viewer]
-2020-01-02 00:02:32.2936 Debug NLogViewer Target[viewer2]
-2020-01-02 00:02:32.3086 Debug Rules:
-2020-01-02 00:02:32.3086 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
-2020-01-02 00:02:32.3086 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
-2020-01-02 00:02:32.3276 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ viewer ]
-2020-01-02 00:02:32.3276 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
-2020-01-02 00:02:32.3396 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
-2020-01-02 00:02:32.3396 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ ]
-2020-01-02 00:02:32.3396 Debug --- End of NLog configuration dump ---
-2020-01-02 00:02:32.3645 Info Found 56 configuration items
-2020-01-02 00:02:32.3954 Info Configuration initialized.
-2020-01-02 00:02:32.4034 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.6.8.10751. Product version: 4.6.8.
-2020-01-02 00:02:32.4034 Debug Targets for ParseLogs.App by level:
-2020-01-02 00:02:32.4193 Debug Trace =>
-2020-01-02 00:02:32.4193 Debug Debug => logfile viewer chainsaw
-2020-01-02 00:02:32.4193 Debug Info => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:32.4383 Debug Warn => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:32.4383 Debug Error => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:32.4503 Debug Fatal => logconsole logfile viewer chainsaw viewer2
-8-NonParallelWorker 2020-01-02 00:02:32.7285|INFO|ParseLogs.App|Thread 34140 is ""
-2020-01-02 00:02:32.7504 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\file.txt' on startup
-2020-01-02 00:02:32.7634 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\bin\Debug\file.txt
-8-NonParallelWorker 2020-01-02 00:02:32.8881|INFO|ParseLogs.App|Thread 28328 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.8881|INFO|ParseLogs.App|Thread 30480 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9010|INFO|ParseLogs.App|Thread 27332 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9010|INFO|ParseLogs.App|Thread 27312 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9010|INFO|ParseLogs.App|Thread 2284 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9010|INFO|ParseLogs.App|Thread 27024 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9220|INFO|ParseLogs.App|Thread 25996 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9220|INFO|ParseLogs.App|Thread 23668 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9339|INFO|ParseLogs.App|Thread 26436 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9339|INFO|ParseLogs.App|Thread 35132 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9339|INFO|ParseLogs.App|Thread 12412 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9539|INFO|ParseLogs.App|Thread 22456 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9539|INFO|ParseLogs.App|Thread 1552 is ""
-8-NonParallelWorker 2020-01-02 00:02:32.9669|INFO|ParseLogs.App|Thread 12388 is ""
-2020-01-02 00:02:34.0639 Debug Targets for ParseLogsLib.LogFinder by level:
-2020-01-02 00:02:34.0639 Debug Trace =>
-2020-01-02 00:02:34.0779 Debug Debug => logfile viewer chainsaw
-2020-01-02 00:02:34.0779 Debug Info => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:34.0908 Debug Warn => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:34.0908 Debug Error => logconsole logfile viewer chainsaw viewer2
-2020-01-02 00:02:34.0908 Debug Fatal => logconsole logfile viewer chainsaw viewer2
-8-NonParallelWorker 2020-01-02 00:02:34.1248|INFO|ParseLogsLib.LogFinder|LogFinder constructor.
-]]></output>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="1-1009" name="ParseLogs" fullname="ParseLogs" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:24Z" duration="3.177789" total="4" passed="3" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1-1010" name="Test" fullname="ParseLogs.Test" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:24Z" duration="3.176648" total="4" passed="3" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="2">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="1-1000" name="AppTests" fullname="ParseLogs.Test.AppTests" classname="ParseLogs.Test.AppTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:21Z" duration="0.032924" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <test-case id="1-1001" name="InitCatalogTest" fullname="ParseLogs.Test.AppTests.InitCatalogTest" methodname="InitCatalogTest" classname="ParseLogs.Test.AppTests" runstate="Runnable" seed="1687408690" result="Passed" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:21Z" duration="0.012416" asserts="0" />
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1002" name="ContainerHelperTests" fullname="ParseLogs.Test.ContainerHelperTests" classname="ParseLogs.Test.ContainerHelperTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:21Z" duration="0.191910" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-case id="1-1003" name="InitializeContainerTest" fullname="ParseLogs.Test.ContainerHelperTests.InitializeContainerTest" methodname="InitializeContainerTest" classname="ParseLogs.Test.ContainerHelperTests" runstate="Runnable" seed="975220386" result="Passed" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:21Z" duration="0.191395" asserts="1" />
+        </test-suite>
+        <test-suite type="TestFixture" id="1-1004" name="LogFinderTests" fullname="ParseLogs.Test.LogFinderTests" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:24Z" duration="2.914754" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="1-1005" name="ExecuteTest" fullname="ParseLogs.Test.LogFinderTests.ExecuteTest" methodname="ExecuteTest" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" seed="2071547676" result="Failed" label="Error" start-time="2020-01-05 13:54:21Z" end-time="2020-01-05 13:54:24Z" duration="2.914608" asserts="0">
+            <failure>
+              <message><![CDATA[System.InvalidOperationException : The calling thread must be STA, because many UI components require this.]]></message>
+              <stack-trace><![CDATA[   at System.Windows.Input.InputManager..ctor()
+   at System.Windows.Input.InputManager.GetCurrentInputManagerImpl()
+   at System.Windows.Input.KeyboardNavigation..ctor()
+   at System.Windows.FrameworkElement.FrameworkServices..ctor()
+   at System.Windows.FrameworkElement.EnsureFrameworkServices()
+   at System.Windows.FrameworkElement..ctor()
+   at ParseLogsLib.LogFinder..ctor() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsLib\LogFinder.cs:line 80
+   at ParseLogs.Test.LogFinderTests.ExecuteTest() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs.Test\LogFinderTests.cs:line 18]]></stack-trace>
+            </failure>
           </test-case>
         </test-suite>
-        <test-suite type="TestFixture" id="1-1002" name="LogFinderTests" fullname="ParseLogs.Test.LogFinderTests" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-02 08:02:34Z" end-time="2020-01-02 08:02:34Z" duration="0.008115" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
-          <test-case id="1-1003" name="ExecuteTest" fullname="ParseLogs.Test.LogFinderTests.ExecuteTest" methodname="ExecuteTest" classname="ParseLogs.Test.LogFinderTests" runstate="Runnable" seed="1572906890" result="Passed" start-time="2020-01-02 08:02:34Z" end-time="2020-01-02 08:02:34Z" duration="0.007852" asserts="0">
-            <output><![CDATA[8-NonParallelWorker 2020-01-02 00:02:34.1846|INFO|ParseLogsLib.LogFinder|LogFinder constructor.
-]]></output>
-          </test-case>
-        </test-suite>
-        <test-suite type="TestFixture" id="1-1004" name="TestClass" fullname="ParseLogs.Test.TestClass" classname="ParseLogs.Test.TestClass" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-02 08:02:34Z" end-time="2020-01-02 08:02:34Z" duration="0.020033" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-          <test-case id="1-1005" name="TestMethod" fullname="ParseLogs.Test.TestClass.TestMethod" methodname="TestMethod" classname="ParseLogs.Test.TestClass" runstate="Runnable" seed="1881766825" result="Passed" start-time="2020-01-02 08:02:34Z" end-time="2020-01-02 08:02:34Z" duration="0.019800" asserts="1" />
+        <test-suite type="TestFixture" id="1-1006" name="TestClass" fullname="ParseLogs.Test.TestClass" classname="ParseLogs.Test.TestClass" runstate="Runnable" testcasecount="1" result="Passed" start-time="2020-01-05 13:54:24Z" end-time="2020-01-05 13:54:24Z" duration="0.022462" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-case id="1-1007" name="TestMethod" fullname="ParseLogs.Test.TestClass.TestMethod" methodname="TestMethod" classname="ParseLogs.Test.TestClass" runstate="Runnable" seed="296347078" result="Passed" start-time="2020-01-05 13:54:24Z" end-time="2020-01-05 13:54:24Z" duration="0.022207" asserts="1" />
         </test-suite>
       </test-suite>
     </test-suite>
