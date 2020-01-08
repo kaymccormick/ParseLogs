@@ -9,7 +9,6 @@
         xmlns:parseLogsLib="clr-namespace:ParseLogsLib;assembly=ParseLogsLib"
         xmlns:xlinq="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq"
         xmlns:data="clr-namespace:System.Windows.Data;assembly=WindowsBase"
-        xmlns:wpfCommonLib="clr-namespace:WpfCommonLib;assembly=WpfCommonLib"
         xmlns:views="clr-namespace:FolderBrowser.Views;assembly=FolderBrowser"
         xmlns:io="clr-namespace:System.IO;assembly=mscorlib"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
@@ -64,7 +63,6 @@
     <!--    <Window.DataContext><Binding Source="{DynamicResource}"></Binding></Window.DataContext>-->
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Dump Resources" Command="{x:Static local:DebugCommands.DumpResources}">Dump Resources</MenuItem>
         </Menu>
         <Grid Margin="25" DataContext="{Binding Source={StaticResource DrivesProvider}}">
             <Grid.RowDefinitions>

@@ -7,6 +7,13 @@
     <Schema Namespace="Model2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="Model2StoreContainer">
     <EntitySet Name="LogEntries" EntityType="Model2.Store.LogEntries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FileInfoes" EntityType="Model2.Store.FileInfoes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Entity1" EntityType="Model2.Store.Entity1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FileSystemInfoes" EntityType="Model2.Store.FileSystemInfoes" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FileSystemInfoFileSystemInfo" Association="Model2.Store.FileSystemInfoFileSystemInfo">
+      <End Role="FileSystemInfo" EntitySet="FileSystemInfoes" />
+      <End Role="FileSystemInfo1" EntitySet="FileSystemInfoes" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="LogEntries">
     <Key>
@@ -14,12 +21,59 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
+  <EntityType Name="FileInfoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Extension" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Length" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Entity1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Extension" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileSystemInfoes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Parent" Type="int" Nullable="false" />
+    <Property Name="CreationTimeUTC" Type="datetime" Nullable="false" />
+    <Property Name="Attributes" Type="bigint" Nullable="false" />
+    <Property Name="LastAccessTimeUTC" Type="datetime" Nullable="false" />
+    <Property Name="LastWriteTimeUTC" Type="datetime" Nullable="false" />
+    <Property Name="ParentInfo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FileSystemInfoFileSystemInfo">
+    <End Role="FileSystemInfo" Type="Model2.Store.FileSystemInfoes" Multiplicity="1" />
+    <End Role="FileSystemInfo1" Type="Model2.Store.FileSystemInfoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FileSystemInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FileSystemInfo1">
+        <PropertyRef Name="ParentInfo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="Model2Container" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="LogEntries" EntityType="Model2.LogEntry" />
+          <EntitySet Name="FileInfoes" EntityType="Model2.FileInfo" />
+          <EntitySet Name="Entity1" EntityType="Model2.Entity1" />
+          <EntitySet Name="FileSystemInfoes" EntityType="Model2.FileSystemInfo" />
+          <AssociationSet Name="FileSystemInfoFileSystemInfo" Association="Model2.FileSystemInfoFileSystemInfo">
+            <End Role="FileSystemInfo" EntitySet="FileSystemInfoes" />
+            <End Role="FileSystemInfo1" EntitySet="FileSystemInfoes" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="LogEntry">
           <Key>
@@ -27,6 +81,39 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="FileInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Extension" Type="String" Nullable="false" />
+          <Property Name="Length" Type="Int64" Nullable="false" />
+          </EntityType>
+        <EntityType Name="Entity1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Extension" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FileSystemInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" Nullable="false" />
+          <Property Name="Parent" Type="Int32" Nullable="false" />
+          <Property Name="CreationTimeUTC" Type="DateTime" Nullable="false" />
+          <Property Name="Attributes" Type="Int64" Nullable="false" />
+          <Property Name="LastAccessTimeUTC" Type="DateTime" Nullable="false" />
+          <Property Name="LastWriteTimeUTC" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ChildrenInfos" Relationship="Model2.FileSystemInfoFileSystemInfo" FromRole="FileSystemInfo" ToRole="FileSystemInfo1" />
+          <NavigationProperty Name="ParentInfo" Relationship="Model2.FileSystemInfoFileSystemInfo" FromRole="FileSystemInfo1" ToRole="FileSystemInfo" />
+        </EntityType>
+        <Association Name="FileSystemInfoFileSystemInfo">
+          <End Type="Model2.FileSystemInfo" Role="FileSystemInfo" Multiplicity="1" />
+          <End Type="Model2.FileSystemInfo" Role="FileSystemInfo1" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -40,6 +127,44 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="FileInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model2.FileInfo)">
+        <MappingFragment StoreEntitySet="FileInfoes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entity1">
+      <EntityTypeMapping TypeName="IsTypeOf(Model2.Entity1)">
+        <MappingFragment StoreEntitySet="Entity1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileSystemInfoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Model2.FileSystemInfo)">
+        <MappingFragment StoreEntitySet="FileSystemInfoes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="CreationTimeUTC" ColumnName="CreationTimeUTC" />
+          <ScalarProperty Name="Attributes" ColumnName="Attributes" />
+          <ScalarProperty Name="LastAccessTimeUTC" ColumnName="LastAccessTimeUTC" />
+          <ScalarProperty Name="LastWriteTimeUTC" ColumnName="LastWriteTimeUTC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="FileSystemInfoFileSystemInfo" TypeName="Model2.FileSystemInfoFileSystemInfo" StoreEntitySet="FileSystemInfoes">
+      <EndProperty Name="FileSystemInfo">
+        <ScalarProperty Name="Id" ColumnName="ParentInfo_Id" />
+      </EndProperty>
+      <EndProperty Name="FileSystemInfo1">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

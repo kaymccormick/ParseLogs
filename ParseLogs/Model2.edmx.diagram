@@ -5,7 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7466b2e82d564d2d8e513f2b9dfb230e" Name="Diagram1" ZoomLevel="172" >
-        <EntityTypeShape EntityType="Model2.LogEntry" Width="1.5" PointX="2" PointY="1.75" />
+        <EntityTypeShape EntityType="Model2.LogEntry" Width="1.5" PointX="1.875" PointY="1.375" />
+        <EntityTypeShape EntityType="Model2.FileInfo" Width="1.5" PointX="5" PointY="3.125" />
+        <EntityTypeShape EntityType="Model2.Entity1" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Model2.FileSystemInfo" Width="2.5" PointX="4.375" PointY="0.5" />
+        <AssociationConnector Association="Model2.FileSystemInfoFileSystemInfo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

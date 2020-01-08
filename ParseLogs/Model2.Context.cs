@@ -26,5 +26,8 @@ namespace ParseLogs
         }
     
         public virtual DbSet<LogEntry> LogEntries { get; set; }
+        public virtual DbSet<FileInfo> FileInfoes { get; set; }
+        public virtual DbSet<Entity1> Entity1 { get; set; }
+        public virtual DbSet<FileSystemInfo> FileSystemInfoes { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace WcfService1
 
         public void ProcessLogMessages(NLogEvents events)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

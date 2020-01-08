@@ -12,7 +12,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProjectGuid>{724936CA-6227-4AD9-A454-4C9436536097}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ParseLogs</RootNamespace>
@@ -168,19 +168,8 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.MSFTTeams, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.MSFTTeams.0.2.1\lib\net452\NLog.MSFTTeams.dll</HintPath>
-    </Reference>
-    <Reference Include="Nlog.RabbitMQ.Target, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nlog.RabbitMQ.Target.2.6.22\lib\net47\Nlog.RabbitMQ.Target.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.Telegram, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.Telegram.1.1.2.0\lib\NLog.Telegram.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.Wcf, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.Wcf.4.6.8\lib\netstandard2.0\NLog.Wcf.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\nlog\debug\NLog.dll</HintPath>
     </Reference>
     <Reference Include="Prism, Version=7.2.0.1422, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.7.2.0.1422\lib\net45\Prism.dll</HintPath>
@@ -287,8 +276,18 @@
     <Compile Include="AppNavWindow.xaml.cs">
       <DependentUpon>AppNavWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyCacheTarget.cs" />
     <Compile Include="ContainerHelper.cs" />
+    <Compile Include="Entity1.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Example.cs" />
+    <Compile Include="FileInfo.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystemInfo.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +297,7 @@
     <Compile Include="LogEntry.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoggerMethod.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -347,14 +347,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LogRibbonWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="LogWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -373,17 +365,11 @@
     <Compile Include="DebugWindow.xaml.cs">
       <DependentUpon>DebugWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LogRibbonWindow.xaml.cs">
-      <DependentUpon>LogRibbonWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DependencyProperties.cs" />
     <Compile Include="MyTarget.cs" />
     <Compile Include="StartupActions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IMetadataItem.cs" />
-    <Compile Include="LogWindow.xaml.cs">
-      <DependentUpon>LogWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -439,17 +425,9 @@
       <Project>{a22e3220-7241-419b-9c29-58d4102ece58}</Project>
       <Name>CommandLine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\NLogViewer\src\NLogViewer\NLogViewer.csproj">
-      <Project>{48a3c54f-fd9b-4c61-808f-212f9bb6f0d3}</Project>
-      <Name>NLogViewer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ParseLogsLib\ParseLogsLib.csproj">
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WpfCommonLib\WpfCommonLib.csproj">
-      <Project>{52cde0c8-07b1-4351-804d-764dc2d70f4e}</Project>
-      <Name>WpfCommonLib</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -499,12 +477,6 @@
     <PackageReference Include="NHibernate">
       <Version>5.2.6</Version>
     </PackageReference>
-    <PackageReference Include="NLog.MSFTTeams">
-      <Version>0.2.1</Version>
-    </PackageReference>
-    <PackageReference Include="NLog.Wcf">
-      <Version>4.6.8</Version>
-    </PackageReference>
     <PackageReference Include="NuGet.Packaging">
       <Version>5.5.0-preview.1.6319</Version>
     </PackageReference>
@@ -520,7 +492,7 @@
     <PackageReference Include="System.ComponentModel.TypeConverter">
       <Version>4.3.0</Version>
     </PackageReference>
-    <PackageReference Include="System.Reactive.Core">
+    <PackageReference Include="System.Reactive">
       <Version>4.3.2</Version>
     </PackageReference>
     <PackageReference Include="System.Reactive.Interfaces">
@@ -531,6 +503,12 @@
     </PackageReference>
     <PackageReference Include="System.Reactive.PlatformServices">
       <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>4.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.3</Version>
     </PackageReference>
     <PackageReference Include="System.ValueTuple">
       <Version>4.5.0</Version>
