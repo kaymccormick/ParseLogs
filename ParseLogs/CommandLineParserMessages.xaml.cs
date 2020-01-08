@@ -23,7 +23,7 @@ namespace ParseLogs
     [DefaultBindingProperty("Usages")]
     public partial class CommandLineParserMessages : UserControl
     {
-        public event RoutedPropertyChangedEventHandler<UsagesFreezableCollection<Usage>> OnUsagesChanged
+        public event RoutedPropertyChangedEventHandler<UsagesFreezableCollection> OnUsagesChanged
         {
             add { AddHandler(UsagesChangedEvent, value); }
             remove { RemoveHandler(UsagesChangedEvent, value); }
@@ -31,7 +31,7 @@ namespace ParseLogs
 
         public static readonly RoutedEvent UsagesChangedEvent = EventManager.RegisterRoutedEvent("UsagesChanged",
             RoutingStrategy.Bubble,
-            typeof(RoutedPropertyChangedEventHandler<UsagesFreezableCollection<Usage>>), typeof(CommandLineParserMessages));
+            typeof(RoutedPropertyChangedEventHandler<UsagesFreezableCollection>), typeof(CommandLineParserMessages));
 
         protected virtual void OnValueChanged(RoutedPropertyChangedEventArgs<string> args)
         {
@@ -40,13 +40,13 @@ namespace ParseLogs
 
 
         private static readonly DependencyProperty UsagesProperty = DependencyProperty.Register("Usages",
-            typeof(UsagesFreezableCollection<Usage>), typeof(CommandLineParserMessages),
-            new FrameworkPropertyMetadata(new UsagesFreezableCollection<Usage>(), FrameworkPropertyMetadataOptions.None,
+            typeof(UsagesFreezableCollection), typeof(CommandLineParserMessages),
+            new FrameworkPropertyMetadata(new UsagesFreezableCollection(), FrameworkPropertyMetadataOptions.None,
                 PropertyChangedCallback));
         [Bindable(true)]
-        public UsagesFreezableCollection<Usage> Usages
+        public UsagesFreezableCollection Usages
         {
-            get { return (UsagesFreezableCollection<Usage>) GetValue(UsagesProperty); }
+            get { return (UsagesFreezableCollection) GetValue(UsagesProperty); }
             set { SetValue(UsagesProperty, value);}
         }
 

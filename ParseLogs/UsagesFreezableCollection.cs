@@ -8,18 +8,17 @@ using CommandLine.Text;
 
 namespace ParseLogs
 {
-    public class UsagesFreezableCollection<T> : FreezableCollection<T> where T : Usage
+    public class UsagesFreezableCollection : FreezableCollection<Usage> 
     {
         public UsagesFreezableCollection() : base()
         {
         }
 
-        public UsagesFreezableCollection(IEnumerable<UsageInfo> usages) : base(new List<T>())
+        public UsagesFreezableCollection(IEnumerable<UsageInfo> usages) : base(new List<Usage>())
         {
             foreach (var u in usages)
             {
-                object o = typeof(T).GetConstructor(Type.EmptyTypes).Invoke(null);
-                T instance = (T) o;
+                Usage instance = new Usage();
                 foreach(var example in u.Examples)
                 {
                     instance.Examples.Add(new Example()
@@ -32,7 +31,7 @@ namespace ParseLogs
             }
         }
 
-        public UsagesFreezableCollection(IEnumerable<T> usages) : base(usages)
+        public UsagesFreezableCollection(IEnumerable<Usage> usages) : base(usages)
         {
         }
     }

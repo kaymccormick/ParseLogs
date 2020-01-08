@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application 
+    
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     x:Class="ParseLogs.App"
     xmlns:local="clr-namespace:ParseLogs"
@@ -11,6 +12,5 @@
     >
   <Application.Resources>
       <ResourceDictionary Source="AppResoureDictionary.xaml"/>
-
-    </Application.Resources>
+  </Application.Resources>
 </Application>

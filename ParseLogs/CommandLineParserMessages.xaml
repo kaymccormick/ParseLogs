@@ -12,12 +12,6 @@
         <x:Array x:Key="Examples1" Type="{x:Type local:Example}">
             <local:Example HelpText="This is help text"></local:Example>
         </x:Array>
-        <x:Array x:Key="Usages" Type="{x:Type local:Usage}">
-            <local:Usage Examples="{Binding Source={StaticResource Examples1}}">
-            </local:Usage>
-        </x:Array>
-        <ObjectDataProvider x:Key="etest" ObjectInstance="{StaticResource Usages}" MethodName="get_Length"
-                            />
         <DataTemplate DataType="{x:Type text:ExampleInfo}">
             <TextBlock Text="{Binding Path=MapResult.HelpText}"></TextBlock>
         </DataTemplate>
@@ -27,7 +21,7 @@
     </UserControl.Resources>
     <UserControl.DataContext><Binding ElementName="MessagesControl" Path="Usages"/>
         </UserControl.DataContext>
-    <Grid d:DataContext="{d:DesignInstance CreateList=True, Type=local:Usage}">
+    <Grid d:DataContext="{d:DesignInstance CreateList=True,IsDesignTimeCreatable=True,Type={x:Type local:Usage}}">
         <Grid.RowDefinitions><RowDefinition Height="Auto"/>
         <RowDefinition Height="*"></RowDefinition></Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -39,24 +33,10 @@
             <TextBlock FontSize="20" Foreground="Red"></TextBlock>
 
         </WrapPanel>
-        <HeaderedItemsControl Validation.ErrorTemplate="{StaticResource listError}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <HeaderedItemsControl.ItemsSource>
-                <Binding Path="."
-                         UpdateSourceTrigger="PropertyChanged">
-                    <Binding.ValidationRules>
-                    <local:UsageValidationRule/>
-                </Binding.ValidationRules>
-            </Binding>
-                </HeaderedItemsControl.ItemsSource>
-            <HeaderedItemsControl.Header><TextBlock Text="Usages"/></HeaderedItemsControl.Header>
-            <HeaderedItemsControl.ItemTemplate>
-                             <DataTemplate>
-                                <ComboBox DataContext="{Binding Path=Examples}" ItemsSource="{Binding .}" Text="{Binding /HelpText}">
-                                </ComboBox></DataTemplate>
-            </HeaderedItemsControl.ItemTemplate>
-        </HeaderedItemsControl>
-        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock Text="{Binding ElementName=MessagesControl, Path=Usages/Examples}"/>
-        </StackPanel>
+        <ListView Name="ListView1">
+            <ListView.View><GridView>
+                <GridViewColumn></GridViewColumn>
+            </GridView></ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

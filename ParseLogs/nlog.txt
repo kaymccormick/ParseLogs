@@ -2014,3 +2014,920 @@
 2020-01-08 04:32:16.8139 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2 cache
 2020-01-08 04:32:16.8319 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2 cache
 2020-01-08 04:32:16.8459 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2 cache
+2020-01-08 05:50:28.6655 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-08 05:50:28.7224 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-08 05:50:28.7343 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:50:28.7443 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (ParseLogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2020-01-08 05:50:28.7443 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:50:28.7662 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:50:28.7802 Debug Auto loading done
+2020-01-08 05:50:28.7932 Info Message Template Auto Format enabled
+2020-01-08 05:50:28.8081 Info Loading assembly: NLog.RabbitMQ
+2020-01-08 05:50:28.8241 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.RabbitMQ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.RabbitMQ' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2020-01-08 05:50:28.8690 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: CacheTarget ---> System.ArgumentException: Target cannot be found: 'CacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:50:28.9059 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MyCacheTarget ---> System.ArgumentException: Target cannot be found: 'MyCacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:50:28.9507 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RabbitMQ ---> System.ArgumentException: Target cannot be found: 'RabbitMQ'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:50:29.0106 Debug Setting 'MethodCallTarget.name' to 'methodCall1'
+2020-01-08 05:50:29.0644 Debug Setting 'MethodCallTarget.methodName' to 'Receive'
+2020-01-08 05:50:29.1053 Debug Setting 'MethodCallTarget.className' to 'ParseLogs, ParseLogs.LoggerMethod'
+2020-01-08 05:50:29.1542 Debug Setting 'MethodCallParameter.layout' to '${log4jxmlevent}'
+2020-01-08 05:50:29.2190 Debug Setting 'MethodCallParameter.name' to 'String'
+2020-01-08 05:50:29.2759 Info Adding target MethodCallTarget(Name=methodCall1)
+2020-01-08 05:50:29.3248 Debug Registered target methodCall1: NLog.Targets.MethodCallTarget
+2020-01-08 05:50:29.3736 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MSFTTeamsTarget ---> System.ArgumentException: Target cannot be found: 'MSFTTeamsTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:50:29.4335 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:29.5033 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:29.5611 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-08 05:50:29.6170 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:50:29.6608 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:50:29.7087 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:29.7536 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:50:29.8005 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
+2020-01-08 05:50:29.8454 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-08 05:50:29.9022 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-08 05:50:29.9551 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.0119 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.1934 Debug Setting 'ChainsawTarget.name' to 'chainsaw_serenity'
+2020-01-08 05:50:30.2652 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:50:30.3301 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:50:30.3809 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.4438 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:50:30.5006 Debug Setting 'ChainsawTarget.address' to 'udp://serenity:4445'
+2020-01-08 05:50:30.5126 Info Adding target ChainsawTarget(Name=chainsaw_serenity)
+2020-01-08 05:50:30.5255 Debug Registered target chainsaw_serenity: NLog.Targets.ChainsawTarget
+2020-01-08 05:50:30.5475 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.5624 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.5794 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-08 05:50:30.5924 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-08 05:50:30.6093 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-08 05:50:30.6253 Info Adding target FileTarget(Name=testLogFile)
+2020-01-08 05:50:30.6402 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-08 05:50:30.6542 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.6652 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.6801 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:50:30.6801 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-08 05:50:30.7200 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:50:30.7330 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.7440 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:50:30.7559 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:50:30.7559 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.7799 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.7938 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:50:30.8068 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-08 05:50:30.8207 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-08 05:50:30.8207 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:50:30.8437 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:50:30.8576 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.8706 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.8856 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-08 05:50:30.9005 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-08 05:50:30.9125 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:50:30.9125 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.9374 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-08 05:50:30.9504 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-08 05:50:30.9644 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:30.9763 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:30.9903 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-08 05:50:30.9903 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-08 05:50:31.0162 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-08 05:50:31.0322 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-08 05:50:31.0451 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-08 05:50:31.0561 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-08 05:50:31.0791 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:31.1030 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:31.1180 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-08 05:50:31.1309 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-08 05:50:31.1539 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-08 05:50:31.1688 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-08 05:50:31.1918 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:50:31.2177 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:50:31.3045 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-08 05:50:31.3314 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-08 05:50:31.3643 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-08 05:50:31.3882 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-08 05:50:31.4421 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache1' not found for logging rule: *.
+2020-01-08 05:50:31.4590 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'msftTeams' not found for logging rule: *.
+2020-01-08 05:50:31.4590 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'teastLogFile' not found for logging rule: *.
+2020-01-08 05:50:31.4830 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache' not found for logging rule: *.
+2020-01-08 05:50:31.4969 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'mycache' not found for logging rule: *.
+2020-01-08 05:50:31.5099 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'RabbitMQTarget' not found for logging rule: *.
+2020-01-08 05:50:31.5298 Debug Unused target checking is started... Rule Count: 13, Target Count: 9
+2020-01-08 05:50:31.9298 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: methodCall1
+2020-01-08 05:50:31.9477 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: testLogFile
+2020-01-08 05:50:31.9697 Debug Unused target checking is completed. Total Rule Count: 13, Total Target Count: 9, Unused Target Count: 2
+2020-01-08 05:50:32.0016 Debug --- NLog configuration dump ---
+2020-01-08 05:50:32.0235 Debug Targets:
+2020-01-08 05:50:32.0385 Debug MethodCall Target[methodCall1]
+2020-01-08 05:50:32.0385 Debug Chainsaw Target[chainsaw]
+2020-01-08 05:50:32.0634 Debug Chainsaw Target[chainsaw_serenity]
+2020-01-08 05:50:32.0734 Debug File Target[testLogFile]
+2020-01-08 05:50:32.0884 Debug File Target[logfile]
+2020-01-08 05:50:32.1103 Debug Console Target[logconsole]
+2020-01-08 05:50:32.1552 Debug NLogViewer Target[viewer]
+2020-01-08 05:50:32.1671 Debug NLogViewer Target[viewer3]
+2020-01-08 05:50:32.1791 Debug NLogViewer Target[viewer2]
+2020-01-08 05:50:32.1791 Debug Rules:
+2020-01-08 05:50:32.2070 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-08 05:50:32.2200 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-08 05:50:32.2330 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-08 05:50:32.2479 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-08 05:50:32.2669 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ chainsaw_serenity ]
+2020-01-08 05:50:32.2878 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-08 05:50:32.3157 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-08 05:50:32.3387 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.3517 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.3517 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.3766 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.3905 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.4085 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:50:32.4833 Debug --- End of NLog configuration dump ---
+2020-01-08 05:50:32.5431 Info Found 81 configuration items
+2020-01-08 05:50:32.6149 Error MethodCall Target[methodCall1]: Error initializing target Exception: NLog.NLogConfigurationException: MethodCallTarget: failed to get type from ClassName=ParseLogs, ParseLogs.LoggerMethod
+   at NLog.Targets.MethodCallTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-01-08 05:50:32.6359 Info Configuration initialized.
+2020-01-08 05:50:32.6538 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-08 05:50:32.6748 Debug Targets for ParseLogs.App by level:
+2020-01-08 05:50:32.6897 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 05:50:32.7037 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:50:32.7207 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:50:32.7446 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:50:32.7586 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:50:32.7715 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:50:33.5325 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml' on startup
+2020-01-08 05:50:33.5714 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml
+2020-01-08 05:53:16.2550 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-08 05:53:16.3088 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-08 05:53:16.3198 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:16.3198 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (ParseLogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2020-01-08 05:53:16.3357 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:16.3357 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:16.3547 Debug Auto loading done
+2020-01-08 05:53:16.3547 Info Message Template Auto Format enabled
+2020-01-08 05:53:16.3776 Info Loading assembly: NLog.RabbitMQ
+2020-01-08 05:53:16.3886 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.RabbitMQ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.RabbitMQ' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:16.4285 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: CacheTarget ---> System.ArgumentException: Target cannot be found: 'CacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:16.4584 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MyCacheTarget ---> System.ArgumentException: Target cannot be found: 'MyCacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:16.4923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RabbitMQ ---> System.ArgumentException: Target cannot be found: 'RabbitMQ'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:16.5312 Debug Setting 'MethodCallTarget.name' to 'methodCall1'
+2020-01-08 05:53:16.5721 Debug Setting 'MethodCallTarget.methodName' to 'Receive'
+2020-01-08 05:53:16.6060 Debug Setting 'MethodCallTarget.className' to 'ParseLogs, ParseLogs.LoggerMethod'
+2020-01-08 05:53:16.6369 Debug Setting 'MethodCallParameter.layout' to '${log4jxmlevent}'
+2020-01-08 05:53:16.6928 Debug Setting 'MethodCallParameter.name' to 'String'
+2020-01-08 05:53:16.7327 Info Adding target MethodCallTarget(Name=methodCall1)
+2020-01-08 05:53:16.7706 Debug Registered target methodCall1: NLog.Targets.MethodCallTarget
+2020-01-08 05:53:16.8055 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MSFTTeamsTarget ---> System.ArgumentException: Target cannot be found: 'MSFTTeamsTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:16.8454 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:16.8743 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:16.9042 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-08 05:53:16.9351 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:53:16.9690 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:17.0040 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.0508 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:53:17.0867 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
+2020-01-08 05:53:17.1236 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-08 05:53:17.1635 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-08 05:53:17.2074 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.2463 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.2842 Debug Setting 'ChainsawTarget.name' to 'chainsaw_serenity'
+2020-01-08 05:53:17.3161 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:53:17.3590 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:17.4099 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.4478 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:53:17.4867 Debug Setting 'ChainsawTarget.address' to 'udp://serenity:4445'
+2020-01-08 05:53:17.4956 Info Adding target ChainsawTarget(Name=chainsaw_serenity)
+2020-01-08 05:53:17.4956 Debug Registered target chainsaw_serenity: NLog.Targets.ChainsawTarget
+2020-01-08 05:53:17.5186 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.5256 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.5256 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-08 05:53:17.5465 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-08 05:53:17.5575 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-08 05:53:17.5575 Info Adding target FileTarget(Name=testLogFile)
+2020-01-08 05:53:17.5744 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-08 05:53:17.5744 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.5944 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.6024 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:53:17.6024 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-08 05:53:17.6173 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:17.6173 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.6353 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:53:17.6353 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:53:17.6512 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.6512 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.6672 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:53:17.6672 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-08 05:53:17.6851 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-08 05:53:17.6941 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:53:17.6941 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:53:17.7131 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.7131 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.7310 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-08 05:53:17.7420 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-08 05:53:17.7420 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:17.7649 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.7739 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-08 05:53:17.7739 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-08 05:53:17.7909 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.7909 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.8118 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-08 05:53:17.8208 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-08 05:53:17.8208 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-08 05:53:17.8387 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-08 05:53:17.8387 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-08 05:53:17.8577 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:17.8676 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.8676 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.8866 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-08 05:53:17.8976 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-08 05:53:17.8976 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-08 05:53:17.9265 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:17.9385 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:17.9524 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:17.9624 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-08 05:53:17.9624 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-08 05:53:17.9853 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-08 05:53:17.9933 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:18.0113 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache1' not found for logging rule: *.
+2020-01-08 05:53:18.0113 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'msftTeams' not found for logging rule: *.
+2020-01-08 05:53:18.0402 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'teastLogFile' not found for logging rule: *.
+2020-01-08 05:53:18.0402 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache' not found for logging rule: *.
+2020-01-08 05:53:18.0621 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'mycache' not found for logging rule: *.
+2020-01-08 05:53:18.0741 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'RabbitMQTarget' not found for logging rule: *.
+2020-01-08 05:53:18.0950 Debug Unused target checking is started... Rule Count: 13, Target Count: 9
+2020-01-08 05:53:18.1160 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: methodCall1
+2020-01-08 05:53:18.1160 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: testLogFile
+2020-01-08 05:53:18.1389 Debug Unused target checking is completed. Total Rule Count: 13, Total Target Count: 9, Unused Target Count: 2
+2020-01-08 05:53:18.1668 Debug --- NLog configuration dump ---
+2020-01-08 05:53:18.1778 Debug Targets:
+2020-01-08 05:53:18.1778 Debug MethodCall Target[methodCall1]
+2020-01-08 05:53:18.2018 Debug Chainsaw Target[chainsaw]
+2020-01-08 05:53:18.2147 Debug Chainsaw Target[chainsaw_serenity]
+2020-01-08 05:53:18.2267 Debug File Target[testLogFile]
+2020-01-08 05:53:18.2267 Debug File Target[logfile]
+2020-01-08 05:53:18.2506 Debug Console Target[logconsole]
+2020-01-08 05:53:18.2626 Debug NLogViewer Target[viewer]
+2020-01-08 05:53:18.2736 Debug NLogViewer Target[viewer3]
+2020-01-08 05:53:18.2736 Debug NLogViewer Target[viewer2]
+2020-01-08 05:53:18.2915 Debug Rules:
+2020-01-08 05:53:18.2915 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-08 05:53:18.3095 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-08 05:53:18.3095 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-08 05:53:18.3274 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-08 05:53:18.3344 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ chainsaw_serenity ]
+2020-01-08 05:53:18.3344 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-08 05:53:18.3514 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-08 05:53:18.3514 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3683 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3683 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3823 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3823 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3982 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:18.3982 Debug --- End of NLog configuration dump ---
+2020-01-08 05:53:18.4222 Info Found 81 configuration items
+2020-01-08 05:53:18.4521 Error MethodCall Target[methodCall1]: Error initializing target Exception: NLog.NLogConfigurationException: MethodCallTarget: failed to get type from ClassName=ParseLogs, ParseLogs.LoggerMethod
+   at NLog.Targets.MethodCallTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-01-08 05:53:18.4661 Info Configuration initialized.
+2020-01-08 05:53:18.4800 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-08 05:53:18.4800 Debug Targets for ParseLogs.App by level:
+2020-01-08 05:53:18.4980 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 05:53:18.5059 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:18.5059 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:18.5059 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:18.5259 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:18.5259 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:18.8864 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml' on startup
+2020-01-08 05:53:18.9074 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml
+2020-01-08 05:53:19.2415 Debug Targets for ParseLogs.Example by level:
+2020-01-08 05:53:19.2415 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 05:53:19.2664 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:19.2794 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:19.2914 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:19.3123 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:19.3243 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:28.9404 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-08 05:53:29.0013 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-08 05:53:29.0112 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:29.0112 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (ParseLogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2020-01-08 05:53:29.0312 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:29.0431 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 05:53:29.0561 Debug Auto loading done
+2020-01-08 05:53:29.0561 Info Message Template Auto Format enabled
+2020-01-08 05:53:29.0820 Info Loading assembly: NLog.RabbitMQ
+2020-01-08 05:53:29.1010 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.RabbitMQ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.RabbitMQ' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:29.1459 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: CacheTarget ---> System.ArgumentException: Target cannot be found: 'CacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:29.1888 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MyCacheTarget ---> System.ArgumentException: Target cannot be found: 'MyCacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:29.2296 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RabbitMQ ---> System.ArgumentException: Target cannot be found: 'RabbitMQ'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:29.2875 Debug Setting 'MethodCallTarget.name' to 'methodCall1'
+2020-01-08 05:53:29.3413 Debug Setting 'MethodCallTarget.methodName' to 'Receive'
+2020-01-08 05:53:29.3842 Debug Setting 'MethodCallTarget.className' to 'ParseLogs, ParseLogs.LoggerMethod'
+2020-01-08 05:53:29.4411 Debug Setting 'MethodCallParameter.layout' to '${log4jxmlevent}'
+2020-01-08 05:53:29.5219 Debug Setting 'MethodCallParameter.name' to 'String'
+2020-01-08 05:53:29.5657 Info Adding target MethodCallTarget(Name=methodCall1)
+2020-01-08 05:53:29.6086 Debug Registered target methodCall1: NLog.Targets.MethodCallTarget
+2020-01-08 05:53:29.6455 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MSFTTeamsTarget ---> System.ArgumentException: Target cannot be found: 'MSFTTeamsTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 05:53:29.6924 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:29.7303 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:29.7692 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-08 05:53:29.8021 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:53:29.8340 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:29.8699 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:29.9148 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:53:29.9697 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
+2020-01-08 05:53:30.0654 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-08 05:53:30.1781 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-08 05:53:30.2731 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.3160 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.3509 Debug Setting 'ChainsawTarget.name' to 'chainsaw_serenity'
+2020-01-08 05:53:30.3898 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 05:53:30.4267 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:30.4676 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.5025 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 05:53:30.5414 Debug Setting 'ChainsawTarget.address' to 'udp://serenity:4445'
+2020-01-08 05:53:30.5414 Info Adding target ChainsawTarget(Name=chainsaw_serenity)
+2020-01-08 05:53:30.5574 Debug Registered target chainsaw_serenity: NLog.Targets.ChainsawTarget
+2020-01-08 05:53:30.5723 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.5843 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.6013 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-08 05:53:30.6013 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-08 05:53:30.6322 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-08 05:53:30.6322 Info Adding target FileTarget(Name=testLogFile)
+2020-01-08 05:53:30.6591 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-08 05:53:30.6701 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.6821 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.6940 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:53:30.7100 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-08 05:53:30.7259 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:30.7259 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.7549 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:53:30.7688 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:53:30.7808 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.7938 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.8087 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 05:53:30.8207 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-08 05:53:30.8207 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-08 05:53:30.8446 Info Adding target FileTarget(Name=logfile)
+2020-01-08 05:53:30.8556 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 05:53:30.8686 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.8686 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.8875 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-08 05:53:30.8875 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-08 05:53:30.9065 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 05:53:30.9174 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.9174 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-08 05:53:30.9394 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-08 05:53:30.9473 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:30.9473 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:30.9663 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-08 05:53:30.9783 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-08 05:53:30.9783 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-08 05:53:30.9962 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-08 05:53:31.0062 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-08 05:53:31.0062 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:31.0281 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:31.0421 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:31.0421 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-08 05:53:31.0630 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-08 05:53:31.0750 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-08 05:53:31.0860 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:31.0860 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 05:53:31.1099 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 05:53:31.1209 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-08 05:53:31.1318 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-08 05:53:31.1318 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-08 05:53:31.1558 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-08 05:53:31.1787 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache1' not found for logging rule: *.
+2020-01-08 05:53:31.1787 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'msftTeams' not found for logging rule: *.
+2020-01-08 05:53:31.1997 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'teastLogFile' not found for logging rule: *.
+2020-01-08 05:53:31.1997 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache' not found for logging rule: *.
+2020-01-08 05:53:31.2186 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'mycache' not found for logging rule: *.
+2020-01-08 05:53:31.2306 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'RabbitMQTarget' not found for logging rule: *.
+2020-01-08 05:53:31.2445 Debug Unused target checking is started... Rule Count: 13, Target Count: 9
+2020-01-08 05:53:31.2565 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: methodCall1
+2020-01-08 05:53:31.2565 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: testLogFile
+2020-01-08 05:53:31.2775 Debug Unused target checking is completed. Total Rule Count: 13, Total Target Count: 9, Unused Target Count: 2
+2020-01-08 05:53:31.3034 Debug --- NLog configuration dump ---
+2020-01-08 05:53:31.3034 Debug Targets:
+2020-01-08 05:53:31.3243 Debug MethodCall Target[methodCall1]
+2020-01-08 05:53:31.3343 Debug Chainsaw Target[chainsaw]
+2020-01-08 05:53:31.3343 Debug Chainsaw Target[chainsaw_serenity]
+2020-01-08 05:53:31.3562 Debug File Target[testLogFile]
+2020-01-08 05:53:31.3662 Debug File Target[logfile]
+2020-01-08 05:53:31.3662 Debug Console Target[logconsole]
+2020-01-08 05:53:31.3872 Debug NLogViewer Target[viewer]
+2020-01-08 05:53:31.3872 Debug NLogViewer Target[viewer3]
+2020-01-08 05:53:31.4071 Debug NLogViewer Target[viewer2]
+2020-01-08 05:53:31.4161 Debug Rules:
+2020-01-08 05:53:31.4161 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-08 05:53:31.4320 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-08 05:53:31.4320 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-08 05:53:31.4470 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-08 05:53:31.4470 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ chainsaw_serenity ]
+2020-01-08 05:53:31.4679 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-08 05:53:31.4769 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-08 05:53:31.4769 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.4929 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.4929 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.5128 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.5128 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.5308 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 05:53:31.5408 Debug --- End of NLog configuration dump ---
+2020-01-08 05:53:31.5587 Info Found 81 configuration items
+2020-01-08 05:53:31.5916 Error MethodCall Target[methodCall1]: Error initializing target Exception: NLog.NLogConfigurationException: MethodCallTarget: failed to get type from ClassName=ParseLogs, ParseLogs.LoggerMethod
+   at NLog.Targets.MethodCallTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-01-08 05:53:31.6066 Info Configuration initialized.
+2020-01-08 05:53:31.6206 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-08 05:53:31.6395 Debug Targets for ParseLogs.App by level:
+2020-01-08 05:53:31.6475 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 05:53:31.6475 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:31.6714 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:31.6834 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:31.6834 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:31.7033 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.0275 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml' on startup
+2020-01-08 05:53:32.0524 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml
+2020-01-08 05:53:32.6129 Debug Registered target MyCacheTarget: ParseLogs.MyCacheTarget
+2020-01-08 05:53:32.6478 Info Found 83 configuration items
+2020-01-08 05:53:32.6478 Debug Targets for ParseLogs.App by level:
+2020-01-08 05:53:32.6667 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 05:53:32.6667 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:32.6837 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.6957 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.6957 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.7136 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.8483 Debug Targets for ParseLogs.MainWindow by level:
+2020-01-08 05:53:32.8562 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 05:53:32.8562 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:32.8722 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.8722 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.8891 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.8891 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.9420 Debug Targets for ParseLogsLib.LogFinder by level:
+2020-01-08 05:53:32.9530 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 05:53:32.9620 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:32.9620 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.9779 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.9779 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:32.9959 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:33.0069 Debug Targets for ParseLogsLib.ParseLogsCommands by level:
+2020-01-08 05:53:33.0069 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 05:53:33.0258 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 05:53:33.0258 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:33.0487 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:33.0637 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 05:53:33.0747 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:51.3589 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-08 06:03:51.4467 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-08 06:03:51.4626 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:03:51.4786 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (ParseLogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2020-01-08 06:03:51.4946 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:03:51.5085 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:03:51.5265 Debug Auto loading done
+2020-01-08 06:03:51.5394 Info Message Template Auto Format enabled
+2020-01-08 06:03:51.5584 Info Loading assembly: NLog.RabbitMQ
+2020-01-08 06:03:51.5833 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.RabbitMQ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.RabbitMQ' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2020-01-08 06:03:51.6651 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: CacheTarget ---> System.ArgumentException: Target cannot be found: 'CacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:03:51.7349 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MyCacheTarget ---> System.ArgumentException: Target cannot be found: 'MyCacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:03:51.7958 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RabbitMQ ---> System.ArgumentException: Target cannot be found: 'RabbitMQ'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:03:51.8686 Debug Setting 'MethodCallTarget.name' to 'methodCall1'
+2020-01-08 06:03:51.9473 Debug Setting 'MethodCallTarget.methodName' to 'Receive'
+2020-01-08 06:03:52.0341 Debug Setting 'MethodCallTarget.className' to 'ParseLogs, ParseLogs.LoggerMethod'
+2020-01-08 06:03:52.1319 Debug Setting 'MethodCallParameter.layout' to '${log4jxmlevent}'
+2020-01-08 06:03:52.2326 Debug Setting 'MethodCallParameter.name' to 'String'
+2020-01-08 06:03:52.3024 Info Adding target MethodCallTarget(Name=methodCall1)
+2020-01-08 06:03:52.3602 Debug Registered target methodCall1: NLog.Targets.MethodCallTarget
+2020-01-08 06:03:52.4231 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MSFTTeamsTarget ---> System.ArgumentException: Target cannot be found: 'MSFTTeamsTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:03:52.5178 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:52.6066 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:52.6894 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-08 06:03:52.7602 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 06:03:52.8200 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:03:52.8789 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:52.9447 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 06:03:53.0015 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
+2020-01-08 06:03:53.0574 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-08 06:03:53.1172 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-08 06:03:53.1900 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:53.2718 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:53.3675 Debug Setting 'ChainsawTarget.name' to 'chainsaw_serenity'
+2020-01-08 06:03:53.4374 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 06:03:53.4922 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:03:53.5501 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:53.6159 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 06:03:53.6947 Debug Setting 'ChainsawTarget.address' to 'udp://serenity:4445'
+2020-01-08 06:03:53.6947 Info Adding target ChainsawTarget(Name=chainsaw_serenity)
+2020-01-08 06:03:53.7326 Debug Registered target chainsaw_serenity: NLog.Targets.ChainsawTarget
+2020-01-08 06:03:53.7565 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:53.7735 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:53.7974 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-08 06:03:53.8094 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-08 06:03:53.8253 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-08 06:03:53.8403 Info Adding target FileTarget(Name=testLogFile)
+2020-01-08 06:03:53.9011 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-08 06:03:53.9171 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:53.9340 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:53.9460 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 06:03:53.9649 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-08 06:03:53.9809 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:03:53.9969 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.0128 Info Adding target FileTarget(Name=logfile)
+2020-01-08 06:03:54.0288 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 06:03:54.0467 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.0637 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:54.0826 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 06:03:54.1126 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-08 06:03:54.1235 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-08 06:03:54.1375 Info Adding target FileTarget(Name=logfile)
+2020-01-08 06:03:54.1475 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 06:03:54.1624 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.1624 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:54.1933 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-08 06:03:54.2063 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-08 06:03:54.2203 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:03:54.2382 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.2552 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-08 06:03:54.2691 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-08 06:03:54.2831 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.3070 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:54.3240 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-08 06:03:54.3479 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-08 06:03:54.3649 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-08 06:03:54.4347 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-08 06:03:54.4666 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-08 06:03:54.4826 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-08 06:03:54.4985 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.5145 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:54.5264 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-08 06:03:54.5374 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-08 06:03:54.5374 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-08 06:03:54.5633 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-08 06:03:54.5803 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:03:54.5953 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:03:54.6072 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-08 06:03:54.6202 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-08 06:03:54.6352 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-08 06:03:54.6491 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-08 06:03:54.6760 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache1' not found for logging rule: *.
+2020-01-08 06:03:54.6920 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'msftTeams' not found for logging rule: *.
+2020-01-08 06:03:54.7199 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'teastLogFile' not found for logging rule: *.
+2020-01-08 06:03:54.7369 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache' not found for logging rule: *.
+2020-01-08 06:03:54.7558 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'mycache' not found for logging rule: *.
+2020-01-08 06:03:54.7718 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'RabbitMQTarget' not found for logging rule: *.
+2020-01-08 06:03:54.7887 Debug Unused target checking is started... Rule Count: 13, Target Count: 9
+2020-01-08 06:03:54.8117 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: methodCall1
+2020-01-08 06:03:54.8247 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: testLogFile
+2020-01-08 06:03:54.8386 Debug Unused target checking is completed. Total Rule Count: 13, Total Target Count: 9, Unused Target Count: 2
+2020-01-08 06:03:54.8695 Debug --- NLog configuration dump ---
+2020-01-08 06:03:54.8885 Debug Targets:
+2020-01-08 06:03:54.9044 Debug MethodCall Target[methodCall1]
+2020-01-08 06:03:54.9234 Debug Chainsaw Target[chainsaw]
+2020-01-08 06:03:54.9383 Debug Chainsaw Target[chainsaw_serenity]
+2020-01-08 06:03:54.9563 Debug File Target[testLogFile]
+2020-01-08 06:03:54.9752 Debug File Target[logfile]
+2020-01-08 06:03:54.9752 Debug Console Target[logconsole]
+2020-01-08 06:03:55.0092 Debug NLogViewer Target[viewer]
+2020-01-08 06:03:55.0281 Debug NLogViewer Target[viewer3]
+2020-01-08 06:03:55.0441 Debug NLogViewer Target[viewer2]
+2020-01-08 06:03:55.0610 Debug Rules:
+2020-01-08 06:03:55.0810 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-08 06:03:55.1019 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-08 06:03:55.1169 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-08 06:03:55.1169 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-08 06:03:55.1468 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ chainsaw_serenity ]
+2020-01-08 06:03:55.1468 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-08 06:03:55.1777 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-08 06:03:55.1937 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.1937 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.2226 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.2365 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.2505 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.2645 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:03:55.2824 Debug --- End of NLog configuration dump ---
+2020-01-08 06:03:55.3084 Info Found 81 configuration items
+2020-01-08 06:03:55.3702 Error MethodCall Target[methodCall1]: Error initializing target Exception: NLog.NLogConfigurationException: MethodCallTarget: failed to get type from ClassName=ParseLogs, ParseLogs.LoggerMethod
+   at NLog.Targets.MethodCallTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-01-08 06:03:55.4600 Info Configuration initialized.
+2020-01-08 06:03:55.5008 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-08 06:03:55.6435 Debug Targets for ParseLogs.App by level:
+2020-01-08 06:03:55.6624 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 06:03:55.6784 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:03:55.6784 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:55.7312 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:55.7442 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:55.7631 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:57.2363 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml' on startup
+2020-01-08 06:03:57.2782 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml
+2020-01-08 06:03:57.4986 Error NetworkTarget(Name=chainsaw_serenity): Failed to create sender to address: 'udp://serenity:4445' Exception: System.Net.Sockets.SocketException (0x80004005): The requested name is valid, but no data of the requested type was found
+   at System.Net.Dns.GetAddrInfo(String name)
+   at System.Net.Dns.InternalGetHostByName(String hostName, Boolean includeIPv6)
+   at System.Net.Dns.GetHostEntry(String hostNameOrAddress)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily)
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize()
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize()
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-08 06:03:58.3882 Debug Registered target MyCacheTarget: ParseLogs.MyCacheTarget
+2020-01-08 06:03:58.4750 Info Found 83 configuration items
+2020-01-08 06:03:58.4919 Debug Targets for ParseLogs.App by level:
+2020-01-08 06:03:58.5059 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:03:58.5059 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:03:58.5358 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.5867 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.6216 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.6405 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.8380 Debug Targets for ParseLogs.MainWindow by level:
+2020-01-08 06:03:58.8560 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:03:58.8749 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:03:58.9118 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.9298 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.9497 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:58.9896 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.1681 Debug Targets for ParseLogsLib.LogFinder by level:
+2020-01-08 06:03:59.1911 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:03:59.2190 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:03:59.2330 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.2499 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.2808 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.3038 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.3187 Debug Targets for ParseLogsLib.ParseLogsCommands by level:
+2020-01-08 06:03:59.3437 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:03:59.3736 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:03:59.3985 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.4165 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.4404 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:03:59.4603 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:27.4977 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-08 06:08:27.6015 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-08 06:08:27.6015 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:08:27.6274 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug' (ParseLogs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2020-01-08 06:08:27.6364 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:08:27.6364 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug
+2020-01-08 06:08:27.6573 Debug Auto loading done
+2020-01-08 06:08:27.6723 Info Message Template Auto Format enabled
+2020-01-08 06:08:27.6972 Info Loading assembly: NLog.RabbitMQ
+2020-01-08 06:08:27.7491 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.RabbitMQ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.RabbitMQ' or one of its dependencies. The system cannot find the file specified.
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2020-01-08 06:08:27.8528 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: CacheTarget ---> System.ArgumentException: Target cannot be found: 'CacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:08:27.9376 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MyCacheTarget ---> System.ArgumentException: Target cannot be found: 'MyCacheTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:08:28.0034 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: RabbitMQ ---> System.ArgumentException: Target cannot be found: 'RabbitMQ'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:08:28.1719 Debug Setting 'MethodCallTarget.name' to 'methodCall1'
+2020-01-08 06:08:28.2976 Debug Setting 'MethodCallTarget.methodName' to 'Receive'
+2020-01-08 06:08:28.3614 Debug Setting 'MethodCallTarget.className' to 'ParseLogs, ParseLogs.LoggerMethod'
+2020-01-08 06:08:28.4502 Debug Setting 'MethodCallParameter.layout' to '${log4jxmlevent}'
+2020-01-08 06:08:28.5420 Debug Setting 'MethodCallParameter.name' to 'String'
+2020-01-08 06:08:28.5968 Info Adding target MethodCallTarget(Name=methodCall1)
+2020-01-08 06:08:28.6716 Debug Registered target methodCall1: NLog.Targets.MethodCallTarget
+2020-01-08 06:08:28.7673 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create target type: MSFTTeamsTarget ---> System.ArgumentException: Target cannot be found: 'MSFTTeamsTarget'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.CreateTargetType(String targetTypeName)
+   --- End of inner exception stack trace ---
+2020-01-08 06:08:28.8541 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:28.9269 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:28.9957 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-08 06:08:29.0705 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 06:08:29.1394 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:08:29.2022 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.2650 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 06:08:29.3079 Debug Setting 'ChainsawTarget.address' to 'udp://127.0.0.1:4445'
+2020-01-08 06:08:29.3468 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-08 06:08:29.3867 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-08 06:08:29.4266 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.4675 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:29.5064 Debug Setting 'ChainsawTarget.name' to 'chainsaw_serenity'
+2020-01-08 06:08:29.5433 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-08 06:08:29.5832 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:08:29.6221 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.6570 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-08 06:08:29.6969 Debug Setting 'ChainsawTarget.address' to 'udp://serenity:4445'
+2020-01-08 06:08:29.6969 Info Adding target ChainsawTarget(Name=chainsaw_serenity)
+2020-01-08 06:08:29.7098 Debug Registered target chainsaw_serenity: NLog.Targets.ChainsawTarget
+2020-01-08 06:08:29.7248 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.7248 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:29.7417 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-08 06:08:29.7417 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-08 06:08:29.7717 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-08 06:08:29.7717 Info Adding target FileTarget(Name=testLogFile)
+2020-01-08 06:08:29.7976 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-08 06:08:29.8086 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.8215 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:29.8345 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 06:08:29.8345 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-08 06:08:29.8604 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:08:29.8704 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.8814 Info Adding target FileTarget(Name=logfile)
+2020-01-08 06:08:29.8814 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 06:08:29.9013 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.9123 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:29.9123 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-08 06:08:29.9302 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-08 06:08:29.9302 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-08 06:08:29.9522 Info Adding target FileTarget(Name=logfile)
+2020-01-08 06:08:29.9602 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-08 06:08:29.9602 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:29.9771 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:29.9771 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-08 06:08:29.9981 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-08 06:08:30.0080 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-08 06:08:30.0080 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:30.0230 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-08 06:08:30.0230 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-08 06:08:30.0419 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:30.0419 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:30.0619 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-08 06:08:30.0719 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-08 06:08:30.0719 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-08 06:08:30.0888 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-08 06:08:30.0888 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-08 06:08:30.1058 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-08 06:08:30.1058 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:30.1207 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:30.1207 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-08 06:08:30.1387 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-08 06:08:30.1497 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-08 06:08:30.1497 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-08 06:08:30.1666 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-08 06:08:30.1666 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-08 06:08:30.1806 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-08 06:08:30.1806 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-08 06:08:30.1975 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-08 06:08:30.1975 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-08 06:08:30.2254 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache1' not found for logging rule: *.
+2020-01-08 06:08:30.2254 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'msftTeams' not found for logging rule: *.
+2020-01-08 06:08:30.2424 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'teastLogFile' not found for logging rule: *.
+2020-01-08 06:08:30.2424 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'cache' not found for logging rule: *.
+2020-01-08 06:08:30.2594 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'mycache' not found for logging rule: *.
+2020-01-08 06:08:30.2594 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'RabbitMQTarget' not found for logging rule: *.
+2020-01-08 06:08:30.2843 Debug Unused target checking is started... Rule Count: 13, Target Count: 9
+2020-01-08 06:08:30.3022 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: methodCall1
+2020-01-08 06:08:30.3162 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: testLogFile
+2020-01-08 06:08:30.3262 Debug Unused target checking is completed. Total Rule Count: 13, Total Target Count: 9, Unused Target Count: 2
+2020-01-08 06:08:30.3621 Debug --- NLog configuration dump ---
+2020-01-08 06:08:30.3711 Debug Targets:
+2020-01-08 06:08:30.3711 Debug MethodCall Target[methodCall1]
+2020-01-08 06:08:30.3880 Debug Chainsaw Target[chainsaw]
+2020-01-08 06:08:30.3880 Debug Chainsaw Target[chainsaw_serenity]
+2020-01-08 06:08:30.4020 Debug File Target[testLogFile]
+2020-01-08 06:08:30.4149 Debug File Target[logfile]
+2020-01-08 06:08:30.4149 Debug Console Target[logconsole]
+2020-01-08 06:08:30.4319 Debug NLogViewer Target[viewer]
+2020-01-08 06:08:30.4319 Debug NLogViewer Target[viewer3]
+2020-01-08 06:08:30.4479 Debug NLogViewer Target[viewer2]
+2020-01-08 06:08:30.4479 Debug Rules:
+2020-01-08 06:08:30.4638 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-08 06:08:30.4638 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-08 06:08:30.4798 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-08 06:08:30.4798 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-08 06:08:30.4957 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ chainsaw_serenity ]
+2020-01-08 06:08:30.4957 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-08 06:08:30.5107 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-08 06:08:30.5107 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5286 Debug logNamePattern: (:All) levels: [ Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5286 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5426 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5426 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5566 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-08 06:08:30.5566 Debug --- End of NLog configuration dump ---
+2020-01-08 06:08:30.5805 Info Found 81 configuration items
+2020-01-08 06:08:30.6234 Error MethodCall Target[methodCall1]: Error initializing target Exception: NLog.NLogConfigurationException: MethodCallTarget: failed to get type from ClassName=ParseLogs, ParseLogs.LoggerMethod
+   at NLog.Targets.MethodCallTarget.InitializeTarget()
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2020-01-08 06:08:30.6463 Info Configuration initialized.
+2020-01-08 06:08:30.6743 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-08 06:08:30.6872 Debug Targets for ParseLogs.App by level:
+2020-01-08 06:08:30.6962 Debug Trace => viewer chainsaw_serenity viewer3
+2020-01-08 06:08:30.6962 Debug Debug => logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:08:30.7131 Debug Info => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:30.7131 Debug Warn => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:30.7301 Debug Error => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:30.7301 Debug Fatal => logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:31.6277 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml' on startup
+2020-01-08 06:08:31.6576 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogs\bin\x64\Debug\file.xml
+2020-01-08 06:08:32.3996 Debug Registered target MyCacheTarget: ParseLogs.MyCacheTarget
+2020-01-08 06:08:32.4525 Info Found 83 configuration items
+2020-01-08 06:08:32.4635 Debug Targets for ParseLogs.App by level:
+2020-01-08 06:08:32.4635 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:08:32.4834 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:08:32.5004 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.5133 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.5223 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.5223 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.6440 Debug Targets for ParseLogs.MainWindow by level:
+2020-01-08 06:08:32.6540 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:08:32.6629 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:08:32.6629 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.6849 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.6849 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.6998 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.7726 Debug Targets for ParseLogsLib.LogFinder by level:
+2020-01-08 06:08:32.7726 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:08:32.7906 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:08:32.7906 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8125 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8235 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8235 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8444 Debug Targets for ParseLogsLib.ParseLogsCommands by level:
+2020-01-08 06:08:32.8544 Debug Trace => MyCacheTarget viewer chainsaw_serenity viewer3
+2020-01-08 06:08:32.8664 Debug Debug => MyCacheTarget logfile viewer chainsaw chainsaw_serenity viewer3
+2020-01-08 06:08:32.8664 Debug Info => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8873 Debug Warn => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.8873 Debug Error => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2
+2020-01-08 06:08:32.9083 Debug Fatal => MyCacheTarget logconsole logfile viewer chainsaw chainsaw_serenity viewer3 viewer2

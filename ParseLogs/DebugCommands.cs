@@ -15,6 +15,9 @@ namespace ParseLogs
     public static class DebugCommands
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
+        public static readonly RoutedCommand ShowLogEventInfoCommand =
+            new RoutedUICommand("Show Log Event Info", nameof(ShowLogEventInfoCommand), typeof(DebugCommands));
         public static readonly ICommand DumpResources = new DelegateCommand(() =>
         {
             if (Logger.IsDebugEnabled)

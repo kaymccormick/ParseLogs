@@ -276,6 +276,8 @@
     <Compile Include="AppNavWindow.xaml.cs">
       <DependentUpon>AppNavWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConsoleHelper.cs" />
+    <Compile Include="EventLogInfoConverter.cs" />
     <Compile Include="MyCacheTarget.cs" />
     <Compile Include="ContainerHelper.cs" />
     <Compile Include="Entity1.cs">
@@ -425,6 +427,14 @@
       <Project>{a22e3220-7241-419b-9c29-58d4102ece58}</Project>
       <Name>CommandLine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\NLogViewer\src\NLogViewer\NLogViewer.csproj">
+      <Project>{c680af0b-982a-45ff-b8c0-fbb0c00f17b1}</Project>
+      <Name>NLogViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DocumentLogger\DocumentLogger.csproj">
+      <Project>{9b8d5b4b-43fb-486d-befc-60390219cac6}</Project>
+      <Name>DocumentLogger</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ParseLogsLib\ParseLogsLib.csproj">
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>
@@ -537,6 +547,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\exit-to-app-button.svg" />
+    <Resource Include="Images\Log_File-512.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

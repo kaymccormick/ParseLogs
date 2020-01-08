@@ -63,8 +63,8 @@ namespace ParseLogs
             };
             SetBinding(LogWindowTypeProperty, binding);
             
-            DebugWindow debugWindow = new DebugWindow();
-            debugWindow.Show();
+            // DebugWindow debugWindow = new DebugWindow();
+            // debugWindow.Show();
 
             foreach (FieldInfo f in typeof(StartupActions).GetFields(
                 BindingFlags.Static | BindingFlags.Public | BindingFlags.ExactBinding))
@@ -82,12 +82,14 @@ namespace ParseLogs
                 }
             }
 
-            ConsoleWindow consoleWindow = new ConsoleWindow();
-            consoleWindow.Show();
-
-            _logWindow = LogWindowType.GetConstructor(Type.EmptyTypes).Invoke(null) as Window;
-            //_logWindow.ShowActivated = true;
-            _logWindow.Show();
+            // ConsoleWindow consoleWindow = new ConsoleWindow();
+            // consoleWindow.Show();
+             if (LogWindowType != null)
+            {
+                _logWindow = LogWindowType.GetConstructor(Type.EmptyTypes).Invoke(null) as Window;
+                //_logWindow.ShowActivated = true;
+                _logWindow.Show();
+            }
 
             Task.Run(() =>
             {
@@ -211,7 +213,7 @@ namespace ParseLogs
 
         private void MainWindow_OnClosed(object sender, EventArgs e)
         {
-            _logWindow.Close();
+            if (_logWindow != null) _logWindow.Close();
         }
 
         private void DriveListBox_Initialized(object sender, EventArgs e)
