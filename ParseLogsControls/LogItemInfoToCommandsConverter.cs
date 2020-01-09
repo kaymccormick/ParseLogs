@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Dynamic;
 using System.Globalization;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -20,16 +17,14 @@ namespace ParseLogsControls
 {
     public class Contract : IContractResolver
     {
-        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
-        private DefaultContractResolver contractResolver;
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly DefaultContractResolver contractResolver;
 
 
-        public string GetResolvedPropertyName(string propertyName)
+        private string GetResolvedPropertyName(string propertyName)
         {
             return contractResolver.GetResolvedPropertyName(propertyName);
         }
-
-        public bool DynamicCodeGeneration => contractResolver.DynamicCodeGeneration;
 
         public BindingFlags DefaultMembersSearchFlags
         {
@@ -163,13 +158,13 @@ namespace ParseLogsControls
             set => defImpl.Converter = value;
         }
 
-        public JsonConverter InternalConverter {
+        public JsonConverter? InternalConverter {
 	get {
 	var r = defImpl.InternalConverter;
 	Logger.Debug($"Returning {r}");
 	return r;
 	}
-	}
+        }
 
         public IList<SerializationCallback> OnDeserializedCallbacks {
 	get {
@@ -324,7 +319,7 @@ namespace ParseLogsControls
         public JsonPropertyCollection Properties {
 	get {
 	var r = defImpl.Properties;
-	Logger.Debug($"Returning {r}");
+	Logger.Warn($"Props: Returning {r}");
 	return r;
 	}
 	}
@@ -668,7 +663,7 @@ namespace ParseLogsControls
             set => defImpl.ExtensionDataNameResolver = value;
         }
 
-        public JsonPropertyCollection Properties
+        public new JsonPropertyCollection Properties
         {
             get
             {
@@ -680,7 +675,7 @@ namespace ParseLogsControls
                         w.Ignored = true;
                     }
                 }
-
+                Logger.Warn($"Props: Returning {r}");
                 return r;
             }
         }
@@ -689,7 +684,7 @@ namespace ParseLogsControls
     [ValueConversion(typeof(WpfLogEventInfo), typeof(List<dynamic>))]
     public class LogItemInfoToCommandsConverter : TypeConverter, IValueConverter
     {
-        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         public LogItemInfoToCommandsConverter()
         {
@@ -722,24 +717,26 @@ namespace ParseLogsControls
         {
             if (context != null)
             {
-                var type = context.PropertyDescriptor.PropertyType;
-                var ctype = context.PropertyDescriptor.ComponentType;
-                var desc = context.PropertyDescriptor.Description;
-                var name = context.PropertyDescriptor.Name;
-                var propDesc = String.Join(";", type, type, desc, name);
-                var o = context.GetService(typeof(IProvideValueTarget));
-                if (o == null)
+                if (context.PropertyDescriptor != null)
                 {
-                    Logger.Debug("no servie");
-                }
+                    var type = context.PropertyDescriptor.PropertyType;
+                    var desc = context.PropertyDescriptor.Description;
+                    var name = context.PropertyDescriptor.Name;
+                    var propDesc = String.Join(";", type, type, desc, name);
+                    var o = context.GetService(typeof(IProvideValueTarget));
+                    if (o == null)
+                    {
+                        Logger.Debug("no servie");
+                    }
 
-                var o2 = context.GetService(typeof(IDestinationTypeProvider));
-                if (o2 == null)
-                {
-                    Logger.Debug("no servie");
-                }
+                    var o2 = context.GetService(typeof(IDestinationTypeProvider));
+                    if (o2 == null)
+                    {
+                        Logger.Debug("no servie");
+                    }
 
-                Logger.Debug($"CanConvertTo({context.Instance},{propDesc}, {destinationType})");
+                    Logger.Debug($"CanConvertTo({context.Instance},{propDesc}, {destinationType})");
+                }
             }
             else
             {
@@ -762,30 +759,11 @@ namespace ParseLogsControls
         public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
             Logger.Debug("ConvertFrom");
-            if (context == null)
+
+            if (value is string s)
             {
-                var o = context.GetService(typeof(IProvideValueTarget));
-                if (o == null)
-                {
-                    Logger.Debug("no servie");
-                }
-
-                if (value == null)
-                {
-                    Logger.Debug("value is null");
-                }
-
-                var propType = context.PropertyDescriptor.PropertyType;
-                var propName = context.PropertyDescriptor.Name;
-                var propComponentType = context.PropertyDescriptor.ComponentType;
-                var propString = $"[{propType}] [{propComponentType}].[{propName}]";
-                Logger.Debug($"prop: {propString}");
-            }
-
-            if (value is string)
-            {
-                byte[] b = System.Convert.FromBase64String((string) value);
-                var json = System.Text.Encoding.UTF8.GetString(b);
+                byte[] b = System.Convert.FromBase64String(s);
+                var json = Encoding.UTF8.GetString(b);
                 WpfLogEventInfo i = JsonConvert.DeserializeObject<WpfLogEventInfo>(json);
                 return i;
             }
@@ -812,22 +790,24 @@ namespace ParseLogsControls
 
                 var instance = context.Instance;
                 var instanceStr = $"[{instance.GetType()}]";
-                var felem = instance as FrameworkElement;
-                if (felem != null)
+                if (instance is FrameworkElement fElem)
                 {
-                    var elemStr = $"Name={felem.Name}";
+                    var elemStr = $"Name={fElem.Name}";
                     instanceStr += elemStr;
                 }
 
-                var propType = context.PropertyDescriptor.PropertyType;
-                var propName = context.PropertyDescriptor.Name;
-                var propComponentType = context.PropertyDescriptor.ComponentType;
-                var propString = $"[{propType}] [{propComponentType}].[{propName}]";
-                Logger.Debug($"prop: {propString}");
+                if (context.PropertyDescriptor != null)
+                {
+                    var propType = context.PropertyDescriptor.PropertyType;
+                    var propName = context.PropertyDescriptor.Name;
+                    var propComponentType = context.PropertyDescriptor.ComponentType;
+                    var propString = $"[{propType}] [{propComponentType}].[{propName}]";
+                    Logger.Debug($"prop: {propString}");
+                }
+
                 Logger.Debug($"instance: {instanceStr}");
 
-                var service = o as IProvideValueTarget;
-                if (service != null)
+                if (o is IProvideValueTarget service)
                 {
                     Logger.Debug($"{service.TargetObject}.{service.TargetProperty}");
                 }
@@ -845,14 +825,14 @@ namespace ParseLogsControls
                 var json = JsonConvert.SerializeObject(i);
 
                 return new TestMarkupExtension(
-                    System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(json)));
+                    System.Convert.ToBase64String(Encoding.UTF8.GetBytes(json)));
             }
             else if (destinationType == typeof(String))
             {
                 WpfLogEventInfo i = (WpfLogEventInfo) value;
                 var json = JsonConvert.SerializeObject(i);
 
-                return System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(json));
+                return System.Convert.ToBase64String(Encoding.UTF8.GetBytes(json));
             }
 
             Logger.Debug("beep");
@@ -861,7 +841,6 @@ namespace ParseLogsControls
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            IServiceProvider provider;
             string valueStr = "null";
             if (value == null)
             {
@@ -876,9 +855,10 @@ namespace ParseLogsControls
             Logger.Debug($"Call to {nameof(Convert)} ({valueStr}), {targetType}, {parameter}, {culture})");
             WpfLogEventInfo i = (WpfLogEventInfo) value;
             List<WpfLogEventInfoCommand> r = new List<WpfLogEventInfoCommand>();
-            WpfLogEventInfoCommand e = new WpfLogEventInfoCommand();
-            e.Command = DiagnosticCommands.ShowLogEventInfoCommand;
-            e.WpfLogEventInfo = i;
+            WpfLogEventInfoCommand e = new WpfLogEventInfoCommand
+            {
+                Command = DiagnosticCommands.ShowLogEventInfoCommand, WpfLogEventInfo = i
+            };
             r.Add(e);
             Logger.Debug($"Returning {r}");
             return r;

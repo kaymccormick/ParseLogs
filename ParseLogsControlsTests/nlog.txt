@@ -2789,3 +2789,33 @@
 2020-01-09 00:32:37.0300 Debug Warn => logconsole logfile xmllogfile viewer chainsaw chainsaw_serenity viewer3 viewer2 testLogFile
 2020-01-09 00:32:37.0450 Debug Error => logconsole logfile xmllogfile viewer chainsaw chainsaw_serenity viewer3 viewer2 testLogFile
 2020-01-09 00:32:37.0579 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw chainsaw_serenity viewer3 viewer2 testLogFile
+2020-01-09 03:28:41.7229 Info Message Template Auto Format enabled
+2020-01-09 03:28:41.8291 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-09 03:28:41.8491 Info Adding target FileTarget(Name=testLogFile)
+2020-01-09 03:28:41.8571 Info Adding target FileTarget(Name=logfile)
+2020-01-09 03:28:41.8571 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-09 03:28:41.8740 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-09 03:28:41.8840 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-09 03:28:41.8840 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-09 03:28:41.9000 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-09 03:28:41.9173 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-09 03:28:41.9619 Info Found 81 configuration items
+2020-01-09 03:28:42.0068 Info Configuration initialized.
+2020-01-09 03:28:42.0068 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-09 03:28:43.6517 Info AppDomain Shutting down. Logger closing...
+2020-01-09 03:28:43.6816 Info Logger has been shut down.
+2020-01-09 03:30:22.0001 Info Message Template Auto Format enabled
+2020-01-09 03:30:22.0948 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-09 03:30:22.1198 Info Adding target FileTarget(Name=testLogFile)
+2020-01-09 03:30:22.1198 Info Adding target FileTarget(Name=logfile)
+2020-01-09 03:30:22.1376 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-09 03:30:22.1496 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-09 03:30:22.1496 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-09 03:30:22.1659 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-09 03:30:22.1659 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-09 03:30:22.1968 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-09 03:30:22.2467 Info Found 81 configuration items
+2020-01-09 03:30:22.2798 Info Configuration initialized.
+2020-01-09 03:30:22.2879 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-09 03:30:24.0616 Info AppDomain Shutting down. Logger closing...
+2020-01-09 03:30:24.1041 Info Logger has been shut down.

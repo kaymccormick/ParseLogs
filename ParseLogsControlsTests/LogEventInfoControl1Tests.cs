@@ -22,6 +22,19 @@ using WriteState = System.Xml.WriteState;
 
 namespace ParseLogsControls.Test
 {
+    public static class Helper
+    { 
+        //AssemblyResolve += new ResolveEventHandler(LoadFromSameFolderResolveEventHandler);
+
+        static Assembly LoadFromSameFolderResolveEventHandler(object sender, ResolveEventArgs args)
+        {
+            string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string assemblyPath = Path.Combine(folderPath, args.Name + ".dll");
+            Assembly assembly = Assembly.LoadFrom(assemblyPath);
+            return assembly;
+        }
+    }
+
     public class TestXmlWriter : XmlWriter
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
@@ -152,19 +165,23 @@ namespace ParseLogsControls.Test
 
         public override WriteState WriteState => xmlWriterImplementation.WriteState;
     }
+
     [TestFixture()]
     public class LogEventInfoControl1Tests
     {
         private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();
+
         [SetUp]
         public void SetUp()
         {
             Application app = new Application();
             var assemblyFullName = typeof(LogEventInfoControl1).Assembly.FullName;
             var assPart = Uri.EscapeUriString(assemblyFullName.ToString());
-            var stream = Application.GetResourceStream(new Uri($"pack://application:,,,/{assPart};component/dictionary.xaml",
+            var stream = Application.GetResourceStream(new Uri(
+                $"pack://application:,,,/{assPart};component/dictionary.xaml",
                 UriKind.RelativeOrAbsolute));
-            System.Uri resourceLocater = new System.Uri("/ParseLogsControls;component/dictionary.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater =
+                new System.Uri("/ParseLogsControls;component/dictionary.xaml", System.UriKind.Relative);
             app.Resources = (ResourceDictionary) Application.LoadComponent(resourceLocater);
             MyApp = app;
         }
@@ -189,7 +206,7 @@ namespace ParseLogsControls.Test
                         XmlWriter w = new TestXmlWriter(textWriter);
                         XamlWriter.Save(wrap.Content, w);
                         Logger.Info($"{stringWriter}");
-                        var fileStream =  new StreamWriter(File.OpenWrite("c:\\data\\logs\\example.xml"));
+                        var fileStream = new StreamWriter(File.OpenWrite("c:\\data\\logs\\example.xml"));
                         fileStream.WriteLine(stringWriter.ToString());
 
                         wrap.Dispatcher.Invoke(() => wrap.Close());
@@ -200,9 +217,8 @@ namespace ParseLogsControls.Test
                         Console.WriteLine(e);
                         throw;
                     }
-
                 };
-                
+
                 MyApp.Run(wrap);
             }
             catch (XamlParseException e)
@@ -217,6 +233,7 @@ namespace ParseLogsControls.Test
                 Console.WriteLine(e);
                 throw;
             }
+
             // LogEventInfoControl1 test = new LogEventInfoControl1();
             // test.Instance = new LogEventInfo(LogLevel.Debug, "testLogger", "eat food");
             // Window w = new Window();
