@@ -1,4 +1,5 @@
 <configuration>
+<config>
     <add key="globalPackagesFolder" value="e:\packages" />
     <add key="repositoryPath" value="e:\installed_packages\parselogs" />
-</configuration>
+</config></configuration>

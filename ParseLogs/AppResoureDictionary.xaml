@@ -10,44 +10,5 @@
         </x:Array.Items>
     </x:Array>
     <ControlTemplate TargetType="{x:Type Button}" x:Key="logButtonTemplate" />
-    <DataTemplate x:Key="ButtonTemplate" DataType="{x:Type nLog:LogEventInfo}">
-        <DockPanel>
-            <DockPanel.Triggers>
-                <EventTrigger SourceName="clickButton" RoutedEvent="ButtonBase.Click">
-                    <BeginStoryboard Name="Storyboard">
-                        <Storyboard>
-                            <BooleanAnimationUsingKeyFrames Storyboard.TargetName="popup"
-                                                            Storyboard.TargetProperty="(IsOpen)" Duration="0:00:05"
-                                                            FillBehavior="HoldEnd">
-                                <DiscreteBooleanKeyFrame Value="True" KeyTime="00:00:02" />
-                            </BooleanAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </DockPanel.Triggers>
-            <Button x:Name="clickButton">
-                <Image Width="12" Height="12" Source="Images/Log_File-512.png" />
-            </Button>
-            <Popup x:Name="popup">
-                <Popup.Triggers>
-                    <EventTrigger RoutedEvent="UIElement.PreviewMouseDown">
-                        <StopStoryboard BeginStoryboardName="Storyboard" />
-                    </EventTrigger>
-                </Popup.Triggers>
-                <ListView ItemsSource="{Binding Converter={StaticResource converter1}, Path=.}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{Binding Path=[0]}" />
-                                    <TextBlock Text="{Binding Path=[1]}" />
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </Popup>
-        </DockPanel>
-    </DataTemplate>
     <BitmapImage x:Key="logImage" UriSource="Images/Log_File-512.png" />
 </ResourceDictionary>
