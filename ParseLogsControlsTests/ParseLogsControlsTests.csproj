@@ -75,6 +75,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Serialization" />
     <Reference Include="WindowsBase" />
@@ -92,6 +93,7 @@
     <Compile Include="LogItemInfoToCommandsConverterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WindowWrap.cs" />
+    <Compile Include="XamlLoadTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NLog.config">
@@ -104,6 +106,9 @@
       <Project>{654E7DD7-A827-411F-BF76-3F0AB3C4E172}</Project>
       <Name>ParseLogsControls</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="test_files\xaml\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
