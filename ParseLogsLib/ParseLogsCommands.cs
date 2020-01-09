@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using NLog;
-using Prism.Commands;
 using Type = System.Type;
 
 namespace ParseLogsLib

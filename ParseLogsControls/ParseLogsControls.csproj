@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiagnosticCommands.cs" />
+    <Compile Include="JsonStoreMarkupExtension.cs" />
     <Compile Include="LogEventInfoControl1.xaml.cs">
       <DependentUpon>LogEventInfoControl1.xaml</DependentUpon>
     </Compile>

@@ -8,7 +8,6 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
 using ParseLogs.Properties;
-using Prism.Commands;
 
 namespace ParseLogs
 {
@@ -18,7 +17,7 @@ namespace ParseLogs
 
         public static readonly RoutedCommand ShowLogEventInfoCommand =
             new RoutedUICommand("Show Log Event Info", nameof(ShowLogEventInfoCommand), typeof(DebugCommands));
-        public static readonly ICommand DumpResources = new DelegateCommand(() =>
+/*        public static readonly ICommand DumpResources = new DelegateCommand(() =>
         {
             if (Logger.IsDebugEnabled)
             {
@@ -73,9 +72,9 @@ namespace ParseLogs
                 ObjectDataProvider o = TryFindResource("DrivesProvider") as ObjectDataProvider;
                 var typ = o.ObjectInstance.GetType().ToString();
                 Logger.Info($"{o.ObjectInstance}");
-                */
+                
             }
         }, () => true);
-
+    */
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestWpfApp.Properties
+namespace WpfTestApp.Properties
 {
 
 

@@ -1,0 +1,8 @@
+StaticResource
+x:Static
+Binding
+<ObjectDataProvider
+<CollectionViewSource
+x:Type
+dont forget linq to xml or w/e
+

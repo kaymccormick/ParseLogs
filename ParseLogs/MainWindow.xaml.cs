@@ -172,10 +172,10 @@ namespace ParseLogs
             {
                 return "FindLogsCommand";
             }
-            else if (argsCommand == DebugCommands.DumpResources)
-            {
-                return "DebugCommands.DumpResources";
-            }
+            // else if (argsCommand == DebugCommands.DumpResources)
+            // {
+            //     return "DebugCommands.DumpResources";
+            // }
 
             var nameProp = argsCommand.GetType().GetProperty("Name");
             if (nameProp != null)

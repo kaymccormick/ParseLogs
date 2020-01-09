@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using ParseLogsLib;
-using Prism.Ioc;
 
 namespace ParseLogs
 {
