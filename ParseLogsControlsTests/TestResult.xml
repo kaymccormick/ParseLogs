@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="10" result="Failed" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-09 13:50:07Z" end-time="2020-01-09 13:50:09Z" duration="2.142413">
-  <command-line><![CDATA["C:\users\mccor.LAPTOP-T6T0BN1K\source\repos\nunit\tools\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe" .\bin\x64\Debug\ParseLogsControlsTests.dll --test=ParseLogsControlsTests.XamlLoadTests.loadXamlTest]]></command-line>
+<test-run id="2" testcasecount="10" result="Failed" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-10 04:06:20Z" end-time="2020-01-10 04:06:25Z" duration="4.935990">
+  <command-line><![CDATA["C:\users\mccor.LAPTOP-T6T0BN1K\source\repos\nunit\tools\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe" .\bin\x64\Debug\ParseLogsControlsTests.dll --test=ParseLogsControls.Test.LogEventInfoControl1Tests.Test2 --output out.txt]]></command-line>
   <filter>
-    <test>ParseLogsControlsTests.XamlLoadTests.loadXamlTest</test>
+    <test>ParseLogsControls.Test.LogEventInfoControl1Tests.Test2</test>
   </filter>
-  <test-suite type="Assembly" id="0-1013" name="ParseLogsControlsTests.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\ParseLogsControlsTests.dll" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2020-01-09 13:50:08Z" end-time="2020-01-09 13:50:09Z" duration="1.423939" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
-    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
+  <test-suite type="Assembly" id="0-1013" name="ParseLogsControlsTests.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests\bin\x64\Debug\ParseLogsControlsTests.dll" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.774824" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
-      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests" />
+      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests" />
       <setting name="ImageRuntimeVersion" value="4.0.30319" />
       <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
       <setting name="ImageRequiresX86" value="False" />
@@ -17,30 +17,80 @@
     </settings>
     <properties>
       <property name="ApartmentState" value="MTA" />
-      <property name="_PID" value="19692" />
+      <property name="_PID" value="8440" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1014" name="ParseLogsControlsTests" fullname="ParseLogsControlsTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-01-09 13:50:08Z" end-time="2020-01-09 13:50:09Z" duration="1.380727" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="TestSuite" id="0-1015" name="ParseLogsControls" fullname="ParseLogsControls" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.738951" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestFixture" id="0-1000" name="XamlLoadTests" fullname="ParseLogsControlsTests.XamlLoadTests" classname="ParseLogsControlsTests.XamlLoadTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2020-01-09 13:50:08Z" end-time="2020-01-09 13:50:09Z" duration="1.372051" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="0-1016" name="Test" fullname="ParseLogsControls.Test" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.737955" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-case id="0-1001" name="loadXamlTest" fullname="ParseLogsControlsTests.XamlLoadTests.loadXamlTest" methodname="loadXamlTest" classname="ParseLogsControlsTests.XamlLoadTests" runstate="Runnable" seed="2115848227" result="Failed" label="Error" start-time="2020-01-09 13:50:09Z" end-time="2020-01-09 13:50:09Z" duration="0.370288" asserts="0">
+        <test-suite type="TestFixture" id="0-1002" name="LogEventInfoControl1Tests" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.729794" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
           <failure>
-            <message><![CDATA[System.IO.DirectoryNotFoundException : Could not find a part of the path 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\test_files\xaml'.]]></message>
-            <stack-trace><![CDATA[   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
-   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
-   at System.IO.Directory.EnumerateFiles(String path)
-   at ParseLogsControlsTests.XamlLoadTests.loadXamlTest() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\XamlLoadTests.cs:line 25]]></stack-trace>
+            <message><![CDATA[One or more child tests had errors]]></message>
           </failure>
-        </test-case>
+          <test-case id="0-1004" name="Test2" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests.Test2" methodname="Test2" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" seed="1438049477" result="Failed" label="Error" start-time="2020-01-10 04:06:22Z" end-time="2020-01-10 04:06:25Z" duration="2.919109" asserts="0">
+            <failure>
+              <message><![CDATA[Newtonsoft.Json.JsonSerializationException : Error converting value "Debug" to type 'NLog.LogLevel'. Path 'Level', line 4, position 18.
+  ----> System.InvalidCastException : Invalid cast from 'System.String' to 'NLog.LogLevel'.]]></message>
+              <stack-trace><![CDATA[   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 992
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 324
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 1039
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 2420
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 493
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 300
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 202
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonSerializer.cs:line 907
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonSerializer.cs:line 886
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonConvert.cs:line 837
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonConvert.cs:line 792
+   at ParseLogsControls.Test.LogEventInfoControl1Tests.Test2() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\LogEventInfoControl1Tests.cs:line 268
+--InvalidCastException
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 985]]></stack-trace>
+            </failure>
+            <output><![CDATA[{
+  "SequenceID": 1,
+  "TimeStamp": "2020-01-09T20:06:24.1943279-08:00",
+  "Level": "Debug",
+  "HasStackTrace": false,
+  "UserStackFrame": null,
+  "UserStackFrameNumber": 0,
+  "StackTrace": null,
+  "CallerClassName": null,
+  "CallerMemberName": null,
+  "CallerFilePath": null,
+  "CallerLineNumber": 0,
+  "Exception": null,
+  "LoggerName": "testlogger",
+  "Message": "message",
+  "Parameters": null,
+  "FormatProvider": null,
+  "MessageFormatter": {
+    "Method": {
+      "Name": "FormatMessage",
+      "AssemblyName": "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c",
+      "ClassName": "NLog.Internal.LogMessageTemplateFormatter",
+      "Signature": "System.String FormatMessage(NLog.LogEventInfo)",
+      "Signature2": "System.String FormatMessage(NLog.LogEventInfo)",
+      "MemberType": 8,
+      "GenericArguments": null
+    },
+    "Target": {}
+  },
+  "HasProperties": false,
+  "Properties": {},
+  "MessageTemplateParameters": []
+}
+]]></output>
+          </test-case>
+        </test-suite>
       </test-suite>
     </test-suite>
   </test-suite>

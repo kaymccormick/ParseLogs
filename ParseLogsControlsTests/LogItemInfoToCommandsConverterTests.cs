@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ParseLogsControls.Test
 {
-    [TestFixture()]
+    [TestFixture()] 
     public class LogItemInfoToCommandsConverterTests
     {
         [Test()]

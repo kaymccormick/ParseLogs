@@ -22,18 +22,29 @@ using WriteState = System.Xml.WriteState;
 
 namespace ParseLogsControls.Test
 {
-    public static class Helper
-    { 
-        //AssemblyResolve += new ResolveEventHandler(LoadFromSameFolderResolveEventHandler);
 
-        static Assembly LoadFromSameFolderResolveEventHandler(object sender, ResolveEventArgs args)
-        {
-            string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string assemblyPath = Path.Combine(folderPath, args.Name + ".dll");
-            Assembly assembly = Assembly.LoadFrom(assemblyPath);
-            return assembly;
-        }
-    }
+//     [SetUpFixture]
+//     public class Helper
+//     {
+//         [OneTimeSetUp]
+//         public void setUp()
+//         {
+//             Assembly.Load("NLog.dll");
+//         }
+//
+//         //System.Threading.Thread.CurrentThread.
+//   //          AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(LoadFromSameFolderResolveEventHandler);
+// //        }
+//
+//
+//         public Assembly LoadFromSameFolderResolveEventHandler(object sender, ResolveEventArgs args)
+//         {
+//             string folderPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+//             string assemblyPath = Path.Combine(folderPath, args.Name + ".dll");
+//             Assembly assembly = Assembly.LoadFrom(assemblyPath);
+//             return assembly;
+//         }
+//     }
 
     public class TestXmlWriter : XmlWriter
     {
@@ -250,9 +261,28 @@ namespace ParseLogsControls.Test
             var json = JsonConvert.SerializeObject(logEventInfo,
                 Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings()
                 {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     ContractResolver = new Contract(),
                 });
-            Logger.Info(json);
+            Console.WriteLine(json);
+            LogEventInfo info = JsonConvert.DeserializeObject<LogEventInfo>(json, new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                ContractResolver = new Contract(),
+            });
+            var json2 = JsonConvert.SerializeObject(info,
+                Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings()
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                    ContractResolver = new Contract(),
+                });
+            Assert.AreEqual(json, json2);
         }
+        
+
+
+
+
+    
     }
 }

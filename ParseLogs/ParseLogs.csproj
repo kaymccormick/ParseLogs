@@ -432,10 +432,6 @@
       <Project>{c680af0b-982a-45ff-b8c0-fbb0c00f17b1}</Project>
       <Name>NLogViewer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DocumentLogger\DocumentLogger.csproj">
-      <Project>{9b8d5b4b-43fb-486d-befc-60390219cac6}</Project>
-      <Name>DocumentLogger</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ParseLogsLib\ParseLogsLib.csproj">
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>

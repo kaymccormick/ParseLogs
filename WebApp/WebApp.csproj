@@ -47,6 +47,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NLog">
       <HintPath>E:\nlog\debug\NLog.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />

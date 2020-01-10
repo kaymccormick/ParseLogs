@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Windows;
@@ -15,70 +16,56 @@ using NLog;
 
 namespace ParseLogsControls
 {
-    public class Contract : IContractResolver
+    public class Contract : DefaultContractResolver
     {
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        private readonly DefaultContractResolver contractResolver;
+        protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
+        {
+            var r = base.CreateProperties(type, memberSerialization);
+            if (typeof(LogEventInfo).IsAssignableFrom(type))
+            {
+                bool found = false;
+                foreach (var p in r.Where(property => property.UnderlyingName == "FormattedMessage"))
+                {
+                    p.Ignored = true;
+                    found = true;
+                }
 
+                if (!found)
+                {
+                    throw new Exception("Beep");
+                }
+            }
+
+            return r;
+        }
+
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        //private readonly DefaultContractResolver contractResolver { get { }};
 
         private string GetResolvedPropertyName(string propertyName)
         {
-            return contractResolver.GetResolvedPropertyName(propertyName);
+            return base.GetResolvedPropertyName(propertyName);
         }
 
-        public BindingFlags DefaultMembersSearchFlags
-        {
-            get => contractResolver.DefaultMembersSearchFlags;
-            set => contractResolver.DefaultMembersSearchFlags = value;
-        }
-
-        public bool SerializeCompilerGeneratedMembers
-        {
-            get => contractResolver.SerializeCompilerGeneratedMembers;
-            set => contractResolver.SerializeCompilerGeneratedMembers = value;
-        }
-
-        public bool IgnoreSerializableInterface
-        {
-            get => contractResolver.IgnoreSerializableInterface;
-            set => contractResolver.IgnoreSerializableInterface = value;
-        }
-
-        public bool IgnoreSerializableAttribute
-        {
-            get => contractResolver.IgnoreSerializableAttribute;
-            set => contractResolver.IgnoreSerializableAttribute = value;
-        }
-
-        public bool IgnoreIsSpecifiedMembers
-        {
-            get => contractResolver.IgnoreIsSpecifiedMembers;
-            set => contractResolver.IgnoreIsSpecifiedMembers = value;
-        }
-
-        public bool IgnoreShouldSerializeMembers
-        {
-            get => contractResolver.IgnoreShouldSerializeMembers;
-            set => contractResolver.IgnoreShouldSerializeMembers = value;
-        }
-
-        public NamingStrategy NamingStrategy
-        {
-            get => contractResolver.NamingStrategy;
-            set => contractResolver.NamingStrategy = value;
-        }
 
         public Contract()
         {
-            contractResolver = new DefaultContractResolver();
+            //contractResolver = new DefaultContractResolver();
             LogEventInfoContract =
                 new LogEventInfoContract(/*contractResolver.ResolveContract(typeof(LogEventInfo))*/);
-            var _wpf = contractResolver.ResolveContract(typeof(WpfLogEventInfo));
-            Logger.Debug($"default contract is {_wpf}");
-            WpfLogEventInfoContract = new WpfLogEventInfoContract(/*_wpf*/);
+            //var _wpf = base.ResolveContract(typeof(WpfLogEventInfo));
+            //Logger.Debug($"default contract is {_wpf}");
+            //WpfLogEventInfoContract = new WpfLogEventInfoContract(/*_wpf*/);
         }
 
-        public JsonContract ResolveContract(Type type)
+        public override JsonContract ResolveContract(Type type)
+        {
+            var r = base.ResolveContract(type);
+            Logger.Debug(r.GetType() + " " + type.FullName);
+            return r;
+        }
+
+        private JsonContract _ResolveContract(Type type)
         {
             Logger.Debug($"resolve contract for {type}");
             if (typeof(WpfLogEventInfo).IsAssignableFrom(type))
@@ -92,7 +79,7 @@ namespace ParseLogsControls
                 return LogEventInfoContract;
             }
 
-            return contractResolver.ResolveContract(type);
+            return null;//cotractResolver.ResolveContract(type);
         }
 
         public JsonContract LogEventInfoContract { get; set; }

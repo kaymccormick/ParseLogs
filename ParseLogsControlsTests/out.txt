@@ -1,0 +1,34 @@
+=> ParseLogsControls.Test.LogEventInfoControl1Tests.Test2
+{
+  "SequenceID": 1,
+  "TimeStamp": "2020-01-09T20:06:24.1943279-08:00",
+  "Level": "Debug",
+  "HasStackTrace": false,
+  "UserStackFrame": null,
+  "UserStackFrameNumber": 0,
+  "StackTrace": null,
+  "CallerClassName": null,
+  "CallerMemberName": null,
+  "CallerFilePath": null,
+  "CallerLineNumber": 0,
+  "Exception": null,
+  "LoggerName": "testlogger",
+  "Message": "message",
+  "Parameters": null,
+  "FormatProvider": null,
+  "MessageFormatter": {
+    "Method": {
+      "Name": "FormatMessage",
+      "AssemblyName": "NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c",
+      "ClassName": "NLog.Internal.LogMessageTemplateFormatter",
+      "Signature": "System.String FormatMessage(NLog.LogEventInfo)",
+      "Signature2": "System.String FormatMessage(NLog.LogEventInfo)",
+      "MemberType": 8,
+      "GenericArguments": null
+    },
+    "Target": {}
+  },
+  "HasProperties": false,
+  "Properties": {},
+  "MessageTemplateParameters": []
+}

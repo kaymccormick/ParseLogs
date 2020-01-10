@@ -4,7 +4,7 @@
   <Import Project="e:\installed_packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('e:\installed_packages\NUnit.3.12.0\build\NUnit.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <ProjectGuid>{3FEE4F61-92A6-41C1-874E-BDC83B8E000F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -68,6 +68,7 @@
     </Reference>
     <Reference Include="NLog">
       <HintPath>E:\nlog\debug\NLog.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>e:\installed_packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
@@ -96,9 +97,6 @@
     <Compile Include="XamlLoadTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
