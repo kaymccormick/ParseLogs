@@ -1,0 +1,2166 @@
+2020-01-11 19:01:48.9521 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:01:49.0019 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:01:49.0019 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:01:49.0249 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:01:49.0318 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:01:49.0448 Debug Auto loading done
+2020-01-11 19:01:49.0448 Info Message Template Auto Format enabled
+2020-01-11 19:01:49.0927 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.1346 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.1465 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:01:49.1545 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:01:49.1545 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:01:49.1735 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.1735 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:01:49.1904 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:01:49.1904 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:01:49.2084 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:01:49.2203 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:01:49.2333 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.2333 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.2533 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:01:49.2533 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:01:49.2702 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:01:49.2702 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:01:49.2832 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:01:49.2832 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.2961 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.2961 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:01:49.3091 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:01:49.3091 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:01:49.3091 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.3300 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:01:49.3300 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:01:49.3440 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.3440 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.3580 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:01:49.3580 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:01:49.3580 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:01:49.3809 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:01:49.3809 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:01:49.3919 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.3919 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.4058 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:01:49.4058 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:01:49.4058 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:01:49.4238 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.4238 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:01:49.4358 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:01:49.4358 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.4517 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.4517 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:01:49.4517 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:01:49.4697 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:01:49.4697 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:01:49.4816 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:01:49.4816 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:01:49.4816 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.5026 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.5026 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:01:49.5175 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:01:49.5295 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:01:49.5295 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:01:49.5295 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:01:49.5494 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:01:49.5494 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:01:49.5614 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:01:49.5614 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:01:49.5774 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:01:49.5923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:01:49.5923 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:01:49.6252 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:01:49.6372 Debug --- NLog configuration dump ---
+2020-01-11 19:01:49.6372 Debug Targets:
+2020-01-11 19:01:49.6372 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:01:49.6582 Debug File Target[testLogFile]
+2020-01-11 19:01:49.6582 Debug File Target[logfile]
+2020-01-11 19:01:49.6701 Debug File Target[xmllogfile]
+2020-01-11 19:01:49.6701 Debug Console Target[logconsole]
+2020-01-11 19:01:49.6841 Debug NLogViewer Target[viewer]
+2020-01-11 19:01:49.6841 Debug NLogViewer Target[viewer3]
+2020-01-11 19:01:49.6841 Debug NLogViewer Target[viewer2]
+2020-01-11 19:01:49.7050 Debug Rules:
+2020-01-11 19:01:49.7050 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:01:49.7180 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:01:49.7180 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:01:49.7180 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:01:49.7379 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:01:49.7379 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:01:49.7509 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:01:49.7509 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:01:49.7509 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:01:49.7699 Debug --- End of NLog configuration dump ---
+2020-01-11 19:01:49.7818 Info Found 79 configuration items
+2020-01-11 19:01:49.8157 Info Configuration initialized.
+2020-01-11 19:01:49.8157 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:01:49.8327 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:01:49.8407 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:01:49.8407 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:01:49.8407 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:49.8577 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:49.8577 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:49.8577 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:50.8550 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:01:50.8680 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:01:50.9009 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:01:50.9088 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:01:50.9796 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:50.9906 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:01:50.9966 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:01:51.0554 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:01:51.0624 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:01:51.0624 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:01:51.0764 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.0764 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.0764 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.0963 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.1163 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:01:51.1242 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:01:51.1242 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:01:51.1422 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.1422 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.1581 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.1581 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:01:51.3815 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:51.4932 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:51.6020 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:51.7137 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:51.8154 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:51.9191 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.0188 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.1176 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.2223 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.3221 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.4537 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.5604 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.6681 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.7828 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:52.8815 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.0022 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.0930 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.1947 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.3333 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.4530 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.5827 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.6864 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:53.8964 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:54.1704 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:54.3599 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:54.6451 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:54.7987 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:54.9672 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.0710 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.1887 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.2814 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.3811 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.4779 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.5746 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.6783 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.8459 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:55.9706 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:56.1122 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:56.2448 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:56.3615 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: '' Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: key
+   at System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address)
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent)
+2020-01-11 19:01:56.6029 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:01:56.6189 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:01:56.6258 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:01:56.6258 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:01:56.6418 Debug Closing logging configuration...
+2020-01-11 19:01:56.6418 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:01:56.6597 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:01:56.6597 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:01:56.6817 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:01:56.6926 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:01:56.6996 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:01:56.6996 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:01:56.6996 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:01:56.7206 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:01:56.7325 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:01:56.7325 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:01:56.7475 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:01:56.7475 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:01:56.7674 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:01:56.7674 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:01:56.7864 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:01:56.7964 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:01:56.7964 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:01:56.8153 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:01:56.8273 Debug Finished closing logging configuration.
+2020-01-11 19:01:56.8273 Info Logger has been shut down.
+2020-01-11 19:02:10.2666 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:02:10.3095 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:02:10.3095 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:02:10.3334 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:02:10.3404 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:02:10.3404 Debug Auto loading done
+2020-01-11 19:02:10.3593 Info Message Template Auto Format enabled
+2020-01-11 19:02:10.3903 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.4212 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.4212 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:02:10.4371 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:02:10.4371 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:02:10.4501 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.4501 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:02:10.4501 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:02:10.4701 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:02:10.4701 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:02:10.4830 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:02:10.4830 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:02:10.5299 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.5299 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.5538 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:02:10.5668 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:02:10.5798 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:02:10.5798 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:02:10.5927 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:02:10.5927 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.6077 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.6077 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:02:10.6077 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:02:10.6266 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:02:10.6266 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.6396 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:02:10.6396 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:02:10.6576 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.6576 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.6725 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:02:10.6725 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:02:10.6895 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:02:10.6895 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:02:10.7044 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:02:10.7044 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.7174 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.7174 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:02:10.7333 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:02:10.7333 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:02:10.7333 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.7533 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:02:10.7533 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:02:10.7673 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.7673 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.7812 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:02:10.7812 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:02:10.7812 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:02:10.8002 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:02:10.8002 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:02:10.8122 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:02:10.8122 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.8251 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.8251 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:02:10.8251 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:02:10.8451 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:02:10.8451 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:02:10.8590 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:02:10.8590 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:02:10.8740 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:02:10.8740 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:02:10.8889 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:02:10.8889 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:02:10.9139 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:02:10.9278 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:02:10.9607 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:02:10.9797 Debug --- NLog configuration dump ---
+2020-01-11 19:02:10.9926 Debug Targets:
+2020-01-11 19:02:11.0016 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:02:11.0016 Debug File Target[testLogFile]
+2020-01-11 19:02:11.0166 Debug File Target[logfile]
+2020-01-11 19:02:11.0166 Debug File Target[xmllogfile]
+2020-01-11 19:02:11.0315 Debug Console Target[logconsole]
+2020-01-11 19:02:11.0315 Debug NLogViewer Target[viewer]
+2020-01-11 19:02:11.0445 Debug NLogViewer Target[viewer3]
+2020-01-11 19:02:11.0445 Debug NLogViewer Target[viewer2]
+2020-01-11 19:02:11.0445 Debug Rules:
+2020-01-11 19:02:11.0664 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:02:11.0764 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:02:11.0764 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:02:11.0904 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:02:11.0904 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:02:11.0904 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:02:11.1094 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:02:11.1094 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:02:11.1223 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:02:11.1223 Debug --- End of NLog configuration dump ---
+2020-01-11 19:02:11.1403 Info Found 81 configuration items
+2020-01-11 19:02:11.1722 Info Configuration initialized.
+2020-01-11 19:02:11.1722 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:02:11.1901 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:02:11.1901 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:02:11.2031 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:02:11.2031 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:11.2200 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:11.2200 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:11.2370 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.2443 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:02:12.2563 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:02:12.2902 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:02:12.2972 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:02:12.3889 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:02:12.3889 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:02:12.4657 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:02:12.4657 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:02:12.4827 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:02:12.4827 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.4966 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.4966 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.4966 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.5226 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:02:12.5295 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:02:12.5295 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:02:12.5295 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.5485 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.5485 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:12.5635 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:02:16.6026 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:02:16.6276 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:02:16.6395 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:02:16.6395 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:02:16.6615 Debug Closing logging configuration...
+2020-01-11 19:02:16.6725 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:02:16.6725 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:02:16.6924 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:02:16.7024 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:02:16.7024 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:02:16.7193 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:02:16.7193 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:02:16.7323 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:02:16.7323 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:02:16.7492 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:02:16.7492 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:02:16.7632 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:02:16.7632 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:02:16.7822 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:02:16.7822 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:02:16.7991 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:02:16.7991 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:02:16.8161 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:02:16.8161 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:02:16.8320 Debug Finished closing logging configuration.
+2020-01-11 19:02:16.8410 Info Logger has been shut down.
+2020-01-11 19:15:21.7134 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:15:21.7603 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:15:21.7713 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:15:21.7862 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:15:21.7862 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:15:21.8052 Debug Auto loading done
+2020-01-11 19:15:21.8141 Info Message Template Auto Format enabled
+2020-01-11 19:15:21.8490 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:21.8859 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:21.8959 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:15:21.9039 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:15:21.9039 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:15:21.9189 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:21.9189 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:15:21.9189 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:15:21.9408 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:15:21.9408 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:15:21.9568 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:15:21.9568 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:15:21.9757 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:21.9827 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:21.9827 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:15:22.0006 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:15:22.0136 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:15:22.0136 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:15:22.0136 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:15:22.0355 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.0435 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.0435 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:15:22.0435 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:15:22.0665 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:15:22.0665 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.0874 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:15:22.0954 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:15:22.0954 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.1083 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.1083 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:15:22.1083 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:15:22.1283 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:15:22.1283 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:15:22.1433 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:15:22.1433 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.1572 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.1572 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:15:22.1732 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:15:22.1732 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:15:22.1881 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.1881 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:15:22.2011 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:15:22.2011 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.2161 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.2161 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:15:22.2161 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:15:22.2360 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:15:22.2360 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:15:22.2480 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:15:22.2480 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:15:22.2480 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.2669 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.2669 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:15:22.2819 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:15:22.2819 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:15:22.2948 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:15:22.2948 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:15:22.2948 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:15:22.3138 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:15:22.3138 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:15:22.3268 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:15:22.3268 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:15:22.3467 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:15:22.3577 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:15:22.3796 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:15:22.3956 Debug --- NLog configuration dump ---
+2020-01-11 19:15:22.3956 Debug Targets:
+2020-01-11 19:15:22.4105 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:15:22.4105 Debug File Target[testLogFile]
+2020-01-11 19:15:22.4225 Debug File Target[logfile]
+2020-01-11 19:15:22.4225 Debug File Target[xmllogfile]
+2020-01-11 19:15:22.4375 Debug Console Target[logconsole]
+2020-01-11 19:15:22.4375 Debug NLogViewer Target[viewer]
+2020-01-11 19:15:22.4504 Debug NLogViewer Target[viewer3]
+2020-01-11 19:15:22.4504 Debug NLogViewer Target[viewer2]
+2020-01-11 19:15:22.4504 Debug Rules:
+2020-01-11 19:15:22.4714 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:15:22.4714 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:15:22.4833 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:15:22.4833 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:15:22.4993 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:15:22.4993 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:15:22.5133 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:15:22.5133 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:15:22.5282 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:15:22.5282 Debug --- End of NLog configuration dump ---
+2020-01-11 19:15:22.5522 Info Found 81 configuration items
+2020-01-11 19:15:22.5931 Info Configuration initialized.
+2020-01-11 19:15:22.5931 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:15:22.6170 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:15:22.6250 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:15:22.6250 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:15:22.6379 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:22.6379 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:22.6379 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:22.6589 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:23.7021 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:15:23.7220 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:15:23.7978 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:15:23.8248 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:15:24.2050 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:15:24.2319 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:15:24.3516 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:15:24.3685 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:15:24.3935 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:15:24.4174 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.4344 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.4583 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.4832 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.5102 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:15:24.5411 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:15:24.5570 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:15:24.5710 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.5840 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.5969 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:24.6069 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:15:31.2820 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:15:31.3040 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:15:31.3120 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:15:31.3120 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:15:31.3319 Debug Closing logging configuration...
+2020-01-11 19:15:31.3469 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:15:31.3608 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:15:31.3718 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:15:31.3718 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:15:31.3987 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:15:31.4087 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:15:31.4087 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:15:31.4257 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:15:31.4356 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:15:31.4506 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:15:31.4506 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:15:31.4705 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:15:31.4705 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:15:31.4895 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:15:31.4985 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:15:31.4985 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:15:31.5124 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:15:31.5124 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:15:31.5124 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:15:31.5344 Debug Finished closing logging configuration.
+2020-01-11 19:15:31.5344 Info Logger has been shut down.
+2020-01-11 19:16:19.3732 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:16:19.4191 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:16:19.4191 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:16:19.4450 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:16:19.4550 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:16:19.4679 Debug Auto loading done
+2020-01-11 19:16:19.4679 Info Message Template Auto Format enabled
+2020-01-11 19:16:19.5188 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.5627 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.5747 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:16:19.5747 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:16:19.5906 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:16:19.5906 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.6086 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:16:19.6086 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:16:19.6255 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:16:19.6255 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:16:19.6415 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:16:19.6415 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:16:19.6644 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.6784 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.6923 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:16:19.6923 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:16:19.7143 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:16:19.7213 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:16:19.7213 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:16:19.7382 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.7382 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.7532 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:16:19.7622 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:16:19.7622 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:16:19.7781 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.7781 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:16:19.7961 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:16:19.7961 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.8160 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.8280 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:16:19.8280 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:16:19.8449 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:16:19.8449 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:16:19.8639 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:16:19.8719 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.8719 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.8878 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:16:19.8878 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:16:19.9028 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:16:19.9028 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.9227 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:16:19.9227 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:16:19.9387 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.9387 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:19.9556 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:16:19.9556 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:16:19.9726 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:16:19.9726 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:16:19.9895 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:16:19.9965 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:16:19.9965 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:19.9965 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:20.0195 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:16:20.0284 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:16:20.0284 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:16:20.0454 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:16:20.0454 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:16:20.0623 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:16:20.0623 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:16:20.0763 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:16:20.0763 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:16:20.0913 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:16:20.1103 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:16:20.1103 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:16:20.1462 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:16:20.1621 Debug --- NLog configuration dump ---
+2020-01-11 19:16:20.1621 Debug Targets:
+2020-01-11 19:16:20.1770 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:16:20.1850 Debug File Target[testLogFile]
+2020-01-11 19:16:20.1850 Debug File Target[logfile]
+2020-01-11 19:16:20.2040 Debug File Target[xmllogfile]
+2020-01-11 19:16:20.2170 Debug Console Target[logconsole]
+2020-01-11 19:16:20.2170 Debug NLogViewer Target[viewer]
+2020-01-11 19:16:20.2339 Debug NLogViewer Target[viewer3]
+2020-01-11 19:16:20.2339 Debug NLogViewer Target[viewer2]
+2020-01-11 19:16:20.2538 Debug Rules:
+2020-01-11 19:16:20.2668 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:16:20.2668 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:16:20.2937 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:16:20.2937 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:16:20.3167 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:16:20.3256 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:16:20.3256 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:16:20.3426 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:16:20.3426 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:16:20.3635 Debug --- End of NLog configuration dump ---
+2020-01-11 19:16:20.3825 Info Found 81 configuration items
+2020-01-11 19:16:20.4214 Info Configuration initialized.
+2020-01-11 19:16:20.4214 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:16:20.4433 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:16:20.4503 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:16:20.4503 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:16:20.4663 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:20.4663 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:20.4812 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:20.4812 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:21.7159 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:16:21.7329 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:16:21.7798 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:16:21.7798 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:16:21.8915 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:16:21.9034 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:16:21.9812 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:16:21.9812 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:16:21.9972 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:16:21.9972 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0121 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0121 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0301 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0441 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:16:22.0441 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:16:22.0600 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:16:22.0600 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0750 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0750 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:22.0909 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:16:29.8682 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:16:29.9011 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:16:29.9150 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:16:29.9310 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:16:29.9469 Debug Closing logging configuration...
+2020-01-11 19:16:29.9659 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:16:29.9818 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:16:29.9978 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:16:30.0168 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:16:30.0357 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:16:30.0457 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:16:30.0457 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:16:30.0626 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:16:30.0626 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:16:30.0886 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:16:30.0965 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:16:30.0965 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:16:30.1145 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:16:30.1235 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:16:30.1235 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:16:30.1454 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:16:30.1574 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:16:30.1574 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:16:30.1773 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:16:30.1863 Debug Finished closing logging configuration.
+2020-01-11 19:16:30.1863 Info Logger has been shut down.
+2020-01-11 19:18:39.5630 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:18:39.6059 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:18:39.6138 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:18:39.6278 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:18:39.6278 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:18:39.6487 Debug Auto loading done
+2020-01-11 19:18:39.6567 Info Message Template Auto Format enabled
+2020-01-11 19:18:39.6936 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.7305 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:39.7425 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:18:39.7505 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:18:39.7505 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:18:39.7654 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.7654 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:18:39.7864 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:18:39.7864 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:18:39.8003 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:18:39.8103 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:18:39.8103 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:18:39.8303 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.8303 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:39.8492 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:18:39.8572 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:18:39.8572 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:18:39.8791 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:18:39.8791 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:18:39.8961 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.9041 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:39.9041 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:18:39.9220 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:18:39.9220 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:18:39.9410 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.9509 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:18:39.9509 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:18:39.9699 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:39.9699 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:39.9878 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:18:39.9878 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:18:40.0048 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:18:40.0048 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:18:40.0217 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:18:40.0297 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:40.0297 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:40.0447 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:18:40.0447 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:18:40.0596 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:18:40.0596 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:40.0766 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:18:40.0766 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:18:40.0926 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:40.0926 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:40.1105 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:18:40.1225 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:18:40.1225 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:18:40.1434 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:18:40.1554 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:18:40.1554 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:18:40.1723 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:40.1723 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:40.1903 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:18:40.2003 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:18:40.2003 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:18:40.2182 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:18:40.2182 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:18:40.2372 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:18:40.2372 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:18:40.2521 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:18:40.2521 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:18:40.2701 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:18:40.2930 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:18:40.3060 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:18:40.3559 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:18:40.3798 Debug --- NLog configuration dump ---
+2020-01-11 19:18:40.3957 Debug Targets:
+2020-01-11 19:18:40.4147 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:18:40.4277 Debug File Target[testLogFile]
+2020-01-11 19:18:40.4396 Debug File Target[logfile]
+2020-01-11 19:18:40.4536 Debug File Target[xmllogfile]
+2020-01-11 19:18:40.4656 Debug Console Target[logconsole]
+2020-01-11 19:18:40.4656 Debug NLogViewer Target[viewer]
+2020-01-11 19:18:40.4885 Debug NLogViewer Target[viewer3]
+2020-01-11 19:18:40.5025 Debug NLogViewer Target[viewer2]
+2020-01-11 19:18:40.5164 Debug Rules:
+2020-01-11 19:18:40.5314 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:18:40.5314 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:18:40.5553 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:18:40.5663 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:18:40.5783 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:18:40.5783 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:18:40.6022 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:18:40.6152 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:18:40.6251 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:18:40.6251 Debug --- End of NLog configuration dump ---
+2020-01-11 19:18:40.6541 Info Found 81 configuration items
+2020-01-11 19:18:40.7059 Info Configuration initialized.
+2020-01-11 19:18:40.7169 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:18:40.7169 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:18:40.7368 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:18:40.7468 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:18:40.7468 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:40.7648 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:40.7648 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:40.7837 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.1860 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:18:42.1999 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:18:42.2398 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:18:42.2398 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:18:42.3336 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:18:42.3455 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:18:42.4513 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:18:42.4513 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:18:42.4752 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:18:42.4832 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.4832 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.4981 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.4981 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.5221 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:18:42.5290 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:18:42.5290 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:18:42.5440 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.5440 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.5440 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:42.5659 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:18:52.6411 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:18:52.6700 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:18:52.6869 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:18:52.7009 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:18:52.7159 Debug Closing logging configuration...
+2020-01-11 19:18:52.7159 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:18:52.7438 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:18:52.7548 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:18:52.7667 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:18:52.7807 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:18:52.7807 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:18:52.8006 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:18:52.8116 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:18:52.8116 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:18:52.8325 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:18:52.8325 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:18:52.8475 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:18:52.8565 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:18:52.8565 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:18:52.8724 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:18:52.8724 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:18:52.8884 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:18:52.8884 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:18:52.9034 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:18:52.9034 Debug Finished closing logging configuration.
+2020-01-11 19:18:52.9223 Info Logger has been shut down.
+2020-01-11 19:20:06.0044 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:20:06.0672 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:20:06.0792 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:20:06.0981 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:20:06.1081 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:20:06.1230 Debug Auto loading done
+2020-01-11 19:20:06.1230 Info Message Template Auto Format enabled
+2020-01-11 19:20:06.1899 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.2427 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.2577 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:20:06.2687 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:20:06.2816 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:20:06.2946 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.2946 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:20:06.3175 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:20:06.3325 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:20:06.3455 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:20:06.3594 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:20:06.3734 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:20:06.3943 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.4063 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.4222 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:20:06.4222 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:20:06.4502 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:20:06.4502 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:20:06.4711 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:20:06.4831 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.4831 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.5070 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:20:06.5170 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:20:06.5280 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:20:06.5280 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.5529 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:20:06.5659 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:20:06.5778 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.5778 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.5978 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:20:06.6068 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:20:06.6068 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:20:06.6287 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:20:06.6437 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:20:06.6596 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.6766 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.6915 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:20:06.7125 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:20:06.7324 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:20:06.7514 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.7693 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:20:06.7843 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:20:06.7972 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.8092 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.8092 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:20:06.8282 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:20:06.8282 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:20:06.8471 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:20:06.8581 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:20:06.8581 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:20:06.8800 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.8910 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.8910 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:20:06.9119 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:20:06.9229 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:20:06.9349 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:20:06.9349 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:20:06.9578 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:20:06.9678 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:20:06.9678 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:20:06.9887 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:20:07.0007 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:20:07.0246 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:20:07.0436 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:20:07.0825 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:20:07.1084 Debug --- NLog configuration dump ---
+2020-01-11 19:20:07.1084 Debug Targets:
+2020-01-11 19:20:07.1343 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:20:07.1453 Debug File Target[testLogFile]
+2020-01-11 19:20:07.1583 Debug File Target[logfile]
+2020-01-11 19:20:07.1692 Debug File Target[xmllogfile]
+2020-01-11 19:20:07.1692 Debug Console Target[logconsole]
+2020-01-11 19:20:07.1932 Debug NLogViewer Target[viewer]
+2020-01-11 19:20:07.2062 Debug NLogViewer Target[viewer3]
+2020-01-11 19:20:07.2171 Debug NLogViewer Target[viewer2]
+2020-01-11 19:20:07.2171 Debug Rules:
+2020-01-11 19:20:07.2421 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:20:07.2510 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:20:07.2510 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:20:07.2680 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:20:07.2680 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:20:07.2879 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:20:07.2979 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:20:07.2979 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:20:07.3208 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:20:07.3288 Debug --- End of NLog configuration dump ---
+2020-01-11 19:20:07.3448 Info Found 81 configuration items
+2020-01-11 19:20:07.3887 Info Configuration initialized.
+2020-01-11 19:20:07.3887 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:20:07.4146 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:20:07.4246 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:20:07.4246 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:20:07.4415 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:07.4515 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:07.4515 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:07.4704 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:08.7939 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:20:08.7939 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:20:08.8587 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:20:08.8587 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:20:08.9884 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:20:09.0004 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:20:09.0921 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:20:09.1091 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:20:09.1091 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:20:09.1270 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.1270 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.1440 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.1539 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.1699 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:20:09.1699 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:20:09.1888 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:20:09.1888 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.2078 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.2168 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:09.2168 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:20:13.8629 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:20:13.8848 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:20:13.8958 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:20:13.9048 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:20:13.9048 Debug Closing logging configuration...
+2020-01-11 19:20:13.9277 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:20:13.9367 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:20:13.9367 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:20:13.9566 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:20:13.9666 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:20:13.9666 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:20:13.9816 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:20:13.9816 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:20:13.9965 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:20:13.9965 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:20:14.0165 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:20:14.0165 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:20:14.0304 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:20:14.0304 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:20:14.0454 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:20:14.0454 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:20:14.0594 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:20:14.0594 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:20:14.0754 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:20:14.0754 Debug Finished closing logging configuration.
+2020-01-11 19:20:14.0913 Info Logger has been shut down.
+2020-01-11 19:21:30.5826 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:21:30.6265 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:21:30.6265 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:21:30.6475 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:21:30.6544 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:21:30.6544 Debug Auto loading done
+2020-01-11 19:21:30.6744 Info Message Template Auto Format enabled
+2020-01-11 19:21:30.7113 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.7482 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:30.7482 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:21:30.7701 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:21:30.7811 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:21:30.7811 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.8041 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:21:30.8150 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:21:30.8270 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:21:30.8270 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:21:30.8509 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:21:30.8589 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:21:30.8589 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.8788 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:30.8878 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:21:30.8878 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:21:30.9098 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:21:30.9237 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:21:30.9237 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:21:30.9407 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.9407 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:30.9556 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:21:30.9556 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:21:30.9696 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:21:30.9696 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.9856 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:21:30.9856 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:21:30.9995 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:30.9995 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:31.0155 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:21:31.0155 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:21:31.0304 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:21:31.0304 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:21:31.0444 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:21:31.0444 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:31.0594 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:31.0594 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:21:31.0594 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:21:31.0813 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:21:31.0813 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:31.0953 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:21:31.0953 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:21:31.1092 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:31.1092 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:31.1232 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:21:31.1232 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:21:31.1232 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:21:31.1431 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:21:31.1431 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:21:31.1591 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:21:31.1591 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:31.1751 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:31.1751 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:21:31.1890 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:21:31.1890 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:21:31.2050 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:21:31.2050 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:21:31.2219 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:21:31.2219 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:21:31.2369 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:21:31.2369 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:21:31.2549 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:21:31.2748 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:21:31.2917 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:21:31.3217 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:21:31.3386 Debug --- NLog configuration dump ---
+2020-01-11 19:21:31.3446 Debug Targets:
+2020-01-11 19:21:31.3446 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:21:31.3606 Debug File Target[testLogFile]
+2020-01-11 19:21:31.3606 Debug File Target[logfile]
+2020-01-11 19:21:31.3745 Debug File Target[xmllogfile]
+2020-01-11 19:21:31.3745 Debug Console Target[logconsole]
+2020-01-11 19:21:31.3885 Debug NLogViewer Target[viewer]
+2020-01-11 19:21:31.3885 Debug NLogViewer Target[viewer3]
+2020-01-11 19:21:31.3885 Debug NLogViewer Target[viewer2]
+2020-01-11 19:21:31.4094 Debug Rules:
+2020-01-11 19:21:31.4094 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:21:31.4234 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:21:31.4234 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:21:31.4413 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:21:31.4413 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:21:31.4603 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:21:31.4673 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:21:31.4673 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:21:31.4822 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:21:31.4822 Debug --- End of NLog configuration dump ---
+2020-01-11 19:21:31.5032 Info Found 81 configuration items
+2020-01-11 19:21:31.5391 Info Configuration initialized.
+2020-01-11 19:21:31.5491 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:21:31.5591 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:21:31.5591 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:21:31.5591 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:21:31.5800 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:31.5800 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:31.5929 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:31.5929 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:32.7369 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:21:32.7518 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:21:32.7887 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:21:32.7957 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:21:32.8935 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:21:32.9064 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:21:33.0132 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:21:33.0132 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:21:33.0361 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:21:33.0441 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.0590 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.0590 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.0770 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.0770 Debug Targets for ParseLogsControls.LogEventInfoContract by level:
+2020-01-11 19:21:33.0959 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:21:33.0959 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:21:33.1119 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.1119 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.1248 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.1248 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:21:33.4201 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:21:33.4410 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:21:33.4500 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:21:33.4500 Debug Targets not configured for logger: ParseLogsControls.LogEventInfoContract
+2020-01-11 19:21:33.4729 Debug Closing logging configuration...
+2020-01-11 19:21:33.4829 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:21:33.4829 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:21:33.5018 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:21:33.5018 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:21:33.5228 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:21:33.5298 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:21:33.5298 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:21:33.5437 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:21:33.5437 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:21:33.5637 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:21:33.5637 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:21:33.5816 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:21:33.5946 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:21:33.5946 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:21:33.6095 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:21:33.6095 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:21:33.6245 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:21:33.6245 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:21:33.6385 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:21:33.6385 Debug Finished closing logging configuration.
+2020-01-11 19:21:33.6544 Info Logger has been shut down.
+2020-01-11 19:42:16.3782 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:42:16.5841 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:42:16.6171 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:42:16.7008 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:42:16.7238 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:42:16.7667 Debug Auto loading done
+2020-01-11 19:42:16.8235 Info Message Template Auto Format enabled
+2020-01-11 19:42:17.0529 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.1337 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.1506 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:42:17.1626 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:42:17.1736 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:42:17.1855 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.1855 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:42:17.2095 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:42:17.2204 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:42:17.2204 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:42:17.2394 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:42:17.2514 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:42:17.2683 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.2783 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.2783 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:42:17.3022 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:42:17.3222 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:42:17.3531 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:42:17.3780 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:42:17.3880 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.4069 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.4069 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:42:17.4279 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:42:17.4389 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:42:17.4389 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.4598 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:42:17.4678 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:42:17.4678 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.4897 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.4987 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:42:17.4987 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:42:17.5186 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:42:17.5296 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:42:17.5296 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:42:17.5486 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.5486 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.5665 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:42:17.5665 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:42:17.5815 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:42:17.5915 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.5915 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:42:17.6064 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:42:17.6064 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.6274 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.6373 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:42:17.6373 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:42:17.6533 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:42:17.6533 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:42:17.6702 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:42:17.6702 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:42:17.6882 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.6882 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.7071 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:42:17.7161 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:42:17.7161 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:42:17.7331 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:42:17.7331 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:42:17.7530 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:42:17.7530 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:42:17.7700 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:42:17.7799 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:42:17.7799 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:42:17.8129 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:42:17.8258 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:42:17.8587 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:42:17.8797 Debug --- NLog configuration dump ---
+2020-01-11 19:42:17.8936 Debug Targets:
+2020-01-11 19:42:17.9056 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:42:17.9056 Debug File Target[testLogFile]
+2020-01-11 19:42:17.9266 Debug File Target[logfile]
+2020-01-11 19:42:17.9375 Debug File Target[xmllogfile]
+2020-01-11 19:42:17.9375 Debug Console Target[logconsole]
+2020-01-11 19:42:17.9555 Debug NLogViewer Target[viewer]
+2020-01-11 19:42:17.9555 Debug NLogViewer Target[viewer3]
+2020-01-11 19:42:17.9714 Debug NLogViewer Target[viewer2]
+2020-01-11 19:42:17.9714 Debug Rules:
+2020-01-11 19:42:17.9924 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:42:18.0034 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:42:18.0183 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:42:18.0293 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:42:18.0562 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:42:18.0772 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:42:18.0772 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:42:18.1021 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:42:18.1160 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:42:18.1310 Debug --- End of NLog configuration dump ---
+2020-01-11 19:42:18.1569 Info Found 81 configuration items
+2020-01-11 19:42:18.2088 Info Configuration initialized.
+2020-01-11 19:42:18.2208 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:42:18.2367 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:42:18.2477 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:42:18.2477 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:42:18.2637 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:18.2637 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:18.2796 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:18.2796 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:19.8345 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:42:19.8484 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:42:19.8963 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:42:19.9033 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:42:20.0050 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:42:20.0210 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:42:20.1167 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:42:20.1277 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:42:20.1386 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:42:20.1386 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:20.1596 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:20.1596 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:20.1775 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:42:20.9604 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:42:20.9844 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:42:20.9844 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:42:21.0063 Debug Closing logging configuration...
+2020-01-11 19:42:21.0183 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:42:21.0183 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:42:21.0372 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:42:21.0522 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:42:21.0662 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:42:21.0761 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:42:21.0761 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:42:21.0941 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:42:21.0941 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:42:21.1260 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:42:21.1260 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:42:21.1459 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:42:21.1559 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:42:21.1559 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:42:21.1749 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:42:21.1749 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:42:21.1948 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:42:21.2058 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:42:21.2168 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:42:21.2168 Debug Finished closing logging configuration.
+2020-01-11 19:42:21.2387 Info Logger has been shut down.
+2020-01-11 19:43:42.9608 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 19:43:43.0436 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 19:43:43.0595 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:43:43.0835 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:43:43.0924 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 19:43:43.1084 Debug Auto loading done
+2020-01-11 19:43:43.1084 Info Message Template Auto Format enabled
+2020-01-11 19:43:43.1612 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.1981 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.2111 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 19:43:43.2191 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 19:43:43.2191 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:43:43.2380 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.2380 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 19:43:43.2550 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 19:43:43.2640 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 19:43:43.2640 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 19:43:43.2839 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 19:43:43.2839 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 19:43:43.3029 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.3098 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.3098 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 19:43:43.3278 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 19:43:43.3448 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 19:43:43.3448 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 19:43:43.3597 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 19:43:43.3597 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.3777 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.3777 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 19:43:43.3926 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 19:43:43.3926 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:43:43.4096 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.4096 Info Adding target FileTarget(Name=logfile)
+2020-01-11 19:43:43.4235 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 19:43:43.4235 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.4385 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.4385 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 19:43:43.4525 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 19:43:43.4525 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 19:43:43.4685 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 19:43:43.4685 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 19:43:43.4834 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.4834 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.4973 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 19:43:43.4973 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 19:43:43.5123 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 19:43:43.5123 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.5123 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 19:43:43.5333 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 19:43:43.5333 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.5462 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.5462 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 19:43:43.5602 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 19:43:43.5602 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 19:43:43.5602 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 19:43:43.5811 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 19:43:43.5811 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 19:43:43.5961 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.5961 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.6120 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 19:43:43.6120 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 19:43:43.6270 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 19:43:43.6270 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 19:43:43.6460 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 19:43:43.6529 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 19:43:43.6529 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 19:43:43.6689 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 19:43:43.6689 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 19:43:43.6858 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 19:43:43.7028 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 19:43:43.7188 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 19:43:43.7447 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 19:43:43.7606 Debug --- NLog configuration dump ---
+2020-01-11 19:43:43.7687 Debug Targets:
+2020-01-11 19:43:43.7687 Debug Chainsaw Target[chainsaw]
+2020-01-11 19:43:43.7846 Debug File Target[testLogFile]
+2020-01-11 19:43:43.7846 Debug File Target[logfile]
+2020-01-11 19:43:43.8015 Debug File Target[xmllogfile]
+2020-01-11 19:43:43.8105 Debug Console Target[logconsole]
+2020-01-11 19:43:43.8105 Debug NLogViewer Target[viewer]
+2020-01-11 19:43:43.8255 Debug NLogViewer Target[viewer3]
+2020-01-11 19:43:43.8255 Debug NLogViewer Target[viewer2]
+2020-01-11 19:43:43.8424 Debug Rules:
+2020-01-11 19:43:43.8424 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 19:43:43.8584 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 19:43:43.8584 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 19:43:43.8723 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 19:43:43.8723 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 19:43:43.8723 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 19:43:43.8933 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 19:43:43.8933 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 19:43:43.9132 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 19:43:43.9212 Debug --- End of NLog configuration dump ---
+2020-01-11 19:43:43.9382 Info Found 81 configuration items
+2020-01-11 19:43:43.9811 Info Configuration initialized.
+2020-01-11 19:43:43.9811 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 19:43:43.9990 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 19:43:43.9990 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:43:43.9990 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:43:44.0190 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:44.0190 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:44.0339 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:44.0339 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:45.1410 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 19:43:45.1609 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:43:45.2327 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 19:43:45.2327 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:43:45.3634 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 19:43:45.3773 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 19:43:45.4810 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 19:43:45.4810 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 19:43:45.5050 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 19:43:45.5239 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:45.5339 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:45.5339 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:45.5538 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 19:43:46.3368 Info AppDomain Shutting down. Logger closing...
+2020-01-11 19:43:46.3627 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 19:43:46.3746 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 19:43:46.3746 Debug Closing logging configuration...
+2020-01-11 19:43:46.3966 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 19:43:46.4086 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 19:43:46.4235 Debug Closing target 'File Target[logfile]'.
+2020-01-11 19:43:46.4445 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 19:43:46.4614 Debug Closed target 'File Target[logfile]'.
+2020-01-11 19:43:46.4714 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 19:43:46.4814 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 19:43:46.4814 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 19:43:46.5033 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 19:43:46.5203 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 19:43:46.5302 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:43:46.5302 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 19:43:46.5492 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:43:46.5612 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 19:43:46.5612 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:43:46.5831 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 19:43:46.5911 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 19:43:46.5911 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 19:43:46.6130 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 19:43:46.6240 Debug Finished closing logging configuration.
+2020-01-11 19:43:46.6240 Info Logger has been shut down.
+2020-01-11 20:06:30.8105 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 20:06:30.8773 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 20:06:30.8893 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:06:30.9102 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:06:30.9212 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:06:30.9441 Debug Auto loading done
+2020-01-11 20:06:30.9611 Info Message Template Auto Format enabled
+2020-01-11 20:06:31.0169 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.0668 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.0817 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 20:06:31.0927 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 20:06:31.0927 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:06:31.1127 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.1246 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 20:06:31.1246 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 20:06:31.1516 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 20:06:31.1625 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 20:06:31.1725 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 20:06:31.1725 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 20:06:31.1984 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.2074 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.2204 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 20:06:31.2204 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 20:06:31.2503 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 20:06:31.2623 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 20:06:31.2623 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 20:06:31.2852 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.2962 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.2962 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 20:06:31.3161 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 20:06:31.3261 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:06:31.3261 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.3430 Info Adding target FileTarget(Name=logfile)
+2020-01-11 20:06:31.3430 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 20:06:31.3620 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.3730 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.3730 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 20:06:31.3919 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 20:06:31.3919 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 20:06:31.4119 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 20:06:31.4238 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 20:06:31.4238 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.4438 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.4537 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 20:06:31.4537 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 20:06:31.4717 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:06:31.4717 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.4897 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 20:06:31.5006 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 20:06:31.5006 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.5216 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.5325 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 20:06:31.5435 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 20:06:31.5435 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 20:06:31.5674 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 20:06:31.5784 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 20:06:31.5784 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 20:06:31.5994 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.6093 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.6093 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 20:06:31.6283 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 20:06:31.6383 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 20:06:31.6383 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 20:06:31.6592 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:06:31.6592 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:06:31.6851 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 20:06:31.6851 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 20:06:31.7061 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 20:06:31.7061 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 20:06:31.7390 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 20:06:31.7529 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 20:06:31.7849 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 20:06:31.8058 Debug --- NLog configuration dump ---
+2020-01-11 20:06:31.8178 Debug Targets:
+2020-01-11 20:06:31.8287 Debug Chainsaw Target[chainsaw]
+2020-01-11 20:06:31.8287 Debug File Target[testLogFile]
+2020-01-11 20:06:31.8477 Debug File Target[logfile]
+2020-01-11 20:06:31.8477 Debug File Target[xmllogfile]
+2020-01-11 20:06:31.8656 Debug Console Target[logconsole]
+2020-01-11 20:06:31.8766 Debug NLogViewer Target[viewer]
+2020-01-11 20:06:31.8766 Debug NLogViewer Target[viewer3]
+2020-01-11 20:06:31.8936 Debug NLogViewer Target[viewer2]
+2020-01-11 20:06:31.9035 Debug Rules:
+2020-01-11 20:06:31.9035 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 20:06:31.9265 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 20:06:31.9355 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 20:06:31.9355 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 20:06:31.9584 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 20:06:31.9704 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 20:06:31.9813 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 20:06:31.9813 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 20:06:31.9993 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 20:06:31.9993 Debug --- End of NLog configuration dump ---
+2020-01-11 20:06:32.0222 Info Found 81 configuration items
+2020-01-11 20:06:32.0701 Info Configuration initialized.
+2020-01-11 20:06:32.0801 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 20:06:32.0801 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 20:06:32.1000 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:06:32.1080 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:06:32.1080 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:32.1250 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:32.1250 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:32.1409 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:33.4165 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 20:06:33.4335 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:06:33.4943 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 20:06:33.5033 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:06:33.6080 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 20:06:33.6080 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 20:06:33.7356 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 20:06:33.7486 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:06:33.7486 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:06:33.7676 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:33.7676 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:33.7855 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:33.7975 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:06:34.3001 Info AppDomain Shutting down. Logger closing...
+2020-01-11 20:06:34.3191 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 20:06:34.3331 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 20:06:34.3331 Debug Closing logging configuration...
+2020-01-11 20:06:34.3480 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 20:06:34.3570 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 20:06:34.3570 Debug Closing target 'File Target[logfile]'.
+2020-01-11 20:06:34.3759 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:06:34.3759 Debug Closed target 'File Target[logfile]'.
+2020-01-11 20:06:34.3939 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 20:06:34.3939 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:06:34.4088 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 20:06:34.4088 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 20:06:34.4308 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 20:06:34.4388 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:06:34.4388 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:06:34.4547 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:06:34.4547 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:06:34.4677 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:06:34.4677 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:06:34.4826 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 20:06:34.4826 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 20:06:34.4986 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 20:06:34.4986 Debug Finished closing logging configuration.
+2020-01-11 20:06:34.5146 Info Logger has been shut down.
+2020-01-11 20:17:42.9778 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 20:17:43.0287 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 20:17:43.0287 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:17:43.0516 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:17:43.0516 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:17:43.0696 Debug Auto loading done
+2020-01-11 20:17:43.0776 Info Message Template Auto Format enabled
+2020-01-11 20:17:43.1165 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.1594 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.1743 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 20:17:43.1863 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 20:17:43.1863 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:17:43.2052 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.2052 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 20:17:43.2222 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 20:17:43.2222 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 20:17:43.2391 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 20:17:43.2481 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 20:17:43.2481 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 20:17:43.2681 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.2681 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.2851 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 20:17:43.2851 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 20:17:43.3060 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 20:17:43.3139 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 20:17:43.3139 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 20:17:43.3279 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.3279 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.3419 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 20:17:43.3419 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 20:17:43.3579 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:17:43.3579 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.3738 Info Adding target FileTarget(Name=logfile)
+2020-01-11 20:17:43.3738 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 20:17:43.3738 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.3947 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.3947 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 20:17:43.4097 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 20:17:43.4097 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 20:17:43.4246 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 20:17:43.4246 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 20:17:43.4386 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.4386 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.4556 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 20:17:43.4556 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 20:17:43.4696 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:17:43.4835 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.4835 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 20:17:43.5004 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 20:17:43.5004 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.5154 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.5154 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 20:17:43.5354 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 20:17:43.5453 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 20:17:43.5453 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 20:17:43.5623 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 20:17:43.5623 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 20:17:43.5792 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.5792 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.5932 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 20:17:43.5932 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 20:17:43.6082 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 20:17:43.6082 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 20:17:43.6231 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:17:43.6231 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:17:43.6231 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 20:17:43.6461 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 20:17:43.6540 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 20:17:43.6540 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 20:17:43.6800 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 20:17:43.6909 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 20:17:43.7129 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 20:17:43.7258 Debug --- NLog configuration dump ---
+2020-01-11 20:17:43.7348 Debug Targets:
+2020-01-11 20:17:43.7348 Debug Chainsaw Target[chainsaw]
+2020-01-11 20:17:43.7508 Debug File Target[testLogFile]
+2020-01-11 20:17:43.7508 Debug File Target[logfile]
+2020-01-11 20:17:43.7647 Debug File Target[xmllogfile]
+2020-01-11 20:17:43.7647 Debug Console Target[logconsole]
+2020-01-11 20:17:43.7827 Debug NLogViewer Target[viewer]
+2020-01-11 20:17:43.7827 Debug NLogViewer Target[viewer3]
+2020-01-11 20:17:43.7966 Debug NLogViewer Target[viewer2]
+2020-01-11 20:17:43.7966 Debug Rules:
+2020-01-11 20:17:43.8136 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 20:17:43.8286 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 20:17:43.8415 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 20:17:43.8415 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 20:17:43.8595 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 20:17:43.8595 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 20:17:43.8774 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 20:17:43.8774 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 20:17:43.8934 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 20:17:43.9044 Debug --- End of NLog configuration dump ---
+2020-01-11 20:17:43.9223 Info Found 81 configuration items
+2020-01-11 20:17:43.9682 Info Configuration initialized.
+2020-01-11 20:17:43.9682 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 20:17:43.9911 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 20:17:44.0011 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:17:44.0011 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:17:44.0201 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:44.0380 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:44.0470 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:44.0470 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:45.5330 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 20:17:45.5530 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:17:45.5968 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 20:17:45.5968 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:17:45.7065 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 20:17:45.7165 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 20:17:45.8003 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 20:17:45.8003 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:17:45.8162 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:17:45.8162 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:45.8332 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:45.8332 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:45.8472 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:17:46.5114 Info AppDomain Shutting down. Logger closing...
+2020-01-11 20:17:46.5303 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 20:17:46.5303 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 20:17:46.5483 Debug Closing logging configuration...
+2020-01-11 20:17:46.5483 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 20:17:46.5642 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 20:17:46.5642 Debug Closing target 'File Target[logfile]'.
+2020-01-11 20:17:46.5862 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:17:46.5992 Debug Closed target 'File Target[logfile]'.
+2020-01-11 20:17:46.6061 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 20:17:46.6061 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:17:46.6221 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 20:17:46.6221 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 20:17:46.6440 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 20:17:46.6440 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:17:46.6600 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:17:46.6600 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:17:46.6769 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:17:46.6919 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:17:46.6919 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:17:46.7069 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 20:17:46.7178 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 20:17:46.7178 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 20:17:46.7388 Debug Finished closing logging configuration.
+2020-01-11 20:17:46.7488 Info Logger has been shut down.
+2020-01-11 20:28:34.1614 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 20:28:34.2482 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 20:28:34.2672 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:28:34.2951 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:28:34.2951 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:28:34.3250 Debug Auto loading done
+2020-01-11 20:28:34.3250 Info Message Template Auto Format enabled
+2020-01-11 20:28:34.4048 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.4756 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:34.4975 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 20:28:34.4975 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 20:28:34.5225 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:28:34.5364 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.5544 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 20:28:34.5723 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 20:28:34.5953 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 20:28:34.6232 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 20:28:34.6412 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 20:28:34.6661 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 20:28:34.6920 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.7070 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:34.7229 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 20:28:34.7379 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 20:28:34.7628 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 20:28:34.7628 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 20:28:34.7888 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 20:28:34.8007 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.8167 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:34.8307 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 20:28:34.8476 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 20:28:34.8646 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:28:34.8785 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.8925 Info Adding target FileTarget(Name=logfile)
+2020-01-11 20:28:34.9035 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 20:28:34.9035 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:34.9538 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:34.9768 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 20:28:34.9977 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 20:28:34.9977 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 20:28:35.0246 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 20:28:35.0396 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 20:28:35.0536 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:35.0665 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:35.0795 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 20:28:35.0905 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 20:28:35.0905 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:28:35.1214 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:35.1463 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 20:28:35.1663 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 20:28:35.1792 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:35.1912 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:35.2042 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 20:28:35.2171 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 20:28:35.2171 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 20:28:35.2431 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 20:28:35.2550 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 20:28:35.2670 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 20:28:35.2820 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:35.2969 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:35.3119 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 20:28:35.3298 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 20:28:35.3468 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 20:28:35.3617 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 20:28:35.3797 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:28:35.3937 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:28:35.4086 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 20:28:35.4256 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 20:28:35.4395 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 20:28:35.4555 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 20:28:35.4844 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 20:28:35.5044 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 20:28:35.5562 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 20:28:35.5921 Debug --- NLog configuration dump ---
+2020-01-11 20:28:35.5921 Debug Targets:
+2020-01-11 20:28:35.6161 Debug Chainsaw Target[chainsaw]
+2020-01-11 20:28:35.6290 Debug File Target[testLogFile]
+2020-01-11 20:28:35.6470 Debug File Target[logfile]
+2020-01-11 20:28:35.6749 Debug File Target[xmllogfile]
+2020-01-11 20:28:35.6899 Debug Console Target[logconsole]
+2020-01-11 20:28:35.7038 Debug NLogViewer Target[viewer]
+2020-01-11 20:28:35.7168 Debug NLogViewer Target[viewer3]
+2020-01-11 20:28:35.7168 Debug NLogViewer Target[viewer2]
+2020-01-11 20:28:35.7407 Debug Rules:
+2020-01-11 20:28:35.7547 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 20:28:35.7657 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 20:28:35.7657 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 20:28:35.7926 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 20:28:35.8066 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 20:28:35.8175 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 20:28:35.8315 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 20:28:35.8445 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 20:28:35.8445 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 20:28:35.8634 Debug --- End of NLog configuration dump ---
+2020-01-11 20:28:35.8814 Info Found 81 configuration items
+2020-01-11 20:28:35.9422 Info Configuration initialized.
+2020-01-11 20:28:35.9601 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 20:28:36.0080 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 20:28:36.0958 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:28:36.1287 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:28:36.1576 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:36.1895 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:36.2105 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:36.2524 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:38.7946 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 20:28:38.7946 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:28:38.8205 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:28:38.8335 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:38.8474 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:38.8604 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:38.8763 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:28:39.8079 Info AppDomain Shutting down. Logger closing...
+2020-01-11 20:28:39.8408 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 20:28:39.8408 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 20:28:39.8687 Debug Closing logging configuration...
+2020-01-11 20:28:39.8807 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 20:28:39.8946 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 20:28:39.9096 Debug Closing target 'File Target[logfile]'.
+2020-01-11 20:28:39.9295 Debug Closed target 'File Target[logfile]'.
+2020-01-11 20:28:39.9435 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 20:28:39.9555 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 20:28:39.9694 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 20:28:39.9864 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 20:28:39.9983 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:28:39.9983 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:28:40.0243 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:28:40.0372 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:28:40.0502 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:28:40.0662 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:28:40.0801 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 20:28:40.0951 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 20:28:40.1070 Debug Finished closing logging configuration.
+2020-01-11 20:28:40.1220 Info Logger has been shut down.
+2020-01-11 20:47:48.4538 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 20:47:48.5017 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 20:47:48.5017 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5256 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5326 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5446 Debug Auto loading done
+2020-01-11 20:47:48.5446 Info Message Template Auto Format enabled
+2020-01-11 20:47:48.5954 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.6383 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.6383 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 20:47:48.6583 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 20:47:48.6583 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:48.6742 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.6742 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 20:47:48.6912 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 20:47:48.6912 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 20:47:48.7061 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 20:47:48.7061 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 20:47:48.7221 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 20:47:48.7450 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.7580 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.7690 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 20:47:48.7789 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 20:47:48.8029 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 20:47:48.8158 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 20:47:48.8268 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.8268 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.8468 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.8468 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 20:47:48.8627 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 20:47:48.8627 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:48.8787 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.8876 Info Adding target FileTarget(Name=logfile)
+2020-01-11 20:47:48.8876 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.9036 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.9036 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.9216 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 20:47:48.9216 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 20:47:48.9395 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 20:47:48.9505 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 20:47:48.9505 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.9654 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.9654 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.9654 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 20:47:48.9874 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 20:47:48.9874 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:49.0033 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0033 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 20:47:49.0173 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 20:47:49.0173 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0323 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.0323 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 20:47:49.0472 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 20:47:49.0472 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 20:47:49.0612 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 20:47:49.0612 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 20:47:49.0612 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.0821 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0821 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.0961 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 20:47:49.0961 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 20:47:49.1101 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 20:47:49.1101 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.1230 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.1230 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.1230 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 20:47:49.1450 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 20:47:49.1580 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 20:47:49.1580 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.1809 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 20:47:49.1928 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 20:47:49.2188 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 20:47:49.2377 Debug --- NLog configuration dump ---
+2020-01-11 20:47:49.2377 Debug Targets:
+2020-01-11 20:47:49.2557 Debug Chainsaw Target[chainsaw]
+2020-01-11 20:47:49.2636 Debug File Target[testLogFile]
+2020-01-11 20:47:49.2636 Debug File Target[logfile]
+2020-01-11 20:47:49.2786 Debug File Target[xmllogfile]
+2020-01-11 20:47:49.2786 Debug Console Target[logconsole]
+2020-01-11 20:47:49.2965 Debug NLogViewer Target[viewer]
+2020-01-11 20:47:49.2965 Debug NLogViewer Target[viewer3]
+2020-01-11 20:47:49.3185 Debug NLogViewer Target[viewer2]
+2020-01-11 20:47:49.3275 Debug Rules:
+2020-01-11 20:47:49.3275 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 20:47:49.3484 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 20:47:49.3584 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 20:47:49.3584 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 20:47:49.3763 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 20:47:49.3763 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 20:47:49.3943 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 20:47:49.4063 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 20:47:49.4063 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 20:47:49.4252 Debug --- End of NLog configuration dump ---
+2020-01-11 20:47:49.4432 Info Found 81 configuration items
+2020-01-11 20:47:49.4850 Info Configuration initialized.
+2020-01-11 20:47:49.4850 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 20:47:49.5060 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 20:47:49.5140 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:47:49.5140 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:47:49.5299 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5299 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5449 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5449 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.6519 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 20:47:50.6679 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:47:50.7148 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 20:47:50.7217 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:47:50.8235 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 20:47:50.8344 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 20:47:50.9421 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 20:47:50.9521 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:47:50.9521 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:47:50.9701 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9701 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9860 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9860 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:51.5565 Info AppDomain Shutting down. Logger closing...
+2020-01-11 20:47:51.5755 Debug Targets not configured for logger: ParseLogsControls.Test.LogEventInfoControl1Tests
+2020-01-11 20:47:51.5755 Debug Targets not configured for logger: ParseLogsControls.Contract
+2020-01-11 20:47:51.5904 Debug Closing logging configuration...
+2020-01-11 20:47:51.5904 Debug Closing target 'Console Target[logconsole]'.
+2020-01-11 20:47:51.6064 Debug Closed target 'Console Target[logconsole]'.
+2020-01-11 20:47:51.6064 Debug Closing target 'File Target[logfile]'.
+2020-01-11 20:47:51.6283 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:47:51.6413 Debug Closed target 'File Target[logfile]'.
+2020-01-11 20:47:51.6413 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-11 20:47:51.6612 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:47:51.6692 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-11 20:47:51.6692 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-11 20:47:51.6872 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-11 20:47:51.6872 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:47:51.7011 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-11 20:47:51.7011 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:47:51.7211 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-11 20:47:51.7310 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:47:51.7310 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-11 20:47:51.7480 Debug Closing target 'File Target[testLogFile]'.
+2020-01-11 20:47:51.7480 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-11 20:47:51.7669 Debug Closed target 'File Target[testLogFile]'.
+2020-01-11 20:47:51.7789 Debug Finished closing logging configuration.
+2020-01-11 20:47:51.7789 Info Logger has been shut down.

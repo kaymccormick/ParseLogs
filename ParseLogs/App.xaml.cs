@@ -32,6 +32,7 @@ using CommandLine.Text;
 using DynamicData.Kernel;
 using EO.Internal;
 using Fluent.Helpers;
+using Newtonsoft.Json;
 using NHibernate.Util;
 using NLog;
 using ParseLogsLib;
@@ -186,7 +187,7 @@ namespace ParseLogs
                     {
                         _LogEventInfos.Add(info);
                     }
-                });
+                });/*
             DataTemplate lvItemTemplate = (DataTemplate) FindResource("ButtonTemplate");
             target.Cache.SubscribeOn(Scheduler.Default).Buffer(TimeSpan.FromMilliseconds(100)).Where(x => x.Any())
                 .ObserveOnDispatcher(DispatcherPriority.Background).Subscribe(infos =>
@@ -200,6 +201,15 @@ namespace ParseLogs
                         var paragraph = new Paragraph(new Run(info.FormattedMessage));
                         paragraph.Inlines.Add(container);
                         FlowDoc.Blocks.Add(paragraph);
+
+                    }
+                });
+                */
+            target.Cache.SubscribeOn(Scheduler.Default).Buffer(TimeSpan.FromMilliseconds(100)).Where(x => x.Any())
+                .ObserveOnDispatcher(DispatcherPriority.Background).Subscribe(infos =>
+                {
+                    foreach (LogEventInfo info in infos)
+                    {
 
                     }
                 });

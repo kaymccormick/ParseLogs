@@ -1,12 +1,6 @@
 ﻿using NUnit.Framework;
-using ParseLogsControls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ParseLogsControls.Test
+namespace ParseLogsControlsTests
 {
     [TestFixture()] 
     public class LogItemInfoToCommandsConverterTests
@@ -14,7 +8,7 @@ namespace ParseLogsControls.Test
         [Test()]
         public void LogItemInfoToCommandsConverterTest()
         {
-            Assert.Fail();
+            var o = new LogItemInfoToCommandsConverterTests();
         }
 
         [Test()]

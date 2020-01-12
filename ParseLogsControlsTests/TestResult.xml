@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="10" result="Failed" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-10 04:06:20Z" end-time="2020-01-10 04:06:25Z" duration="4.935990">
+<test-run id="2" testcasecount="11" result="Failed" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-12 04:47:47Z" end-time="2020-01-12 04:47:51Z" duration="4.306872">
   <command-line><![CDATA["C:\users\mccor.LAPTOP-T6T0BN1K\source\repos\nunit\tools\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe" .\bin\x64\Debug\ParseLogsControlsTests.dll --test=ParseLogsControls.Test.LogEventInfoControl1Tests.Test2 --output out.txt]]></command-line>
   <filter>
     <test>ParseLogsControls.Test.LogEventInfoControl1Tests.Test2</test>
   </filter>
-  <test-suite type="Assembly" id="0-1013" name="ParseLogsControlsTests.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests\bin\x64\Debug\ParseLogsControlsTests.dll" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.774824" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
-    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
+  <test-suite type="Assembly" id="0-1014" name="ParseLogsControlsTests.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\ParseLogsControlsTests.dll" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2020-01-12 04:47:47Z" end-time="2020-01-12 04:47:51Z" duration="3.558443" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
-      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\parselogs\ParseLogsControlsTests" />
+      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests" />
       <setting name="ImageRuntimeVersion" value="4.0.30319" />
       <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
       <setting name="ImageRequiresX86" value="False" />
@@ -17,31 +17,134 @@
     </settings>
     <properties>
       <property name="ApartmentState" value="MTA" />
-      <property name="_PID" value="8440" />
+      <property name="_PID" value="27748" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1015" name="ParseLogsControls" fullname="ParseLogsControls" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.738951" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="TestSuite" id="0-1016" name="ParseLogsControls" fullname="ParseLogsControls" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2020-01-12 04:47:47Z" end-time="2020-01-12 04:47:51Z" duration="3.528428" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestSuite" id="0-1016" name="Test" fullname="ParseLogsControls.Test" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.737955" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="0-1017" name="Test" fullname="ParseLogsControls.Test" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2020-01-12 04:47:47Z" end-time="2020-01-12 04:47:51Z" duration="3.527866" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-suite type="TestFixture" id="0-1002" name="LogEventInfoControl1Tests" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2020-01-10 04:06:21Z" end-time="2020-01-10 04:06:25Z" duration="3.729794" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestFixture" id="0-1010" name="LogEventInfoControl1Tests" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2020-01-12 04:47:47Z" end-time="2020-01-12 04:47:51Z" duration="3.520869" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
           <failure>
             <message><![CDATA[One or more child tests had errors]]></message>
           </failure>
-          <test-case id="0-1004" name="Test2" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests.Test2" methodname="Test2" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" seed="1438049477" result="Failed" label="Error" start-time="2020-01-10 04:06:22Z" end-time="2020-01-10 04:06:25Z" duration="2.919109" asserts="0">
+          <output><![CDATA[2020-01-11 20:47:48.4538 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-11 20:47:48.5017 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-11 20:47:48.5017 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5256 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5326 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug
+2020-01-11 20:47:48.5446 Debug Auto loading done
+2020-01-11 20:47:48.5446 Info Message Template Auto Format enabled
+2020-01-11 20:47:48.5954 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.6383 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.6383 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-11 20:47:48.6583 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-11 20:47:48.6583 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:48.6742 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.6742 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-11 20:47:48.6912 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-11 20:47:48.6912 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-11 20:47:48.7061 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-11 20:47:48.7061 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-11 20:47:48.7221 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-11 20:47:48.7450 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.7580 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.7690 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-11 20:47:48.7789 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-11 20:47:48.8029 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-11 20:47:48.8158 Info Adding target FileTarget(Name=testLogFile)
+2020-01-11 20:47:48.8268 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.8268 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.8468 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.8468 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-11 20:47:48.8627 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-11 20:47:48.8627 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:48.8787 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.8876 Info Adding target FileTarget(Name=logfile)
+2020-01-11 20:47:48.8876 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.9036 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.9036 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.9216 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-11 20:47:48.9216 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-11 20:47:48.9395 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-11 20:47:48.9505 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-11 20:47:48.9505 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-11 20:47:48.9654 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:48.9654 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:48.9654 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-11 20:47:48.9874 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-11 20:47:48.9874 Debug Setting 'ConsoleTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-11 20:47:49.0033 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0033 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-11 20:47:49.0173 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-11 20:47:49.0173 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0323 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.0323 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-11 20:47:49.0472 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-11 20:47:49.0472 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-11 20:47:49.0612 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-11 20:47:49.0612 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-11 20:47:49.0612 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.0821 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.0821 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.0961 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-11 20:47:49.0961 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-11 20:47:49.1101 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-11 20:47:49.1101 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.1230 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-11 20:47:49.1230 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-11 20:47:49.1230 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-11 20:47:49.1450 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-11 20:47:49.1580 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-11 20:47:49.1580 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-11 20:47:49.1809 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-11 20:47:49.1928 Debug Unused target checking is started... Rule Count: 9, Target Count: 8
+2020-01-11 20:47:49.2188 Debug Unused target checking is completed. Total Rule Count: 9, Total Target Count: 8, Unused Target Count: 0
+2020-01-11 20:47:49.2377 Debug --- NLog configuration dump ---
+2020-01-11 20:47:49.2377 Debug Targets:
+2020-01-11 20:47:49.2557 Debug Chainsaw Target[chainsaw]
+2020-01-11 20:47:49.2636 Debug File Target[testLogFile]
+2020-01-11 20:47:49.2636 Debug File Target[logfile]
+2020-01-11 20:47:49.2786 Debug File Target[xmllogfile]
+2020-01-11 20:47:49.2786 Debug Console Target[logconsole]
+2020-01-11 20:47:49.2965 Debug NLogViewer Target[viewer]
+2020-01-11 20:47:49.2965 Debug NLogViewer Target[viewer3]
+2020-01-11 20:47:49.3185 Debug NLogViewer Target[viewer2]
+2020-01-11 20:47:49.3275 Debug Rules:
+2020-01-11 20:47:49.3275 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logconsole ]
+2020-01-11 20:47:49.3484 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-11 20:47:49.3584 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-11 20:47:49.3584 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-11 20:47:49.3763 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-11 20:47:49.3763 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-11 20:47:49.3943 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-11 20:47:49.4063 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-11 20:47:49.4063 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-11 20:47:49.4252 Debug --- End of NLog configuration dump ---
+2020-01-11 20:47:49.4432 Info Found 81 configuration items
+2020-01-11 20:47:49.4850 Info Configuration initialized.
+2020-01-11 20:47:49.4850 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-11 20:47:49.5060 Debug Targets for ParseLogsControls.Test.LogEventInfoControl1Tests by level:
+2020-01-11 20:47:49.5140 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:47:49.5140 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:47:49.5299 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5299 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5449 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:49.5449 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+]]></output>
+          <test-case id="0-1012" name="Test2" fullname="ParseLogsControls.Test.LogEventInfoControl1Tests.Test2" methodname="Test2" classname="ParseLogsControls.Test.LogEventInfoControl1Tests" runstate="Runnable" seed="723791099" result="Failed" label="Error" start-time="2020-01-12 04:47:49Z" end-time="2020-01-12 04:47:51Z" duration="1.942271" asserts="0">
             <failure>
-              <message><![CDATA[Newtonsoft.Json.JsonSerializationException : Error converting value "Debug" to type 'NLog.LogLevel'. Path 'Level', line 4, position 18.
-  ----> System.InvalidCastException : Invalid cast from 'System.String' to 'NLog.LogLevel'.]]></message>
-              <stack-trace><![CDATA[   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 992
-   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 324
-   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 1039
+              <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+              <stack-trace><![CDATA[   at ParseLogsControls.LogLevelProvider.GetValue(Object target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControls\LogItemInfoToCommandsConverter.cs:line 163
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CalculatePropertyDetails(JsonProperty property, JsonConverter& propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target, Boolean& useExistingValue, Object& currentValue, JsonContract& propertyContract, Boolean& gottenCurrentValue, Boolean& ignoredValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 1105
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue(JsonProperty property, JsonConverter propertyConverter, JsonContainerContract containerContract, JsonProperty containerProperty, JsonReader reader, Object target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 1001
    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject(Object newObject, JsonReader reader, JsonObjectContract contract, JsonProperty member, String id) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 2420
    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 493
    at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 300
@@ -50,15 +153,25 @@
    at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonSerializer.cs:line 886
    at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonConvert.cs:line 837
    at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\JsonConvert.cs:line 792
-   at ParseLogsControls.Test.LogEventInfoControl1Tests.Test2() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\LogEventInfoControl1Tests.cs:line 268
---InvalidCastException
-   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
-   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\Newtonsoft.Json\src\Newtonsoft.Json\Serialization\JsonSerializerInternalReader.cs:line 985]]></stack-trace>
+   at ParseLogsControls.Test.LogEventInfoControl1Tests.Test2() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\LogEventInfoControl1Tests.cs:line 281]]></stack-trace>
             </failure>
-            <output><![CDATA[{
-  "SequenceID": 1,
-  "TimeStamp": "2020-01-09T20:06:24.1943279-08:00",
-  "Level": "Debug",
+            <output><![CDATA[2020-01-11 20:47:50.6519 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt' on startup
+2020-01-11 20:47:50.6679 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.txt
+2020-01-11 20:47:50.7148 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml' on startup
+2020-01-11 20:47:50.7217 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\ParseLogsControlsTests\bin\x64\Debug\file.xml
+2020-01-11 20:47:50.8235 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-11 20:47:50.8344 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-11 20:47:50.9421 Debug Targets for ParseLogsControls.Contract by level:
+2020-01-11 20:47:50.9521 Debug Trace => viewer viewer3 testLogFile
+2020-01-11 20:47:50.9521 Debug Debug => logconsole logfile xmllogfile viewer chainsaw viewer3 testLogFile
+2020-01-11 20:47:50.9701 Debug Info => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9701 Debug Warn => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9860 Debug Error => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+2020-01-11 20:47:50.9860 Debug Fatal => logconsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile
+{
+  "SequenceID": 2,
+  "TimeStamp": "2020-01-11T20:47:50.9421984-08:00",
+  "Level": {},
   "HasStackTrace": false,
   "UserStackFrame": null,
   "UserStackFrameNumber": 0,

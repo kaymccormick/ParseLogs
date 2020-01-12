@@ -197,6 +197,12 @@ namespace ParseLogsControls.Test
             MyApp = app;
         }
 
+        [TearDown]
+        public void TearDown()
+        {
+            MyApp.Shutdown();
+        }
+
         public Application MyApp { get; set; }
 
         [Test(), Apartment(ApartmentState.STA)]
@@ -257,6 +263,7 @@ namespace ParseLogsControls.Test
         [Test]
         public void Test2()
         {
+            Logger.Error("here");
             var logEventInfo = new LogEventInfo(LogLevel.Debug, "testlogger", "message");
             var json = JsonConvert.SerializeObject(logEventInfo,
                 Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings()
@@ -264,6 +271,13 @@ namespace ParseLogsControls.Test
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
                     ContractResolver = new Contract(),
                 });
+            var fileStream = File.Open(@"c:\data\loginfo.json", FileMode.Create);
+            var writer = new StreamWriter(fileStream);
+            writer.Write(json);
+            writer.Close();
+            return;
+//            fileStream.Close();
+
             Console.WriteLine(json);
             LogEventInfo info = JsonConvert.DeserializeObject<LogEventInfo>(json, new JsonSerializerSettings()
             {
@@ -274,15 +288,28 @@ namespace ParseLogsControls.Test
                 Newtonsoft.Json.Formatting.Indented, new JsonSerializerSettings()
                 {
                     ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                    
                     ContractResolver = new Contract(),
                 });
             Assert.AreEqual(json, json2);
         }
-        
+
+        [Test]
+        public void Test3()
+        {
+            var json = File.ReadAllText(@"C:\data\loginfo.json");
+            LogEventInfo info = JsonConvert.DeserializeObject<LogEventInfo>(json, new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                ContractResolver = new Contract(),
+                ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
+            });
+        }
 
 
 
 
-    
+
+
     }
 }

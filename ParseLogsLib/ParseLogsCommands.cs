@@ -91,7 +91,7 @@ namespace ParseLogsLib
                 {
                     throw new ArgumentException(
                         $"Invalid parameter for command {this}, parameter {parameter ?? "null"}",
-                        "parameter");
+                        nameof(parameter));
                 }
 
                 return;
