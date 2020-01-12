@@ -67,32 +67,15 @@ namespace LogAdjunct
                 }
                 Debug.Assert(found);
                 return r2;
-                // foreach (var p in r.Where(property => property.UnderlyingName == "FormattedMessage"))
-                // {
-                //     p.Ignored = true;
-                //     found = true;
-                // }
-                //
-                // if (!found)
-                // {
-                //     throw new Exception("Beep");
-                // }
             }
 
             return r;
         }
 
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        //private readonly DefaultContractResolver contractResolver { get { }};
 
         public ContractResolver()
         {
-            //contractResolver = new DefaultContractResolver();
-            // LogEventInfoContract =
-            //     new LogEventInfoContract(/*contractResolver.ResolveContract(typeof(LogEventInfo))*/);
-            //var _wpf = base.ResolveContract(typeof(WpfLogEventInfo));
-            //Logger.Debug($"default contract is {_wpf}");
-            //WpfLogEventInfoContract = new WpfLogEventInfoContract(/*_wpf*/);
         }
 
         public override JsonContract ResolveContract(Type type)
@@ -107,35 +90,5 @@ namespace LogAdjunct
             //Logger.Debug(r.GetType() + " " + type.FullName);
             return r;
         }
-
-        private JsonContract _ResolveContract(Type type)
-        {
-            Logger.Debug($"resolve contract for {type}");
-            if (type == typeof(LogLevel))
-            {
-                //     return new JsonObjectContract()
-                //     {
-                //         CreatorParameters = { }
-                //         DefaultCreator =  
-                //     }
-            }
-            /*
-            if (typeof(WpfLogEventInfo).IsAssignableFrom(type))
-            {
-                Logger.Debug($"returning {WpfLogEventInfoContract}");
-                return WpfLogEventInfoContract;
-            }
-            else */ if (typeof(LogEventInfo).IsAssignableFrom(type))
-            {
-                Logger.Debug($"returning {LogEventInfoContract}");
-                return LogEventInfoContract;
-            }
-
-            return null;//cotractResolver.ResolveContract(type);
-        }
-
-        public JsonContract LogEventInfoContract { get; set; }
-
-        public JsonContract WpfLogEventInfoContract { get; set; }
     }
 }
