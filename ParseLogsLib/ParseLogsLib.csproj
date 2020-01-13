@@ -112,10 +112,6 @@
     <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>e:\installed_packages\winapicp.1.1\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\nlog\debug\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="ObjectDumper, Version=1.0.0.12, Culture=neutral, PublicKeyToken=9e2fabf3af85dba9, processorArchitecture=MSIL">
       <HintPath>e:\installed_packages\ObjectDumper.1.0.0.12\lib\net35-Client\ObjectDumper.dll</HintPath>
     </Reference>
@@ -209,7 +205,12 @@
     <Analyzer Include="e:\installed_packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="e:\installed_packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\NLog\src\NLog\NLog.csproj">
+      <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>
+      <Name>NLog</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

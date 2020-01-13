@@ -1,0 +1,1 @@
+<Playlist Version="1.0"><Add Test="LogAdjunctTest.LogHelperTests.SerializeLogEventInfoTest" /><Add Test="LogAdjunctTest.LogHelperTests.DeserializeLogEventInfoTest" /></Playlist>

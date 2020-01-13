@@ -56,10 +56,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Newtonsoft.Json\Src\Newtonsoft.Json\bin\Debug\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NLog">
-      <HintPath>E:\nlog\debug\NLog.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Dynamic" />
@@ -120,6 +116,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\NLog\src\NLog\NLog.csproj">
+      <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>
+      <Name>NLog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

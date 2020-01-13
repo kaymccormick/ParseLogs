@@ -1,0 +1,1817 @@
+2020-01-12 15:07:36.8783 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:07:36.9806 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:07:36.9935 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:07:37.0204 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:07:37.0314 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:07:37.0554 Debug Auto loading done
+2020-01-12 15:07:37.0713 Info Message Template Auto Format enabled
+2020-01-12 15:07:37.2652 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.3291 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.3461 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:07:37.3546 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:07:37.3800 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:07:37.3930 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:07:37.4189 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:07:37.4290 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:07:37.4290 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:07:37.4509 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:07:37.4593 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:07:37.4593 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:07:37.4799 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:07:37.4919 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:07:37.4919 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:07:37.5249 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.5249 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.5489 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:07:37.5599 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:07:37.5789 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:07:37.5909 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.6039 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:07:37.6159 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:07:37.6371 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:07:37.6490 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-12 15:07:37.6490 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:07:37.6706 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:07:37.6816 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.6956 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.6956 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:07:37.7208 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:07:37.7329 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:07:37.7529 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:07:37.7659 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:07:37.7808 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.7948 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.8058 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:07:37.8183 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:07:37.8183 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:07:37.8373 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.8373 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:07:37.8570 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:07:37.8673 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.8673 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.8870 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:07:37.8970 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:07:37.8970 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:07:37.9202 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:07:37.9302 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:07:37.9302 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:37.9511 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:37.9752 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:07:37.9752 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:07:37.9991 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:07:38.0210 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:07:38.0360 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:07:38.0539 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.1210 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:07:38.1401 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:07:38.1620 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:07:38.1620 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:07:38.1881 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:07:38.2051 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:07:38.2170 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:07:38.2270 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:07:38.2420 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:07:38.2621 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:07:38.2741 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:07:38.2881 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:07:38.3040 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:07:38.3210 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.3340 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:38.3340 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:07:38.3579 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:07:38.3680 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:07:38.3680 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.3912 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:07:38.4072 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:07:38.4278 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:07:38.4278 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:07:38.4497 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.4596 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:38.4596 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:07:38.4791 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:07:38.4906 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:07:38.4906 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:07:38.5125 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:07:38.5215 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:07:38.5215 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.5445 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:38.5544 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:07:38.5544 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:07:38.5744 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:07:38.5848 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:07:38.5848 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:07:38.6033 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:07:38.6033 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:07:38.6243 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:07:38.6332 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:07:38.6332 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:07:38.6647 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:07:38.6789 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:07:38.7066 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:07:38.7156 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:07:38.7415 Debug --- NLog configuration dump ---
+2020-01-12 15:07:38.7415 Debug Targets:
+2020-01-12 15:07:38.7614 Debug File Target[jsonFile]
+2020-01-12 15:07:38.7724 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:07:38.7724 Debug File Target[testLogFile]
+2020-01-12 15:07:38.7993 Debug File Target[logfile]
+2020-01-12 15:07:38.8113 Debug File Target[xmllogfile]
+2020-01-12 15:07:38.8223 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:07:38.8223 Debug Console Target[logconsole]
+2020-01-12 15:07:38.8422 Debug NLogViewer Target[viewer]
+2020-01-12 15:07:38.8532 Debug NLogViewer Target[viewer3]
+2020-01-12 15:07:38.8532 Debug NLogViewer Target[viewer2]
+2020-01-12 15:07:38.8741 Debug Rules:
+2020-01-12 15:07:38.8871 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:07:38.8871 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:07:38.9051 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:07:38.9180 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:07:38.9280 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:07:38.9280 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:07:38.9469 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:07:38.9469 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:07:38.9693 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:07:38.9793 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:07:38.9793 Debug --- End of NLog configuration dump ---
+2020-01-12 15:07:39.0112 Info Found 124 configuration items
+2020-01-12 15:07:39.0705 Info Configuration initialized.
+2020-01-12 15:07:39.0705 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:07:39.0960 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:07:39.1070 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:07:39.1169 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:07:39.1169 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.1436 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.1539 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.1659 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.3228 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:07:39.3228 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:07:39.3449 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:07:39.3527 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.3527 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.3736 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:39.3856 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:07:40.2510 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:07:40.2760 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:07:40.3408 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:07:40.3587 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:07:40.5608 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:07:40.5715 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:07:40.6094 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:07:40.6214 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:07:41.9815 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:07:42.0249 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:07:42.0392 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:07:42.0392 Debug Closing logging configuration...
+2020-01-12 15:07:42.0639 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:07:42.0768 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:07:42.0919 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:07:42.1097 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:07:42.1277 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:07:42.1390 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:07:42.1506 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:07:42.1626 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:07:42.1626 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:07:42.1965 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:07:42.1965 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:07:42.2194 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:07:42.2314 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:07:42.2424 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:07:42.2564 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:07:42.2564 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:07:42.2784 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:07:42.2896 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:07:42.2896 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:07:42.3104 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:07:42.3213 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:07:42.3213 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:07:42.3442 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:07:42.3562 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:07:42.3681 Debug Finished closing logging configuration.
+2020-01-12 15:07:42.3810 Info Logger has been shut down.
+2020-01-12 15:26:49.5077 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:26:49.6830 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:26:49.7050 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:26:49.7548 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:26:49.7708 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:26:49.8060 Debug Auto loading done
+2020-01-12 15:26:49.8189 Info Message Template Auto Format enabled
+2020-01-12 15:26:49.9055 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:49.9820 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:50.0049 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:26:50.0218 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:26:50.0738 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:26:50.0887 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:26:50.1097 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:26:50.1217 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:26:50.1346 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:26:50.1505 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:26:50.1626 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:26:50.1626 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:26:50.1845 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:26:50.1986 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:26:50.1986 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:26:50.2458 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:50.3088 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:50.4025 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:26:50.4366 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:26:50.4556 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:26:50.4726 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:50.4865 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:26:50.5066 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:26:50.5216 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:26:50.5216 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-12 15:26:50.5506 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:26:50.5655 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:26:50.5795 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:50.5935 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:50.6194 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:26:50.6617 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:26:50.7356 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:26:50.7704 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:26:50.7864 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:26:50.8034 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:50.8423 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:50.8563 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:26:50.8672 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:26:50.8813 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:26:50.9474 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:50.9962 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:26:51.1353 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:26:51.1862 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:51.2062 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:51.2231 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:26:51.2341 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:26:51.2482 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:26:51.2612 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:26:51.2714 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:26:51.2923 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:51.3173 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:51.4095 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:26:51.4340 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:26:51.4871 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:26:51.5220 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:26:51.5730 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:26:51.6020 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:51.6259 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:26:51.6438 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:26:51.6887 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:26:51.7137 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:26:51.7284 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:26:51.7404 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:26:51.7613 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:26:51.7793 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:26:51.7952 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:26:51.8142 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:26:51.8371 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:26:51.8603 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:26:51.8744 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:26:51.8882 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:51.9032 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:51.9212 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:26:51.9351 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:26:51.9531 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:26:51.9932 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:52.0160 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:26:52.0310 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:26:52.0480 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:26:52.0575 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:26:52.0692 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:52.0692 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:52.0887 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:26:52.0887 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:26:52.1085 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:26:52.1205 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:26:52.1205 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:26:52.1454 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:26:52.1594 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:52.1803 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:52.1803 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:26:52.2063 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:26:52.2182 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:26:52.2352 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:26:52.2452 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:26:52.2591 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:26:52.2591 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:26:52.2830 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:26:52.3059 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:26:52.3219 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:26:52.4019 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:26:52.4268 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:26:52.5486 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:26:52.5785 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:26:52.6105 Debug --- NLog configuration dump ---
+2020-01-12 15:26:52.6225 Debug Targets:
+2020-01-12 15:26:52.6423 Debug File Target[jsonFile]
+2020-01-12 15:26:52.6921 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:26:52.8459 Debug File Target[testLogFile]
+2020-01-12 15:26:52.8781 Debug File Target[logfile]
+2020-01-12 15:26:52.9560 Debug File Target[xmllogfile]
+2020-01-12 15:26:52.9932 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:26:53.0522 Debug Console Target[logconsole]
+2020-01-12 15:26:53.0650 Debug NLogViewer Target[viewer]
+2020-01-12 15:26:53.0810 Debug NLogViewer Target[viewer3]
+2020-01-12 15:26:53.1163 Debug NLogViewer Target[viewer2]
+2020-01-12 15:26:53.1350 Debug Rules:
+2020-01-12 15:26:53.1569 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:26:53.1808 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:26:53.1808 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:26:53.2067 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:26:53.2189 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:26:53.2368 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:26:53.2600 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:26:53.2967 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:26:53.3207 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:26:53.3619 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:26:53.3898 Debug --- End of NLog configuration dump ---
+2020-01-12 15:26:53.5232 Info Found 124 configuration items
+2020-01-12 15:26:53.6872 Info Configuration initialized.
+2020-01-12 15:26:53.7092 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:26:53.7444 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:26:53.7580 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:26:53.7789 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:26:53.8009 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:53.8282 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:53.8502 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:53.9109 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:54.1110 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:26:54.1461 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:26:54.1960 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:26:54.2646 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:54.2866 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:54.3145 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:54.4076 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:26:55.4542 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:26:55.5154 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:26:55.6194 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:26:55.6464 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:26:56.0527 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:26:56.0687 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:26:56.1885 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:26:56.2194 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:26:58.4265 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:26:58.4766 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:26:58.4966 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:26:58.5105 Debug Closing logging configuration...
+2020-01-12 15:26:58.5225 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:26:58.5225 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:26:58.5504 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:26:58.5705 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:26:58.5905 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:26:58.6024 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:26:58.6211 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:26:58.6367 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:26:58.6486 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:26:58.6727 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:26:58.6839 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:26:58.6946 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:26:58.6946 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:26:58.7278 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:26:58.7418 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:26:58.7559 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:26:58.7559 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:26:58.7803 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:26:58.7913 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:26:58.7913 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:26:58.8124 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:26:58.8234 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:26:58.8357 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:26:58.8521 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:26:58.8716 Debug Finished closing logging configuration.
+2020-01-12 15:26:58.8926 Info Logger has been shut down.
+2020-01-12 15:33:38.6872 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:33:38.7712 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:33:38.7851 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:33:38.8080 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:33:38.8230 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:33:38.8471 Debug Auto loading done
+2020-01-12 15:33:38.8590 Info Message Template Auto Format enabled
+2020-01-12 15:33:38.9307 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:38.9967 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.0197 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:33:39.0337 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:33:39.0598 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:33:39.0708 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:33:39.0997 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:33:39.0997 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:33:39.1256 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:33:39.1382 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:33:39.1487 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:33:39.1487 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:33:39.1711 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:33:39.1842 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:33:39.1978 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:33:39.2297 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.2487 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.2628 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:33:39.2756 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:33:39.2876 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:33:39.2876 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.3100 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:33:39.3224 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:33:39.3354 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:33:39.3354 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-12 15:33:39.3633 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:33:39.3763 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:33:39.3852 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.3965 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.3965 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:33:39.4171 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:33:39.4171 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:33:39.4378 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:33:39.4482 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:33:39.4482 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.4672 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.4754 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:33:39.4754 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:33:39.4945 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:33:39.4945 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.5166 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:33:39.5256 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:33:39.5256 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.5439 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.5541 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:33:39.5541 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:33:39.5688 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:33:39.5688 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:33:39.5888 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:33:39.5998 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.5998 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.6327 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:33:39.6327 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:33:39.6508 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:33:39.6508 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:33:39.6697 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:33:39.6827 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.6827 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:33:39.6996 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:33:39.6996 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:33:39.7167 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:33:39.7276 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:33:39.7276 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:33:39.7485 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:33:39.7625 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:33:39.7734 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:33:39.7734 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:33:39.7962 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:33:39.8054 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:33:39.8054 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:33:39.8207 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.8207 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.8423 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:33:39.8527 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:33:39.8527 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:33:39.8713 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.8713 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:33:39.8856 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:33:39.9005 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:33:39.9005 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:33:39.9165 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.9165 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.9325 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:33:39.9325 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:33:39.9464 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:33:39.9464 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:33:39.9619 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:33:39.9619 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:33:39.9808 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:39.9928 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:39.9928 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:33:40.0128 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:33:40.0257 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:33:40.0257 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:33:40.0447 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:33:40.0537 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:33:40.0537 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:33:40.0747 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:33:40.0747 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:33:40.0886 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:33:40.1105 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:33:40.1235 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:33:40.1584 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:33:40.1694 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:33:40.1883 Debug --- NLog configuration dump ---
+2020-01-12 15:33:40.1953 Debug Targets:
+2020-01-12 15:33:40.1953 Debug File Target[jsonFile]
+2020-01-12 15:33:40.2117 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:33:40.2117 Debug File Target[testLogFile]
+2020-01-12 15:33:40.2316 Debug File Target[logfile]
+2020-01-12 15:33:40.2316 Debug File Target[xmllogfile]
+2020-01-12 15:33:40.2472 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:33:40.2472 Debug Console Target[logconsole]
+2020-01-12 15:33:40.2628 Debug NLogViewer Target[viewer]
+2020-01-12 15:33:40.2628 Debug NLogViewer Target[viewer3]
+2020-01-12 15:33:40.2768 Debug NLogViewer Target[viewer2]
+2020-01-12 15:33:40.2768 Debug Rules:
+2020-01-12 15:33:40.3017 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:33:40.3123 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:33:40.3187 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:33:40.3187 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:33:40.3356 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:33:40.3356 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:33:40.3511 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:33:40.3511 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:33:40.3670 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:33:40.3670 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:33:40.3848 Debug --- End of NLog configuration dump ---
+2020-01-12 15:33:40.4069 Info Found 124 configuration items
+2020-01-12 15:33:40.4618 Info Configuration initialized.
+2020-01-12 15:33:40.4618 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:33:40.4847 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:33:40.4917 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:33:40.4917 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:33:40.5112 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5112 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5290 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5290 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5556 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:33:40.5556 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:33:40.5705 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:33:40.5705 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5856 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5856 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.5856 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:33:40.8186 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:33:40.8186 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:33:40.8755 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:33:40.8815 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:33:41.0281 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:33:41.0635 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:33:41.1473 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:33:41.1633 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:33:42.1721 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:33:42.1891 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:33:42.1961 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:33:42.1961 Debug Closing logging configuration...
+2020-01-12 15:33:42.2100 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:33:42.2100 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:33:42.2100 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:33:42.2340 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:33:42.2439 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:33:42.2439 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:33:42.2588 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:33:42.2588 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:33:42.2787 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:33:42.2993 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:33:42.3153 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:33:42.3293 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:33:42.3370 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:33:42.3370 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:33:42.3562 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:33:42.3562 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:33:42.3702 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:33:42.3702 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:33:42.3831 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:33:42.3831 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:33:42.3981 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:33:42.3981 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:33:42.4160 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:33:42.4160 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:33:42.4362 Debug Finished closing logging configuration.
+2020-01-12 15:33:42.4439 Info Logger has been shut down.
+2020-01-12 15:43:56.0282 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:43:56.0805 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:43:56.0930 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:43:56.1095 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:43:56.1181 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:43:56.1321 Debug Auto loading done
+2020-01-12 15:43:56.1321 Info Message Template Auto Format enabled
+2020-01-12 15:43:56.1899 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.2363 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.2519 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:43:56.2599 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:43:56.2778 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:43:56.2778 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:43:56.2968 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:43:56.3057 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:43:56.3057 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:43:56.3277 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:43:56.3366 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:43:56.3366 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:43:56.3550 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:43:56.3550 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:43:56.3765 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:43:56.3915 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.4008 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.4134 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:43:56.4134 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:43:56.4671 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:43:56.4930 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.5090 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:43:56.5090 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:43:56.5518 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:43:56.5659 Debug Setting 'ChainsawTarget.address' to 'udp://192.168.10.1:4445'
+2020-01-12 15:43:56.5877 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:43:56.6057 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:43:56.6157 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.6157 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.6327 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:43:56.6327 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:43:56.6477 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:43:56.6477 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:43:56.6625 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:43:56.6625 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.6802 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.6955 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:43:56.6955 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:43:56.7164 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:43:56.7164 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.7334 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:43:56.7334 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:43:56.7480 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.7567 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.7567 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:43:56.7752 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:43:56.7752 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:43:56.7947 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:43:56.8036 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:43:56.8036 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.8235 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:56.8465 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:43:56.8554 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:43:56.8554 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:43:56.8704 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:43:56.8704 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:43:56.8914 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:56.9023 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:43:56.9023 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:43:56.9193 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:43:56.9297 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:43:56.9297 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:43:56.9477 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:43:56.9477 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:43:56.9619 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:43:56.9619 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:43:56.9619 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:43:56.9807 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:43:56.9807 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:43:56.9956 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:43:56.9956 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:57.0135 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:57.0245 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:43:57.0245 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:43:57.0424 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:43:57.0424 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:57.0574 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:43:57.0574 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:43:57.0793 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:43:57.0883 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:43:57.0883 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:57.1053 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:57.1053 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:43:57.1222 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:43:57.1222 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:43:57.1369 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:43:57.1369 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:43:57.1518 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:43:57.1518 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:57.1687 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:57.1809 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:43:57.1809 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:43:57.2016 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:43:57.2095 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:43:57.2095 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:43:57.2258 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:43:57.2258 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:43:57.2608 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:43:57.2727 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:43:57.2727 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:43:57.3167 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:43:57.3348 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:43:57.3740 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:43:57.3842 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:43:57.4090 Debug --- NLog configuration dump ---
+2020-01-12 15:43:57.4196 Debug Targets:
+2020-01-12 15:43:57.4303 Debug File Target[jsonFile]
+2020-01-12 15:43:57.4303 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:43:57.4523 Debug File Target[testLogFile]
+2020-01-12 15:43:57.4698 Debug File Target[logfile]
+2020-01-12 15:43:57.4838 Debug File Target[xmllogfile]
+2020-01-12 15:43:57.4928 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:43:57.4928 Debug Console Target[logconsole]
+2020-01-12 15:43:57.5117 Debug NLogViewer Target[viewer]
+2020-01-12 15:43:57.5216 Debug NLogViewer Target[viewer3]
+2020-01-12 15:43:57.5216 Debug NLogViewer Target[viewer2]
+2020-01-12 15:43:57.5735 Debug Rules:
+2020-01-12 15:43:57.5924 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:43:57.6034 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:43:57.6227 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:43:57.6324 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:43:57.6324 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:43:57.6504 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:43:57.6623 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:43:57.6623 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:43:57.6803 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:43:57.6803 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:43:57.6952 Debug --- End of NLog configuration dump ---
+2020-01-12 15:43:57.7122 Info Found 124 configuration items
+2020-01-12 15:43:57.7581 Info Configuration initialized.
+2020-01-12 15:43:57.7581 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:43:57.7829 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:43:57.7930 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:43:57.7930 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:43:57.8090 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:57.8090 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:57.8229 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:57.8229 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:59.5030 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:43:59.5090 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:43:59.5090 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:43:59.5090 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:59.5269 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:59.5269 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:43:59.5388 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:44:00.8567 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:44:00.8686 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:44:00.8955 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:44:00.9020 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:44:01.0363 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:44:01.0513 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:44:01.0862 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:44:01.1001 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:44:02.5725 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:44:02.5934 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:44:02.6004 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:44:02.6004 Debug Closing logging configuration...
+2020-01-12 15:44:02.6243 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:44:02.6363 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:44:02.6363 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:44:02.6632 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:44:02.6632 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:44:02.6852 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:44:02.6963 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:44:02.6963 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:44:02.7161 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:44:02.7340 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:44:02.7465 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:44:02.7465 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:44:02.7617 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:44:02.7756 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:44:02.7756 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:44:02.7910 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:44:02.7910 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:44:02.8035 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:44:02.8035 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:44:02.8209 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:44:02.8209 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:44:02.8365 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:44:02.8365 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:44:02.8516 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:44:02.8516 Debug Finished closing logging configuration.
+2020-01-12 15:44:02.8685 Info Logger has been shut down.
+2020-01-12 15:45:14.5174 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:45:14.5932 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:45:14.6061 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:45:14.6330 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:45:14.6330 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:45:14.6589 Debug Auto loading done
+2020-01-12 15:45:14.6709 Info Message Template Auto Format enabled
+2020-01-12 15:45:14.7268 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:14.7760 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:14.7959 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:45:14.8049 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:45:14.8281 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:45:14.8401 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:45:14.8584 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:45:14.8730 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:45:14.8809 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:45:14.8809 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:45:14.8969 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:45:14.8969 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:45:14.9132 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:45:14.9132 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:45:14.9381 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:45:14.9591 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:14.9591 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:14.9800 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:45:14.9906 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:45:14.9906 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:45:15.0089 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.0089 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:45:15.0295 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:45:15.0384 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:45:15.0384 Debug Setting 'ChainsawTarget.address' to 'udp://24.18.229.228'
+2020-01-12 15:45:15.0613 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:45:15.0723 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:45:15.0843 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.1002 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:15.1172 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:45:15.1321 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:45:15.1321 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:45:15.1571 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:45:15.1650 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:45:15.1780 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.1780 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:15.1989 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:45:15.2104 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:45:15.2104 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:45:15.2302 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.2302 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:45:15.2459 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:45:15.2459 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.2624 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:15.2624 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:45:15.2809 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:45:15.2881 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:45:15.2881 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:45:15.3078 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:45:15.3078 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.3289 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:15.3538 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:45:15.3538 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:45:15.3739 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:45:15.3818 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:45:15.3818 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:45:15.4049 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.4161 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:45:15.4161 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:45:15.4364 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:45:15.8456 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:45:15.8536 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:45:15.8841 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:45:15.8841 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:45:15.9014 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:45:15.9014 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:45:15.9195 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:45:15.9195 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:45:15.9384 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:45:15.9494 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:45:15.9604 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:15.9604 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:15.9792 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:45:15.9792 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:45:15.9955 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:45:15.9955 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:16.0132 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:45:16.0215 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:45:16.0215 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:45:16.0441 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:45:16.0441 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:16.0606 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:16.0696 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:45:16.0696 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:45:16.0865 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:45:16.0865 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:45:16.1025 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:45:16.1025 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:45:16.1244 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:16.1354 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:16.1354 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:45:16.1554 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:45:16.1643 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:45:16.1643 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:45:16.1929 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:45:16.2022 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:45:16.2133 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:45:16.2133 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:45:16.2330 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:45:16.2425 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:45:16.2684 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:45:16.2884 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:45:16.3278 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:45:16.3378 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:45:16.3548 Debug --- NLog configuration dump ---
+2020-01-12 15:45:16.3548 Debug Targets:
+2020-01-12 15:45:16.3707 Debug File Target[jsonFile]
+2020-01-12 15:45:16.3707 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:45:16.3857 Debug File Target[testLogFile]
+2020-01-12 15:45:16.3857 Debug File Target[logfile]
+2020-01-12 15:45:16.4045 Debug File Target[xmllogfile]
+2020-01-12 15:45:16.4126 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:45:16.4126 Debug Console Target[logconsole]
+2020-01-12 15:45:16.4317 Debug NLogViewer Target[viewer]
+2020-01-12 15:45:16.4317 Debug NLogViewer Target[viewer3]
+2020-01-12 15:45:16.4476 Debug NLogViewer Target[viewer2]
+2020-01-12 15:45:16.4476 Debug Rules:
+2020-01-12 15:45:16.4665 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:45:16.4665 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:45:16.4826 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:45:16.4826 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:45:16.4988 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:45:16.5072 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:45:16.5072 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:45:16.5253 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:45:16.5596 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:45:16.5685 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:45:16.5685 Debug --- End of NLog configuration dump ---
+2020-01-12 15:45:16.6062 Info Found 124 configuration items
+2020-01-12 15:45:16.6595 Info Configuration initialized.
+2020-01-12 15:45:16.6715 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:45:16.6844 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:45:16.6844 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:45:16.7004 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:45:16.7103 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.7103 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.7310 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.7425 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.8571 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:45:16.8690 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:45:16.8820 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:45:16.8820 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.9040 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.9161 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:16.9281 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:45:17.3394 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:45:17.3584 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:45:17.4051 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:45:17.4131 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:45:17.6628 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:17.6917 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:45:17.7196 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:45:17.7675 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:45:17.7884 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:45:18.0078 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:18.1038 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:18.2350 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:18.4619 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:18.5319 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:18.9804 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:19.1191 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:19.3673 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:19.4525 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:19.5816 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:45:19.8901 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:45:19.9340 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:45:19.9470 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:45:19.9589 Debug Closing logging configuration...
+2020-01-12 15:45:19.9589 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:45:19.9858 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:45:19.9988 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:45:20.0171 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:45:20.0341 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:45:20.0460 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:45:20.0642 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:45:20.0782 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:45:20.0913 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:45:20.1142 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:45:20.1262 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:45:20.1391 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:45:20.1531 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:45:20.1660 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:45:20.1660 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:45:20.1905 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:45:20.2025 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:45:20.2146 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:45:20.2285 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:45:20.2475 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:45:20.2594 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:45:20.2724 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:45:20.2724 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:45:20.2984 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:45:20.3095 Debug Finished closing logging configuration.
+2020-01-12 15:45:20.3225 Info Logger has been shut down.
+2020-01-12 15:46:05.2956 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:46:05.3874 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:46:05.4046 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:05.4335 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:05.4546 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:05.4817 Debug Auto loading done
+2020-01-12 15:46:05.4947 Info Message Template Auto Format enabled
+2020-01-12 15:46:05.5688 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:05.6428 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:05.6618 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:46:05.6744 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:46:05.7022 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:46:05.7115 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:46:05.7271 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:46:05.7271 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:46:05.7473 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:46:05.7583 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:46:05.7763 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:46:05.7763 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:46:05.7962 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:46:05.8082 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:46:05.8205 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:46:05.8404 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:05.8525 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:05.8525 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:46:05.8756 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:46:05.8865 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:46:05.8966 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:05.8966 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:46:05.9197 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:46:05.9296 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:46:05.9296 Debug Setting 'ChainsawTarget.address' to 'udp://24.18.229.228'
+2020-01-12 15:46:05.9678 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:46:05.9828 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:46:05.9947 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.0067 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.0067 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:46:06.0307 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:46:06.0406 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:46:06.0406 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:46:06.0634 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:46:06.0834 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.1105 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.1356 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:46:06.1515 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:46:06.1705 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:46:06.1855 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.1965 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:46:06.2155 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:46:06.2303 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.2473 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.2617 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:46:06.2750 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:46:06.2750 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:46:06.2969 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:46:06.3099 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:46:06.3231 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.3351 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.3605 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:46:06.3709 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:46:06.3709 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:46:06.3979 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:46:06.3979 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:46:06.4233 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.4373 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:46:06.4482 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:46:06.4595 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:46:06.4595 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:46:06.4822 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:46:06.4952 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:46:06.5110 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:46:06.5244 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:46:06.5244 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:46:06.5504 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:46:06.5783 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:46:06.5942 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:46:06.6052 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:46:06.6192 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.6371 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.6510 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:46:06.6624 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:46:06.6624 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:46:06.6831 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.6831 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:46:06.7044 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:46:06.7190 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:46:06.7289 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:46:06.7289 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.7495 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.7588 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:46:06.7588 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:46:06.7819 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:46:06.7918 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:46:06.7918 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:46:06.8107 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:06.8197 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.8197 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.8411 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:46:06.8517 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:46:06.8517 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:46:06.8777 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:06.8956 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:06.9116 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:06.9265 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:46:06.9425 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:46:06.9605 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:46:06.9605 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:07.0194 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:46:07.0553 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:46:07.1615 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:46:07.2153 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:46:07.2442 Debug --- NLog configuration dump ---
+2020-01-12 15:46:07.2624 Debug Targets:
+2020-01-12 15:46:07.2762 Debug File Target[jsonFile]
+2020-01-12 15:46:07.2991 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:46:07.3203 Debug File Target[testLogFile]
+2020-01-12 15:46:07.3389 Debug File Target[logfile]
+2020-01-12 15:46:07.3711 Debug File Target[xmllogfile]
+2020-01-12 15:46:07.3861 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:46:07.4250 Debug Console Target[logconsole]
+2020-01-12 15:46:07.4648 Debug NLogViewer Target[viewer]
+2020-01-12 15:46:07.4857 Debug NLogViewer Target[viewer3]
+2020-01-12 15:46:07.5216 Debug NLogViewer Target[viewer2]
+2020-01-12 15:46:07.5216 Debug Rules:
+2020-01-12 15:46:07.5495 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:46:07.5636 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:46:07.5870 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:46:07.6039 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:46:07.6249 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:46:07.6445 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:46:07.6943 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:46:07.7157 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:46:07.7490 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:46:07.7610 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:46:07.7949 Debug --- End of NLog configuration dump ---
+2020-01-12 15:46:07.8559 Info Found 124 configuration items
+2020-01-12 15:46:07.9664 Info Configuration initialized.
+2020-01-12 15:46:07.9804 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:46:08.0083 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:46:08.0485 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:46:08.0739 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:46:08.0959 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.1309 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.1596 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.1864 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.3735 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:46:08.3873 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:46:08.4103 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:46:08.4890 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.5208 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.5428 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:08.5607 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:09.9567 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:46:10.0042 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:46:10.1416 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:46:10.1668 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:46:10.5949 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:10.6169 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:46:10.6643 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:46:10.7283 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:46:10.7958 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:46:11.0260 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:11.3770 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:11.7619 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:12.1581 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:12.3913 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:13.0018 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:13.2462 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:13.7915 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:13.9922 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:14.1910 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:14.5881 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:46:14.6430 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:46:14.6569 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:46:14.6719 Debug Closing logging configuration...
+2020-01-12 15:46:14.6868 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:46:14.6997 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:46:14.7149 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:46:14.7347 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:46:14.7536 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:46:14.7658 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:46:14.7785 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:46:14.7905 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:46:14.8038 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:46:14.8269 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:46:14.8399 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:46:14.8538 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:46:14.8757 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:46:14.8907 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:46:14.9077 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:46:14.9220 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:46:14.9362 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:46:14.9521 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:46:14.9661 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:46:14.9801 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:46:14.9920 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:46:15.0061 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:46:15.0061 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:46:15.0312 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:46:15.0442 Debug Finished closing logging configuration.
+2020-01-12 15:46:15.0564 Info Logger has been shut down.
+2020-01-12 15:46:56.3413 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:46:56.4107 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:46:56.4265 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:56.4597 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:56.4777 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:46:56.5005 Debug Auto loading done
+2020-01-12 15:46:56.5169 Info Message Template Auto Format enabled
+2020-01-12 15:46:56.5894 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:56.6543 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:56.6725 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:46:56.6903 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:46:56.7197 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:46:56.7337 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:46:56.7516 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:46:56.7667 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:46:56.7821 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:46:56.7948 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:46:56.8079 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:46:56.8189 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:46:56.8189 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:46:56.8456 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:46:56.8606 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:46:56.8839 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:56.8975 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:56.9277 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:46:56.9277 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:46:56.9577 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:46:56.9726 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:56.9846 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:46:56.9952 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:46:57.0065 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:46:57.0216 Debug Setting 'ChainsawTarget.address' to 'udp://24.18.229.228'
+2020-01-12 15:46:57.0216 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:46:57.0625 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:46:57.0735 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.0883 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.1004 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:46:57.1004 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:46:57.1193 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:46:57.1313 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:46:57.1313 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:46:57.1522 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.1642 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.1642 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:46:57.1874 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:46:57.1942 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:46:57.1942 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.2101 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:46:57.2101 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:46:57.2315 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.2401 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.2401 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:46:57.2570 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:46:57.2570 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:46:57.2763 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:46:57.2881 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:46:57.2881 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.3170 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.3480 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:46:57.3599 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:46:57.3739 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:46:57.3844 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:46:57.3844 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:46:57.4129 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.4129 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:46:57.4351 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:46:57.4442 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:46:57.4442 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:46:57.4634 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:46:57.4634 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:46:57.4793 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:46:57.4793 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:46:57.4971 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:46:57.5070 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:46:57.5070 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:46:57.5276 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:46:57.5276 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:46:57.5442 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.5442 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.7452 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:46:57.7452 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:46:57.7652 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:46:57.8880 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.8979 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:46:57.8979 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:46:57.9229 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:46:57.9328 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:46:57.9449 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:57.9618 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:57.9618 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:46:57.9821 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:46:57.9917 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:46:57.9917 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:46:58.0108 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:46:58.0108 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:58.0316 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:58.0406 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:58.0406 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:46:58.0625 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:46:58.0735 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:46:58.0735 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:58.0925 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:46:58.1035 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:46:58.1035 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:46:58.1244 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:46:58.1335 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:46:58.1335 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:46:58.1654 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:46:58.1836 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:46:58.2202 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:46:58.2292 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:46:58.2513 Debug --- NLog configuration dump ---
+2020-01-12 15:46:58.2581 Debug Targets:
+2020-01-12 15:46:58.2581 Debug File Target[jsonFile]
+2020-01-12 15:46:58.2761 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:46:58.2761 Debug File Target[testLogFile]
+2020-01-12 15:46:58.2911 Debug File Target[logfile]
+2020-01-12 15:46:58.2911 Debug File Target[xmllogfile]
+2020-01-12 15:46:58.3117 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:46:58.3117 Debug Console Target[logconsole]
+2020-01-12 15:46:58.3258 Debug NLogViewer Target[viewer]
+2020-01-12 15:46:58.3258 Debug NLogViewer Target[viewer3]
+2020-01-12 15:46:58.3415 Debug NLogViewer Target[viewer2]
+2020-01-12 15:46:58.3514 Debug Rules:
+2020-01-12 15:46:58.3514 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:46:58.3714 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:46:58.3823 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:46:58.3823 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:46:58.4043 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:46:58.4192 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:46:58.4432 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:46:58.4552 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:46:58.4662 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:46:58.4662 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:46:58.4831 Debug --- End of NLog configuration dump ---
+2020-01-12 15:46:58.5130 Info Found 124 configuration items
+2020-01-12 15:46:58.5799 Info Configuration initialized.
+2020-01-12 15:46:58.5918 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:46:58.6091 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:46:58.6208 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:46:58.6318 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:46:58.6318 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.6530 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.6630 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.6630 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.7043 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:46:58.7124 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:46:58.7124 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:46:58.7318 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.7408 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.7408 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:58.7408 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:46:59.1351 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:46:59.1603 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:46:59.2001 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:46:59.2126 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:46:59.3835 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:59.4054 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:46:59.4505 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:46:59.5509 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:46:59.5768 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:46:59.6736 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:46:59.7988 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:00.0045 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:00.3950 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:00.5020 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:00.8259 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:01.0106 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:01.1799 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:01.2954 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:01.3948 Error NetworkTarget(Name=chainsaw): Failed to create sender to address: 'udp://24.18.229.228' Exception: System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: port
+   at System.Net.IPEndPoint..ctor(IPAddress address, Int32 port)
+   at NLog.Internal.NetworkSenders.NetworkSender.ParseEndpointAddress(Uri uri, AddressFamily addressFamily) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 169
+   at NLog.Internal.NetworkSenders.UdpNetworkSender.DoInitialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\UdpNetworkSender.cs:line 94
+   at NLog.Internal.NetworkSenders.NetworkSender.Initialize() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Internal\NetworkSenders\NetworkSender.cs:line 76
+   at NLog.Targets.NetworkTarget.CreateNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 516
+   at NLog.Targets.NetworkTarget.GetCachedNetworkSender(String address) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 498
+   at NLog.Targets.NetworkTarget.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\NetworkTarget.cs:line 297
+2020-01-12 15:47:01.5674 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:47:01.6211 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:47:01.6351 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:47:01.6551 Debug Closing logging configuration...
+2020-01-12 15:47:01.6760 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:47:01.6900 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:47:01.7030 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:47:01.7240 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:47:01.7419 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:47:01.7419 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:47:01.7668 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:47:01.7818 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:47:01.7938 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:47:01.8167 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:47:01.8306 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:47:01.8425 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:47:01.8567 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:47:01.8687 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:47:01.8687 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:47:01.8924 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:47:01.9070 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:47:01.9198 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:47:01.9328 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:47:01.9448 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:47:01.9448 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:47:01.9711 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:47:01.9848 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:47:02.0009 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:47:02.0139 Debug Finished closing logging configuration.
+2020-01-12 15:47:02.0288 Info Logger has been shut down.
+2020-01-12 15:48:01.9034 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-12 15:48:01.9663 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-12 15:48:01.9952 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:48:02.1533 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:48:02.1912 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-12 15:48:02.2570 Debug Auto loading done
+2020-01-12 15:48:02.2999 Info Message Template Auto Format enabled
+2020-01-12 15:48:02.4188 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:02.5743 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:02.6122 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-12 15:48:02.6362 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-12 15:48:02.7092 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-12 15:48:02.7092 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-12 15:48:02.7541 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-12 15:48:02.7704 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-12 15:48:02.7883 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-12 15:48:02.8033 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-12 15:48:02.8033 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-12 15:48:02.8284 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-12 15:48:02.8447 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-12 15:48:02.8606 Info Adding target FileTarget(Name=jsonFile)
+2020-01-12 15:48:02.8737 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-12 15:48:02.8929 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:02.9010 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:02.9010 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-12 15:48:02.9191 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-12 15:48:02.9191 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:48:02.9351 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:02.9351 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-12 15:48:02.9508 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-12 15:48:02.9607 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-12 15:48:02.9607 Debug Setting 'ChainsawTarget.address' to 'udp://24.18.229.228:4445'
+2020-01-12 15:48:02.9797 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-12 15:48:02.9797 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-12 15:48:02.9960 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:02.9960 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.0114 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-12 15:48:03.0114 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-12 15:48:03.0265 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-12 15:48:03.0265 Info Adding target FileTarget(Name=testLogFile)
+2020-01-12 15:48:03.0441 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-12 15:48:03.0441 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.0620 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.0710 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-12 15:48:03.0710 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-12 15:48:03.0903 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-12 15:48:03.0903 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.1093 Info Adding target FileTarget(Name=logfile)
+2020-01-12 15:48:03.1171 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-12 15:48:03.1171 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.1361 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.1361 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-12 15:48:03.1579 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-12 15:48:03.1668 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-12 15:48:03.1668 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-12 15:48:03.1885 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-12 15:48:03.1978 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.1978 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.2198 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-12 15:48:03.2267 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-12 15:48:03.2267 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-12 15:48:03.2447 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-12 15:48:03.2447 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-12 15:48:03.2646 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.2746 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-12 15:48:03.2916 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-12 15:48:03.2916 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-12 15:48:03.3128 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-12 15:48:03.3247 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-12 15:48:03.3347 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-12 15:48:03.3347 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-12 15:48:03.3554 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:48:03.3554 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-12 15:48:03.3753 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-12 15:48:03.3870 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-12 15:48:03.3968 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-12 15:48:03.3968 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-12 15:48:03.4198 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.4277 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.4277 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-12 15:48:03.4467 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-12 15:48:03.4467 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-12 15:48:03.4706 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.4856 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-12 15:48:03.4986 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-12 15:48:03.5155 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-12 15:48:03.5275 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-12 15:48:03.5374 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.5374 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.5645 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-12 15:48:03.5755 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-12 15:48:03.5863 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-12 15:48:03.5863 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-12 15:48:03.6084 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-12 15:48:03.6214 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-12 15:48:03.6363 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.6563 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.6682 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-12 15:48:03.6824 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-12 15:48:03.6992 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-12 15:48:03.7241 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-12 15:48:03.7433 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-12 15:48:03.7615 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-12 15:48:03.7737 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-12 15:48:03.7927 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-12 15:48:03.8087 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-12 15:48:03.8207 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-12 15:48:03.8561 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-12 15:48:03.8763 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-12 15:48:03.9352 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-12 15:48:03.9511 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-12 15:48:03.9753 Debug --- NLog configuration dump ---
+2020-01-12 15:48:03.9753 Debug Targets:
+2020-01-12 15:48:03.9959 Debug File Target[jsonFile]
+2020-01-12 15:48:03.9959 Debug Chainsaw Target[chainsaw]
+2020-01-12 15:48:04.0163 Debug File Target[testLogFile]
+2020-01-12 15:48:04.0279 Debug File Target[logfile]
+2020-01-12 15:48:04.0399 Debug File Target[xmllogfile]
+2020-01-12 15:48:04.0399 Debug ColoredConsole Target[coloredConsole]
+2020-01-12 15:48:04.0628 Debug Console Target[logconsole]
+2020-01-12 15:48:04.0728 Debug NLogViewer Target[viewer]
+2020-01-12 15:48:04.0846 Debug NLogViewer Target[viewer3]
+2020-01-12 15:48:04.0846 Debug NLogViewer Target[viewer2]
+2020-01-12 15:48:04.1080 Debug Rules:
+2020-01-12 15:48:04.1220 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-12 15:48:04.1339 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-12 15:48:04.1339 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-12 15:48:04.1559 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-12 15:48:04.1650 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-12 15:48:04.1650 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-12 15:48:04.1879 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-12 15:48:04.1976 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-12 15:48:04.1976 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-12 15:48:04.2163 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-12 15:48:04.2250 Debug --- End of NLog configuration dump ---
+2020-01-12 15:48:04.2489 Info Found 124 configuration items
+2020-01-12 15:48:04.3103 Info Configuration initialized.
+2020-01-12 15:48:04.3192 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-12 15:48:04.3359 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-12 15:48:04.3359 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:48:04.3583 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:48:04.3713 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.3863 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.3983 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.3983 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.4641 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-12 15:48:04.4970 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-12 15:48:04.5468 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-12 15:48:04.5678 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.5947 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.6217 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:04.6854 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-12 15:48:05.1772 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-12 15:48:05.2071 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:48:05.2658 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-12 15:48:05.2798 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:48:05.5309 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-12 15:48:05.5583 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-12 15:48:05.6055 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-12 15:48:05.6185 Debug Creating file appender: c:\data\logs\x.json
+2020-01-12 15:48:07.3305 Info AppDomain Shutting down. Logger closing...
+2020-01-12 15:48:07.3863 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-12 15:48:07.4053 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-12 15:48:07.4193 Debug Closing logging configuration...
+2020-01-12 15:48:07.4332 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:48:07.4443 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-12 15:48:07.4443 Debug Closing target 'File Target[logfile]'.
+2020-01-12 15:48:07.4820 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-12 15:48:07.4988 Debug Closed target 'File Target[logfile]'.
+2020-01-12 15:48:07.5099 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-12 15:48:07.5099 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-12 15:48:07.5325 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-12 15:48:07.5430 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-12 15:48:07.5622 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-12 15:48:07.5720 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:48:07.5720 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-12 15:48:07.5941 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:48:07.6034 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-12 15:48:07.6034 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:48:07.6234 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-12 15:48:07.6311 Debug Closing target 'File Target[testLogFile]'.
+2020-01-12 15:48:07.6311 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-12 15:48:07.6489 Debug Closed target 'File Target[testLogFile]'.
+2020-01-12 15:48:07.6489 Debug Closing target 'File Target[jsonFile]'.
+2020-01-12 15:48:07.6681 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-12 15:48:07.6798 Debug Closed target 'File Target[jsonFile]'.
+2020-01-12 15:48:07.6798 Debug Closing target 'Console Target[logconsole]'.
+2020-01-12 15:48:07.7028 Debug Closed target 'Console Target[logconsole]'.
+2020-01-12 15:48:07.7157 Debug Finished closing logging configuration.
+2020-01-12 15:48:07.7277 Info Logger has been shut down.

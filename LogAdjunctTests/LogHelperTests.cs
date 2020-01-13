@@ -17,7 +17,15 @@ namespace LogAdjunctTest
         {
             LogEventInfo entry = new LogEventInfo();
             LogAdjunct.LogHelper.SerializeLogEventInfo(entry);
-            Assert.Fail();
         }
+
+        [Test()]
+        public void DeserializeLogEventInfoTest()
+        {
+            var json = "{ \"time\": \"2020-01-12 08:43:24.5903\", \"level\": \"DEBUG\", \"message\": \"CreateContract: NLog.LogEventInfo\" }";
+            var deserializeLogEventInfo = LogAdjunct.LogHelper.DeserializeLogEventInfo(json);
+            LogEventInfo entry = deserializeLogEventInfo;
+        }
+
     }
 }

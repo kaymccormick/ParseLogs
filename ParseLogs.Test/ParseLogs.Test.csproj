@@ -84,10 +84,6 @@
       <HintPath>e:\installed_packages\Autofac.4.9.4\lib\net45\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\nlog\debug\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>e:\installed_packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -113,6 +109,10 @@
     <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NLog\src\NLog\NLog.csproj">
+      <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>
+      <Name>NLog</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ParseLogsLib\ParseLogsLib.csproj">
       <Project>{97603CED-2640-42A8-9BF1-1ED45614EFDE}</Project>
       <Name>ParseLogsLib</Name>

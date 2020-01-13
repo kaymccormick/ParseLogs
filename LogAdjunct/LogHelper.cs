@@ -16,9 +16,22 @@ namespace LogAdjunct
         {
             var jsonOut = JsonConvert.SerializeObject(entry, new JsonSerializerSettings()
             {
+                ContractResolver = new ContractResolver()
             });
             Logger.Debug("serialization result is " + jsonOut);
             return jsonOut;
+        }
+
+        public static LogEventInfo DeserializeLogEventInfo(string json)
+        {
+            var d = JsonConvert.DeserializeObject(json,
+                new JsonSerializerSettings()
+                {
+                    ContractResolver = new ContractResolver()
+                });
+            Logger.Debug($"{d.GetType()}");
+            LogEventInfo e = (LogEventInfo) d;
+            return e;
         }
     }
 }

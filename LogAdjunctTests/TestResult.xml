@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="2" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2020-01-12 23:48:00Z" end-time="2020-01-12 23:48:07Z" duration="6.847806">
+  <command-line><![CDATA["E:\kay2020\source\nunit\tools\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe" .\bin\debug\LogAdjunctTests.dll -test LogAdjunctTest.LogHelperTests.SerializeLogEventInfoTest]]></command-line>
+  <filter>
+    <test>LogAdjunctTest.LogHelperTests.SerializeLogEventInfoTest</test>
+  </filter>
+  <test-suite type="Assembly" id="0-1003" name="LogAdjunctTests.dll" fullname="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\LogAdjunctTests.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-01-12T23:48:01.2760893Z" end-time="2020-01-12T23:48:07.2404282Z" duration="5.962858" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.13.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.18363.0" platform="Win32NT" cwd="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests" machine-name="EXOMAIL-87976" user="mccor" user-domain="EXOMAIL-87976" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="13488" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1004" name="LogAdjunctTest" fullname="LogAdjunctTest" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-01-12T23:48:01.3140642Z" end-time="2020-01-12T23:48:07.2404282Z" duration="5.925983" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="0-1000" name="LogHelperTests" fullname="LogAdjunctTest.LogHelperTests" classname="LogAdjunctTest.LogHelperTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2020-01-12T23:48:01.3181197Z" end-time="2020-01-12T23:48:07.2387551Z" duration="5.920823" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <test-case id="0-1001" name="SerializeLogEventInfoTest" fullname="LogAdjunctTest.LogHelperTests.SerializeLogEventInfoTest" methodname="SerializeLogEventInfoTest" classname="LogAdjunctTest.LogHelperTests" runstate="Runnable" seed="530109739" result="Passed" start-time="2020-01-12T23:48:01.3231867Z" end-time="2020-01-12T23:48:07.2282295Z" duration="5.904430" asserts="0">
+          <output><![CDATA[\u001b[37m2020-01-12 15:48:04.8654| INFO|CreateContract: NLog.LogEventInfo\u001b[0m
+\u001b[90m2020-01-12 15:48:05.6873|DEBUG|CreateObjectContract ( NLog.LogEventInfo )\u001b[0m
+\u001b[90m2020-01-12 15:48:05.7974|DEBUG|ResolveContractConverter (NLog.LogEventInfo)\u001b[0m
+\u001b[90m2020-01-12 15:48:06.1119|DEBUG|CreateProperties (NLog.LogEventInfo, OptOut\u001b[0m
+\u001b[90m2020-01-12 15:48:06.3464|DEBUG|Constructed custom contract for NLog.LogEventInfo\u001b[0m
+\u001b[90m2020-01-12 15:48:06.4398|DEBUG|performing compare\u001b[0m
+\u001b[90m2020-01-12 15:48:06.7516|DEBUG|Difference: DifferenceType=NumberOfElementsMismatch, MemberPath='Properties', Value1='20', Value2='0'.\u001b[0m
+\u001b[90m2020-01-12 15:48:06.9101|DEBUG|Difference: DifferenceType=ValueMismatch, MemberPath='ExtensionDataNameResolver', Value1='System.Func`2[System.String,System.String]', Value2=''.\u001b[0m
+\u001b[90m2020-01-12 15:48:07.0185|DEBUG|Difference: DifferenceType=ValueMismatch, MemberPath='DefaultCreator', Value1='System.Func`1[System.Object]', Value2=''.\u001b[0m
+\u001b[90m2020-01-12 15:48:07.0700|DEBUG|ObjectContract has MemberSerialization of OptOut\u001b[0m
+\u001b[90m2020-01-12 15:48:07.1450|DEBUG|serialization result is {}\u001b[0m
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
