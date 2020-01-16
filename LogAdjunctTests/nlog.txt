@@ -1815,3 +1815,193 @@ Parameter name: port
 2020-01-12 15:48:07.7028 Debug Closed target 'Console Target[logconsole]'.
 2020-01-12 15:48:07.7157 Debug Finished closing logging configuration.
 2020-01-12 15:48:07.7277 Info Logger has been shut down.
+2020-01-13 05:06:41.3576 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2020-01-13 05:06:41.4031 Debug Found assembly location directory: 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2020-01-13 05:06:41.4031 Debug Search for auto loading files in location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-13 05:06:41.4211 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-13 05:06:41.4211 Debug Start auto loading, location: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug
+2020-01-13 05:06:41.4380 Debug Auto loading done
+2020-01-13 05:06:41.4440 Info Message Template Auto Format enabled
+2020-01-13 05:06:41.4749 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.5058 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.5058 Debug Setting 'FileTarget.name' to 'jsonFile'
+2020-01-13 05:06:41.5218 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\x.json'
+2020-01-13 05:06:41.5218 Debug Setting 'JsonLayout.includeAllProperties' to 'true'
+2020-01-13 05:06:41.5407 Debug Setting 'JsonLayout.excludeProperties' to ''
+2020-01-13 05:06:41.5407 Debug Setting 'JsonAttribute.name' to 'time'
+2020-01-13 05:06:41.5567 Debug Setting 'JsonAttribute.layout' to '${longdate}'
+2020-01-13 05:06:41.5567 Debug Setting 'JsonAttribute.name' to 'level'
+2020-01-13 05:06:41.5686 Debug Setting 'JsonAttribute.layout' to '${level:upperCase=true}'
+2020-01-13 05:06:41.5686 Debug Setting 'UppercaseLayoutRendererWrapper.upperCase' to 'true'
+2020-01-13 05:06:41.5686 Debug Setting 'JsonAttribute.name' to 'message'
+2020-01-13 05:06:41.5836 Debug Setting 'JsonAttribute.layout' to '${message}'
+2020-01-13 05:06:41.5836 Info Adding target FileTarget(Name=jsonFile)
+2020-01-13 05:06:41.5836 Debug Registered target jsonFile: NLog.Targets.FileTarget
+2020-01-13 05:06:41.6075 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.6075 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.6195 Debug Setting 'ChainsawTarget.name' to 'chainsaw'
+2020-01-13 05:06:41.6195 Debug Setting 'ChainsawTarget.newLine' to 'false'
+2020-01-13 05:06:41.6325 Debug Setting 'ChainsawTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-13 05:06:41.6325 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.6325 Debug Setting 'ChainsawTarget.encoding' to 'utf-8'
+2020-01-13 05:06:41.6534 Debug Setting 'ChainsawTarget.includeSourceInfo' to 'true'
+2020-01-13 05:06:41.6534 Debug Setting 'ChainsawTarget.includeCallSite' to 'true'
+2020-01-13 05:06:41.6654 Debug Setting 'ChainsawTarget.address' to 'udp://24.18.229.228:4445'
+2020-01-13 05:06:41.6654 Info Adding target ChainsawTarget(Name=chainsaw)
+2020-01-13 05:06:41.6654 Debug Registered target chainsaw: NLog.Targets.ChainsawTarget
+2020-01-13 05:06:41.6843 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.6843 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.6973 Debug Setting 'FileTarget.name' to 'testLogFile'
+2020-01-13 05:06:41.6973 Debug Setting 'FileTarget.fileName' to 'c:\data\logs\test.txt'
+2020-01-13 05:06:41.6973 Debug Setting 'FileTarget.layout' to '${message}'
+2020-01-13 05:06:41.7133 Info Adding target FileTarget(Name=testLogFile)
+2020-01-13 05:06:41.7133 Debug Registered target testLogFile: NLog.Targets.FileTarget
+2020-01-13 05:06:41.7282 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.7282 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.7282 Debug Setting 'FileTarget.name' to 'logfile'
+2020-01-13 05:06:41.7442 Debug Setting 'FileTarget.fileName' to 'file.txt'
+2020-01-13 05:06:41.7442 Debug Setting 'FileTarget.layout' to '${threadid}-${threadname} ${longdate}|${level:uppercase=true}|${logger}|${message}'
+2020-01-13 05:06:41.7561 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.7561 Info Adding target FileTarget(Name=logfile)
+2020-01-13 05:06:41.7561 Debug Registered target logfile: NLog.Targets.FileTarget
+2020-01-13 05:06:41.7741 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.7741 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.7741 Debug Setting 'FileTarget.name' to 'xmllogfile'
+2020-01-13 05:06:41.7910 Debug Setting 'FileTarget.fileName' to 'file.xml'
+2020-01-13 05:06:41.7910 Debug Setting 'FileTarget.layout' to '${log4jxmlevent}'
+2020-01-13 05:06:41.7910 Info Adding target FileTarget(Name=xmllogfile)
+2020-01-13 05:06:41.8070 Debug Registered target xmllogfile: NLog.Targets.FileTarget
+2020-01-13 05:06:41.8070 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.8200 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.8200 Debug Setting 'ColoredConsoleTarget.name' to 'coloredConsole'
+2020-01-13 05:06:41.8379 Debug Setting 'ColoredConsoleTarget.useDefaultRowHighlightingRules' to 'false'
+2020-01-13 05:06:41.8379 Debug Setting 'ColoredConsoleTarget.enableAnsiOutput' to 'true'
+2020-01-13 05:06:41.8379 Debug Setting 'ColoredConsoleTarget.layout' to '${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message}'
+2020-01-13 05:06:41.8539 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '5'
+2020-01-13 05:06:41.8539 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.8698 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Debug'
+2020-01-13 05:06:41.8698 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'DarkGray'
+2020-01-13 05:06:41.8828 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Info'
+2020-01-13 05:06:41.8828 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Gray'
+2020-01-13 05:06:41.8828 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Warn'
+2020-01-13 05:06:41.8998 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Yellow'
+2020-01-13 05:06:41.8998 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Error'
+2020-01-13 05:06:41.9157 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-13 05:06:41.9157 Debug Setting 'ConsoleRowHighlightingRule.condition' to 'level == LogLevel.Fatal'
+2020-01-13 05:06:41.9157 Debug Setting 'ConsoleRowHighlightingRule.foregroundColor' to 'Red'
+2020-01-13 05:06:41.9317 Debug Setting 'ConsoleRowHighlightingRule.backgroundColor' to 'White'
+2020-01-13 05:06:41.9317 Info Adding target ColoredConsoleTarget(Name=coloredConsole)
+2020-01-13 05:06:41.9317 Debug Registered target coloredConsole: NLog.Targets.ColoredConsoleTarget
+2020-01-13 05:06:41.9476 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.9476 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:41.9586 Debug Setting 'ConsoleTarget.error' to 'true'
+2020-01-13 05:06:41.9586 Debug Setting 'ConsoleTarget.name' to 'logconsole'
+2020-01-13 05:06:41.9586 Debug Setting 'ConsoleTarget.layout' to '${level:uppercase=true} ${pad:padding=20:fixedLength=true:inner=${logger}} ${message}'
+2020-01-13 05:06:41.9586 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.9785 Debug Setting 'PaddingLayoutRendererWrapper.padding' to '20'
+2020-01-13 05:06:41.9785 Debug Setting 'PaddingLayoutRendererWrapper.fixedLength' to 'true'
+2020-01-13 05:06:41.9785 Info Adding target ConsoleTarget(Name=logconsole)
+2020-01-13 05:06:41.9945 Debug Registered target logconsole: NLog.Targets.ConsoleTarget
+2020-01-13 05:06:41.9945 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:41.9945 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:42.0095 Debug Setting 'NLogViewerTarget.name' to 'viewer'
+2020-01-13 05:06:42.0095 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9999'
+2020-01-13 05:06:42.0095 Debug Setting 'NLogViewerTarget.includeSourceInfo' to 'true'
+2020-01-13 05:06:42.0254 Debug Setting 'NLogViewerTarget.includeCallSite' to 'true'
+2020-01-13 05:06:42.0254 Info Adding target NLogViewerTarget(Name=viewer)
+2020-01-13 05:06:42.0254 Debug Registered target viewer: NLog.Targets.NLogViewerTarget
+2020-01-13 05:06:42.0404 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:42.0404 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:42.0404 Debug Setting 'NLogViewerTarget.name' to 'viewer3'
+2020-01-13 05:06:42.0563 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:878'
+2020-01-13 05:06:42.0563 Info Adding target NLogViewerTarget(Name=viewer3)
+2020-01-13 05:06:42.0563 Debug Registered target viewer3: NLog.Targets.NLogViewerTarget
+2020-01-13 05:06:42.0723 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2020-01-13 05:06:42.0723 Debug Setting 'MessageLayoutRenderer.withexception' to 'true'
+2020-01-13 05:06:42.0723 Debug Setting 'NLogViewerTarget.name' to 'viewer2'
+2020-01-13 05:06:42.0882 Debug Setting 'NLogViewerTarget.address' to 'udp://10.25.0.102:9998'
+2020-01-13 05:06:42.0882 Info Adding target NLogViewerTarget(Name=viewer2)
+2020-01-13 05:06:42.0882 Debug Registered target viewer2: NLog.Targets.NLogViewerTarget
+2020-01-13 05:06:42.1092 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'chainsaw_serenity' not found for logging rule: *.
+2020-01-13 05:06:42.1182 Debug Unused target checking is started... Rule Count: 10, Target Count: 10
+2020-01-13 05:06:42.1364 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: logconsole
+2020-01-13 05:06:42.1364 Debug Unused target checking is completed. Total Rule Count: 10, Total Target Count: 10, Unused Target Count: 1
+2020-01-13 05:06:42.1583 Debug --- NLog configuration dump ---
+2020-01-13 05:06:42.1633 Debug Targets:
+2020-01-13 05:06:42.1633 Debug File Target[jsonFile]
+2020-01-13 05:06:42.1633 Debug Chainsaw Target[chainsaw]
+2020-01-13 05:06:42.1793 Debug File Target[testLogFile]
+2020-01-13 05:06:42.1793 Debug File Target[logfile]
+2020-01-13 05:06:42.1793 Debug File Target[xmllogfile]
+2020-01-13 05:06:42.1952 Debug ColoredConsole Target[coloredConsole]
+2020-01-13 05:06:42.1952 Debug Console Target[logconsole]
+2020-01-13 05:06:42.1952 Debug NLogViewer Target[viewer]
+2020-01-13 05:06:42.2102 Debug NLogViewer Target[viewer3]
+2020-01-13 05:06:42.2102 Debug NLogViewer Target[viewer2]
+2020-01-13 05:06:42.2102 Debug Rules:
+2020-01-13 05:06:42.2272 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ coloredConsole ]
+2020-01-13 05:06:42.2272 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2020-01-13 05:06:42.2272 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ xmllogfile ]
+2020-01-13 05:06:42.2431 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer ]
+2020-01-13 05:06:42.2431 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ chainsaw ]
+2020-01-13 05:06:42.2431 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ ]
+2020-01-13 05:06:42.2581 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ viewer3 ]
+2020-01-13 05:06:42.2581 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] appendTo: [ viewer2 ]
+2020-01-13 05:06:42.2581 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ testLogFile ]
+2020-01-13 05:06:42.2730 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ jsonFile ]
+2020-01-13 05:06:42.2730 Debug --- End of NLog configuration dump ---
+2020-01-13 05:06:42.2900 Info Found 124 configuration items
+2020-01-13 05:06:42.3189 Info Configuration initialized.
+2020-01-13 05:06:42.3189 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.0.0.0. Product version: 1.0.0.
+2020-01-13 05:06:42.3359 Debug Targets for LogAdjunct.LogHelper by level:
+2020-01-13 05:06:42.3359 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-13 05:06:42.3359 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-13 05:06:42.3528 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.3528 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.3528 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.3688 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.4336 Debug Targets for LogAdjunct.ContractResolver by level:
+2020-01-13 05:06:42.4436 Debug Trace => viewer viewer3 testLogFile jsonFile
+2020-01-13 05:06:42.4436 Debug Debug => coloredConsole logfile xmllogfile viewer chainsaw viewer3 testLogFile jsonFile
+2020-01-13 05:06:42.4436 Debug Info => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.4595 Debug Warn => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.4595 Debug Error => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.4595 Debug Fatal => coloredConsole logfile xmllogfile viewer chainsaw viewer3 viewer2 testLogFile jsonFile
+2020-01-13 05:06:42.7274 Debug FileTarget(Name=logfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt' on startup
+2020-01-13 05:06:42.7274 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-13 05:06:42.7643 Debug FileTarget(Name=xmllogfile): Process file 'C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml' on startup
+2020-01-13 05:06:42.7643 Debug Creating file appender: C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-13 05:06:42.8750 Debug FileTarget(Name=testLogFile): Process file 'c:\data\logs\test.txt' on startup
+2020-01-13 05:06:42.8750 Debug Creating file appender: c:\data\logs\test.txt
+2020-01-13 05:06:42.8979 Debug FileTarget(Name=jsonFile): Process file 'c:\data\logs\x.json' on startup
+2020-01-13 05:06:42.8979 Debug Creating file appender: c:\data\logs\x.json
+2020-01-13 05:06:43.4116 Info AppDomain Shutting down. Logger closing...
+2020-01-13 05:06:43.4325 Debug Targets not configured for logger: LogAdjunct.LogHelper
+2020-01-13 05:06:43.4435 Debug Targets not configured for logger: LogAdjunct.ContractResolver
+2020-01-13 05:06:43.4435 Debug Closing logging configuration...
+2020-01-13 05:06:43.4435 Debug Closing target 'ColoredConsole Target[coloredConsole]'.
+2020-01-13 05:06:43.4604 Debug Closed target 'ColoredConsole Target[coloredConsole]'.
+2020-01-13 05:06:43.4604 Debug Closing target 'File Target[logfile]'.
+2020-01-13 05:06:43.4784 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.txt
+2020-01-13 05:06:43.4784 Debug Closed target 'File Target[logfile]'.
+2020-01-13 05:06:43.4953 Debug Closing target 'File Target[xmllogfile]'.
+2020-01-13 05:06:43.4953 Debug FileAppender Closing Invalidate - C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\ParseLogs\LogAdjunctTests\bin\debug\file.xml
+2020-01-13 05:06:43.5133 Debug Closed target 'File Target[xmllogfile]'.
+2020-01-13 05:06:43.5133 Debug Closing target 'NLogViewer Target[viewer]'.
+2020-01-13 05:06:43.5302 Debug Closed target 'NLogViewer Target[viewer]'.
+2020-01-13 05:06:43.5302 Debug Closing target 'Chainsaw Target[chainsaw]'.
+2020-01-13 05:06:43.5412 Debug Closed target 'Chainsaw Target[chainsaw]'.
+2020-01-13 05:06:43.5412 Debug Closing target 'NLogViewer Target[viewer3]'.
+2020-01-13 05:06:43.5412 Debug Closed target 'NLogViewer Target[viewer3]'.
+2020-01-13 05:06:43.5572 Debug Closing target 'NLogViewer Target[viewer2]'.
+2020-01-13 05:06:43.5572 Debug Closed target 'NLogViewer Target[viewer2]'.
+2020-01-13 05:06:43.5681 Debug Closing target 'File Target[testLogFile]'.
+2020-01-13 05:06:43.5681 Debug FileAppender Closing Invalidate - c:\data\logs\test.txt
+2020-01-13 05:06:43.5681 Debug Closed target 'File Target[testLogFile]'.
+2020-01-13 05:06:43.5841 Debug Closing target 'File Target[jsonFile]'.
+2020-01-13 05:06:43.5841 Debug FileAppender Closing Invalidate - c:\data\logs\x.json
+2020-01-13 05:06:43.5841 Debug Closed target 'File Target[jsonFile]'.
+2020-01-13 05:06:43.6001 Debug Closing target 'Console Target[logconsole]'.
+2020-01-13 05:06:43.6001 Debug Closed target 'Console Target[logconsole]'.
+2020-01-13 05:06:43.6001 Debug Finished closing logging configuration.
+2020-01-13 05:06:43.6170 Info Logger has been shut down.
