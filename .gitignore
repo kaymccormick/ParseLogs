@@ -8,3 +8,6 @@ FileSigs_*
 *.user
 *.DotSettings
 TestResults
+nlog.txt
+TestResult.xml
+
